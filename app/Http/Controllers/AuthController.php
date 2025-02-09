@@ -72,6 +72,9 @@ class AuthController extends Controller
             Auth::login($users);
             Session::flash('success', 'Create an account successfully');
             return redirect('auth/login');
+        } else {
+            Session::flash('error', 'Invalid created account');
+            return redirect('auth/registrasi');
         }
     }
 
