@@ -1,4 +1,4 @@
-<section class="goals w-full px-16 mx-auto relative" id="tujuan">
+<section class="goals w-full px-16 mx-auto relative mb-32" id="tujuan">
     <div class="goals-container w-full flex gap-x-6 justify-between items-center">
         <div class="goals-col-left flex flex-col gap-y-4 basis-1/2">
             <div class="goals-title-section">
@@ -13,9 +13,9 @@
             <div class="goals-list">
                 <ul class="flex flex-col gap-y-3 ">
                     <li class="flex gap-x-3 items-center text-xl font-semibold text-white bg-blue-600 rounded-full py-3 px-4"><i class="ph ph-check text-white text-3xl"></i>Keamanan & Kepercayaan Terjamin</li>
-                    <li class="flex gap-x-3 items-center text-xl font-semibold text-white bg-orange-500 rounded-full py-3 px-4"><i class="ph ph-check text-white text-3xl"></i>Sistem Pembayaran Fleksibel & Multi-Wallet</li>
-                    <li class="flex gap-x-3 items-center text-xl font-semibold text-white bg-blue-600 rounded-full py-3 px-4"><i class="ph ph-check text-white text-3xl"></i>Komunitas & Forum Diskusi</li>
-                    <li class="flex gap-x-3 items-center text-xl font-semibold text-white bg-orange-500 rounded-full py-3 px-4"><i class="ph ph-check text-white text-3xl"></i>Akses ke Pelatihan & Sertifikasi Gratis</li>
+                    <li class="flex gap-x-3 items-center text-xl font-semibold text-white bg-orange-500 rounded-full py-3 px-4"><i class="ph ph-credit-card  text-white text-3xl"></i>Sistem Pembayaran Fleksibel & Multi-Wallet</li>
+                    <li class="flex gap-x-3 items-center text-xl font-semibold text-white bg-blue-600 rounded-full py-3 px-4"><i class="ph ph-chat-circle-dots text-white text-3xl"></i>Komunitas & Forum Diskusi</li>
+                    <li class="flex gap-x-3 items-center text-xl font-semibold text-white bg-orange-500 rounded-full py-3 px-4"><i class="ph ph-trophy text-white text-3xl"></i>Akses ke Pelatihan & Sertifikasi Gratis</li>
                 </ul>
             </div>
             <div class="goals-underline w-full h-1 bg-gray-100 mt-5"></div>

@@ -16,6 +16,7 @@
     @include('mainpage.header')
     @include('mainpage.about')
     @include('mainpage.goals')
+    @include('mainpage.how-works')
 
 
     <!-- Icons -->
