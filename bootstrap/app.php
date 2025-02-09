@@ -11,7 +11,9 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware) {
-        //
+        $middleware->alias([
+            'AuthIsLogin' => \App\Http\Middleware\AuthIsLogin::class,
+        ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //
