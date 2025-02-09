@@ -17,9 +17,10 @@
 </head>
 
 <body class="font-primary">
-    <section class="login-section flex flex-col lg:flex-row relative w-full  lg:overflow-hidden">
-        <div class="left-col hidden lg:flex-1 bg-primary w-full py-56 lg:flex px-[6%]">
-            <img class="w-full" src="{{ asset('images/auth/image-job.png') }}" alt="">
+    <section class="login-section flex flex-col lg:flex-row relative w-full h-full lg:overflow-hidden">
+        <div
+            class="left-col hidden lg:flex-1 bg-gradient-to-r from-sky_normal to-primary_dark w-full h-auto lg:flex items-center px-[6%] relative">
+            <img class="w-full" src="{{ asset('images/auth/image-job-2.png') }}" alt="">
         </div>
         <div class="right-col flex-1 py-28 lg:py-14 px-[6%] w-full relative">
             <div
@@ -38,25 +39,25 @@
             </div>
             <form action="{{ route('processRegistrasi') }}" method="post">
                 @csrf
-                <div class="form-group mb-6">
+                <div class="form-group mb-5">
                     <label class="label-form block mb-1 text-gray-500 text-md">Name</label>
                     <input type="text"
                         class="inline-block bg-gray-100 border-[1.8px] border-gray-400 w-full py-2.5 px-3 focus:border-primary outline-none rounded-md"
                         name="name" id="name" autocomplete="off">
                 </div>
-                <div class="form-group mb-6">
+                <div class="form-group mb-5">
                     <label class="label-form block mb-1 text-gray-500 text-md">Email</label>
                     <input type="text"
                         class="inline-block bg-gray-100 border-[1.8px] border-gray-400 w-full py-2.5 px-3 focus:border-primary outline-none rounded-md"
                         name="email" id="email" autocomplete="off">
                 </div>
-                <div class="form-group mb-6">
+                <div class="form-group mb-5">
                     <label class="label-form block mb-1 text-gray-500 text-md">Username</label>
                     <input type="text"
                         class="inline-block bg-gray-100 border-[1.8px] border-gray-400 w-full py-2.5 px-3 focus:border-primary outline-none rounded-md"
                         name="username" id="username" autocomplete="off">
                 </div>
-                <div class="form-group mb-6">
+                <div class="form-group mb-8">
                     <label class="label-form block mb-1 text-gray-500 text-md">Password</label>
                     <input type="password"
                         class="inline-block bg-gray-100 border-[1.8px] border-gray-400 w-full py-2.5 px-3 focus:border-primary outline-none rounded-md"
@@ -69,8 +70,8 @@
                         type="submit">Sign Up</button>
                 </div>
             </form>
-            <p class="text-center mt-2 text-gray-500">Already have an account? <a href="{{ url('auth/login') }}"
-                    class="text-primary">Sign In</a></p>
+            <p class="text-center mt-4 text-gray-500">Already have an account? <a href="{{ url('auth/login') }}"
+                    class="text-primary font-medium">Sign In</a></p>
         </div>
     </section>
 

@@ -5,7 +5,7 @@ use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('main-page');
+    return view('main-page') ;
 });
 
 Route::prefix('auth')->group(function() {

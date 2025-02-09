@@ -14,16 +14,3 @@ passwordIcon.addEventListener("click", function () {
         passwordIcon.style.color = "#6b7280";
     }
 });
-
-// swiper
-const swiper = new Swiper(".auth_swiper", {
-    slidesPerView: 1,
-    autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-    },
-    loop: true,
-    pagination: {
-        el: ".swiper-pagination",
-    },
-});
