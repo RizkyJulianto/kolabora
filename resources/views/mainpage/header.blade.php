@@ -1,4 +1,4 @@
-<header class="relative w-full h-screen mb-32">
+<header class="relative w-full h-screen mb-32" id="beranda">
 <svg class="absolute inset-0 z-0" viewBox="0 0 902 451" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><rect class="bg" id="bg" x="0" y="0" width="902" height="451" fill="#ffffff"></rect><defs><filter id="f1" x="-200%" y="-200%" width="500%" height="500%"><feGaussianBlur stdDeviation="100"></feGaussianBlur></filter></defs><circle cx="902" cy="451" r="1008.4666578524052" fill="#FCA311" filter="url(#f1)"></circle><circle cx="902" cy="451" r="806.7733262819241" fill="#FFFFFF" filter="url(#f1)"></circle><circle cx="902" cy="451" r="605.0799947114431" fill="#FFFFFF" filter="url(#f1)"></circle><circle cx="902" cy="451" r="403.38666314096207" fill="#FFFFFF" filter="url(#f1)"></circle><circle cx="902" cy="451" r="201.69333157048104" fill="#2563EB" filter="url(#f1)"></circle></svg>
     <div class="navigation w-full py-5 px-6">
         <nav class="z-10 relative py-4 flex justify-between  px-10 w-full bg-gray-300 rounded-full bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-20 border border-gray-300  shadow-3xl">
@@ -9,9 +9,9 @@
             </div>
         </div>
             <ul class="nav-links flex gap-x-3 items-center">
-               <li><a href="" class="hover:text-gray-700 duration-300">Beranda</a></li>
-               <li><a href="" class="hover:text-gray-700 duration-300">Tentang</a></li>
-               <li><a href="" class="hover:text-gray-700 duration-300">Misi</a></li>
+               <li><a href="#beranda" class="hover:text-gray-700 duration-300">Beranda</a></li>
+               <li><a href="#tentang" class="hover:text-gray-700 duration-300">Tentang</a></li>
+               <li><a href="#tujuan" class="hover:text-gray-700 duration-300">Keunggulan</a></li>
                <li><a href="" class="hover:text-gray-700 duration-300">Cara Kerja</a></li>
             </ul>
             <div class="btn-right flex items-center gap-x-3">
