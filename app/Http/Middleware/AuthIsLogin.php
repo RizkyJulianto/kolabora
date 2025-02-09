@@ -5,6 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 use Symfony\Component\HttpFoundation\Response;
 
 class AuthIsLogin
@@ -17,6 +18,7 @@ class AuthIsLogin
     public function handle(Request $request, Closure $next): Response
     {
         if(!Auth::check()) {
+            Session::flash('notLogin', "Anda harus login dahulu");
             return redirect('auth/login');
         }
         return $next($request);

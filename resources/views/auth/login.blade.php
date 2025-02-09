@@ -105,6 +105,16 @@
         </script>
     @endif
 
+    @if (session('notLogin'))
+        <script>
+            Swal.fire({
+                title: "{{ session('notLogin') }}",
+                icon: "error",
+                draggable: true,
+            });
+        </script>
+    @endif
+
     @if ($errors->any())
         <script>
             Swal.fire({
