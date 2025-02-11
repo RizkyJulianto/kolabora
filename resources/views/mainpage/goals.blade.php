@@ -1,4 +1,4 @@
-<section class="goals w-full px-16 mx-auto relative mb-32" id="tujuan">
+<section class="goals w-full px-16 mx-auto relative mb-32 scroll-mt-28" id="keunggulan">
     <div class="goals-container w-full flex gap-x-6 justify-between items-center">
         <div class="goals-col-left flex flex-col gap-y-4 basis-1/2">
             <div class="goals-title-section">

@@ -1,4 +1,4 @@
-<section class="testimoni w-full px-14 mx-auto mb-32" id="testimoni">
+<section class="testimoni w-full px-14 mx-auto mb-32 scroll-mt-24" id="testimoni">
     <div class="testimoni-container flex flex-col gap-y-4 w-full items-center">
             <div class="testimoni-tagline">
                 <h3 class="mt-5 font-semibold text-lg bg-gray-100 rounded-full py-3 px-8 shadow-md">🌟 Apa Kata Mereka Tentang Kolabora</h3>
@@ -149,9 +149,6 @@
                     </div>
                 </div>
             </div>
-            <!-- Donut shape -->
-             <img src="{{asset('images/donut_3d_shape.png')}}" alt="" class="absolute">
-             <img src="{{asset('images/donut_3d_shape.png')}}" alt="" class="absolute right-0 bottom-0">
         <div class="swiper-pagination"></div>
     </div>
 

@@ -1,4 +1,4 @@
-<section class="about w-full px-10 mx-auto mb-32" id="tentang">
+<section class="about w-full px-10 mx-auto mb-32 scroll-mt-24" id="tentang">
     <div class="about-container flex flex-col gap-y-4 w-full items-center">
             <div class="about-tagline">
                 <h3 class="mt-5 font-semibold text-lg bg-gray-100 rounded-full py-3 px-8 shadow-md">🌍 Kolabora - Platform Kolaborasi & Peluang Lokal</h3>

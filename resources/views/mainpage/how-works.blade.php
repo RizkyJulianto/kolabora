@@ -1,4 +1,4 @@
-<section class="how-works w-full px-10 mx-auto mb-32" id="carakerja">
+<section class="how-works w-full px-14 mx-auto mb-32 scroll-mt-24" id="carakerja">
     <div class="how-works-container flex flex-col gap-y-4 w-full items-center">
             <div class="how-works-tagline">
                 <h3 class="mt-5 font-semibold text-lg bg-gray-100 rounded-full py-3 px-8 shadow-md">🛠️ Cara Menggunakan Kolabora</h3>

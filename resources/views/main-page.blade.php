@@ -13,12 +13,14 @@
     <title>Kolabora</title>
     @vite('resources/css/app.css')
 </head>
-<body class="font-primary h-[5000px]">
+<body class="font-primary ">
     @include('mainpage.header')
     @include('mainpage.about')
     @include('mainpage.goals')
     @include('mainpage.how-works')
     @include('mainpage.testimoni')
+    @include('mainpage.faq')
+    @include('mainpage.footer')
 
 
     <!-- Icons -->
