@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="{{ asset('css/font/mona-sans.css') }}">
     <link rel="stylesheet" href="{{ asset('library/sweetalert/sweetalert2.min.css') }}">
     <link rel="stylesheet" href="{{ asset('library/swiper/swiper-bundle.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/layout_users.css') }}">
     @vite('resources/css/app.css')
 </head>
 
@@ -160,7 +160,7 @@
 
     <script src="{{ asset('library/sweetalert/sweetalert2.min.js') }}"></script>
     <script src="{{ asset('library/swiper/swiper-bundle.min.js') }}"></script>
-    <script src="{{ asset('js/main.js') }}"></script>
+    <script src="{{ asset('js/layout_users.js') }}"></script>
 
     @if (session('success'))
         <script>
