@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\UsersController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -17,7 +17,7 @@ Route::prefix('auth')->group(function() {
 });
 
 Route::middleware(['AuthIsLogin'])->group(function() {
-    Route::get('/dashboard', [DashboardController::class, 'index']);
+    Route::get('/main-users', [UsersController::class, 'index']);
 });
 
 Route::fallback(function () {
