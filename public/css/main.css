@@ -1,0 +1,15 @@
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    left: -10px;
+    bottom: -90px;
+    min-width: 100px;
+}
+
+.show {
+    display: block;
+}

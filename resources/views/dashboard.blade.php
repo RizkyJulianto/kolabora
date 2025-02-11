@@ -9,8 +9,8 @@
         <p class="text-sm">Temukan pekerjaan impianmu, tempat passion dan keterampilan bersatu untuk karier yang bermakna!
         </p>
     </div>
-    <div class="find-jobs flex px-[5%] lg:px-[3%] gap-6 py-10">
-        <div class="left-col flex-[1_1_25%] w-full">
+    <div class="find-jobs flex flex-col lg:flex-row px-[5%] lg:px-[3%] gap-6 pt-11 pb-20">
+        <div class="left-col flex-[1_1_100%] lg:flex-[1_1_25%] w-full">
             <div class="filter-col shadow-sm border border-slate-200 rounded">
                 <div class="flex justify-between items-center border-b border-slate-200 py-2 px-3">
                     <h1 class="font-semibold">Filter</h1>
@@ -98,7 +98,7 @@
                 </div>
             </div>
         </div>
-        <div class="right-col flex-[1_1_75%] w-full">
+        <div class="right-col flex-[1_1_100%] lg:flex-[1_1_75%] w-full">
             <div class="content-find-jobs">
                 <div class="flex items-center justify-between mb-10">
                     <div class="flex items-center gap-2">
