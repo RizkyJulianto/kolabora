@@ -45,13 +45,13 @@
                         <label class="label-form block mb-1 text-gray-500 text-md">Username</label>
                         <input type="text"
                             class="inline-block tracking-wide bg-gray-100 border-[1.8px] border-gray-400 w-full py-2.5 px-3 focus:border-primary outline-none rounded-md"
-                            name="username" id="username" autocomplete="off">
+                            name="username" id="username" value="{{ Request::old('username') }}" autocomplete="off">
                     </div>
                     <div class="form-group mb-8 relative">
                         <label class="label-form block mb-1 text-gray-500 text-md">Password</label>
                         <input type="password"
                             class="inline-block tracking-wide bg-gray-100 border-[1.8px] border-gray-400 w-full py-2.5 px-3 focus:border-primary outline-none rounded-md"
-                            name="password" id="password" autocomplete="off">
+                            name="password" value="{{ Request::old('password') }}" id="password" autocomplete="off">
                         <span class="password-icon"><i class="fas fa-eye"></i></span>
                     </div>
                     <div class="form-group">

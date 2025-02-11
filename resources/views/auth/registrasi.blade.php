@@ -43,25 +43,25 @@
                     <label class="label-form block mb-1 text-gray-500 text-md">Name</label>
                     <input type="text"
                         class="inline-block bg-gray-100 border-[1.8px] border-gray-400 w-full py-2.5 px-3 focus:border-primary outline-none rounded-md"
-                        name="name" id="name" autocomplete="off">
+                        name="name" value="{{ old('name') }}" id="name" autocomplete="off">
                 </div>
                 <div class="form-group mb-5">
                     <label class="label-form block mb-1 text-gray-500 text-md">Email</label>
                     <input type="text"
                         class="inline-block bg-gray-100 border-[1.8px] border-gray-400 w-full py-2.5 px-3 focus:border-primary outline-none rounded-md"
-                        name="email" id="email" autocomplete="off">
+                        name="email" value="{{ old('email') }}" id="email" autocomplete="off">
                 </div>
                 <div class="form-group mb-5">
                     <label class="label-form block mb-1 text-gray-500 text-md">Username</label>
                     <input type="text"
                         class="inline-block bg-gray-100 border-[1.8px] border-gray-400 w-full py-2.5 px-3 focus:border-primary outline-none rounded-md"
-                        name="username" id="username" autocomplete="off">
+                        name="username" value="{{ old('username') }}" id="username" autocomplete="off">
                 </div>
                 <div class="form-group mb-8">
                     <label class="label-form block mb-1 text-gray-500 text-md">Password</label>
                     <input type="password"
                         class="inline-block bg-gray-100 border-[1.8px] border-gray-400 w-full py-2.5 px-3 focus:border-primary outline-none rounded-md"
-                        name="password" id="password" autocomplete="off">
+                        name="password" value="{{ old('password') }}" id="password" autocomplete="off">
                     <span class="password-icon"><i class="fas fa-eye"></i></span>
                 </div>
                 <div class="form-group">

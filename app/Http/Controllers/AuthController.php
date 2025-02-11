@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Validator;
 
 class AuthController extends Controller
 {
@@ -17,13 +18,18 @@ class AuthController extends Controller
 
     public function processLogin(Request $request)
     {
-        $request->validate([
+        $validator = Validator::make($request->all(), [
             'username' => 'required',
             'password' => 'required'
         ],[
             'username.required' => 'Username is required',
             'password.required' => 'Password is required'
         ]);
+
+        if ($validator->fails())
+        {
+            return redirect('auth/login')->withErrors($validator)->withInput();
+        }
 
         $data = [
             'username' => $request->input('username'),
@@ -46,7 +52,7 @@ class AuthController extends Controller
 
     public function processRegistrasi(Request $request)
     {
-         $request->validate([
+          $validator = Validator::make($request->all(),[
             'name' => 'required|string|max:255',
             'username' => 'required|string|max:255|unique:users,username',
             'email' => 'required|max:255|email|unique:users,email',
@@ -60,6 +66,11 @@ class AuthController extends Controller
             'password.required' => 'Password is required',
             'password.min' => 'Password min 8 characters',
         ]);
+
+        if ($validator->fails())
+        {
+            return redirect('auth/registrasi')->withErrors($validator)->withInput();
+        }
 
         $users = User::create([
             'name' => $request->input('name'),
