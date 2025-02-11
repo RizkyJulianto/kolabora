@@ -3,16 +3,16 @@
             <div class="testimoni-tagline">
                 <h3 class="mt-5 font-semibold text-lg bg-gray-100 rounded-full py-3 px-8 shadow-md">🎯 Pertanyaan yang Sering Diajukan</h3>
             </div>
-            <div class="testimoni-description max-w-[70%]">
-            <p class="text-center font-light text-2xl">Ada pertanyaan tentang Kolabora? Berikut beberapa pertanyaan umum yang mungkin bisa membantu Anda memahami cara kerja, fitur, dan manfaat dari platform ini.</p>
+            <div class="testimoni-description max-w-[90%]">
+            <p class="text-center font-light lg:text-2xl text-xl">Ada pertanyaan tentang Kolabora? Berikut beberapa pertanyaan umum yang mungkin bisa membantu Anda memahami cara kerja, fitur, dan manfaat dari platform ini.</p>
         </div>
     
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-y-5 gap-x-8 py-12">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-y-5 gap-x-8 py-12">
         <div class="flex flex-col gap-y-5">
           <div class="flex flex-col card-faq bg-white border-2 border-gray-300 shadow-md rounded-xl p-5">
             <div class="card-faq-header flex justify-between items-center">
               <div class="card-faq-title">
-                <label for="accordion" class="text-base lg:text-xl font-bold  cursor-pointer">Apakah ada program pelatihan di Kolabora?</label>
+                <label for="accordion" class="text-lg lg:text-xl font-bold  cursor-pointer">Apakah ada program pelatihan di Kolabora?</label>
               </div>
               <div class="card-faq-toggle">
                 <label for="accordion" class="cursor-pointer">
@@ -34,7 +34,7 @@
           <div class="flex flex-col card-faq bg-white border-2 border-gray-300 shadow-md rounded-xl p-5">
             <div class="card-faq-header flex justify-between items-center">
               <div class="card-faq-title">
-                <label for="accordion2" class="text-base lg:text-xl font-bold  cursor-pointer">Apa itu Sistem Skill-to-Earn?
+                <label for="accordion2" class="text-lg lg:text-xl font-bold  cursor-pointer">Apa itu Sistem Skill-to-Earn?
                 </label>
               </div>
               <div class="card-faq-toggle">
@@ -57,7 +57,7 @@
           <div class="flex flex-col card-faq bg-white border-2 border-gray-300 shadow-md rounded-xl p-5">
             <div class="card-faq-header flex justify-between items-center">
               <div class="card-faq-title">
-                <label for="accordion3" class="text-base lg:text-xl font-bold  cursor-pointer">Bagaimana cara mencari proyek di Kolabora? </label>
+                <label for="accordion3" class="text-lg lg:text-xl font-bold  cursor-pointer">Bagaimana cara mencari proyek di Kolabora? </label>
               </div>
               <div class="card-faq-toggle">
                 <label for="accordion3" class="cursor-pointer">
@@ -80,7 +80,7 @@
           <div class="flex flex-col card-faq bg-white border-2 border-gray-300 shadow-md rounded-xl p-5">
             <div class="card-faq-header flex justify-between items-center">
               <div class="card-faq-title">
-                <label for="accordion4" class="text-base lg:text-xl font-bold  cursor-pointer">Bagaimana cara menukarkan poin reward?
+                <label for="accordion4" class="text-lg lg:text-xl font-bold  cursor-pointer">Bagaimana cara menukarkan poin reward?
                 </label>
               </div>
               <div class="card-faq-toggle">
@@ -103,7 +103,7 @@
           <div class="flex flex-col card-faq bg-white border-2 border-gray-300 shadow-md rounded-xl p-5">
             <div class="card-faq-header flex justify-between items-center">
               <div class="card-faq-title">
-                <label for="accordion5" class="text-base lg:text-xl font-bold  cursor-pointer">Bagaimana cara membuat proyek di Kolabora? </label>
+                <label for="accordion5" class="text-lg lg:text-xl font-bold  cursor-pointer">Bagaimana cara membuat proyek di Kolabora? </label>
               </div>
               <div class="card-faq-toggle">
                 <label for="accordion5" class="cursor-pointer">
@@ -125,7 +125,7 @@
           <div class="flex flex-col card-faq bg-white border-2 border-gray-300 shadow-md rounded-xl p-5">
             <div class="card-faq-header flex justify-between items-center">
               <div class="card-faq-title">
-                <label for="accordion6" class="text-base lg:text-xl font-bold  cursor-pointer">Apakah saya bisa bekerja dalam tim di Kolabora?</label>
+                <label for="accordion6" class="text-lg lg:text-xl font-bold  cursor-pointer">Apakah saya bisa bekerja dalam tim di Kolabora?</label>
               </div>
               <div class="card-faq-toggle">
                 <label for="accordion6" class="cursor-pointer">

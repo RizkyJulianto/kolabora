@@ -3,8 +3,8 @@
             <div class="testimoni-tagline">
                 <h3 class="mt-5 font-semibold text-lg bg-gray-100 rounded-full py-3 px-8 shadow-md">🌟 Apa Kata Mereka Tentang Kolabora</h3>
             </div>
-            <div class="testimoni-description max-w-[70%]">
-            <p class="text-center font-light text-2xl">Kolabora telah membantu ribuan profesional dan tim untuk menemukan peluang kerja dan berkolaborasi lebih efektif. Ini pengalaman mereka!</p>
+            <div class="testimoni-description max-w-[80%]">
+            <p class="text-center font-light lg:text-2xl text-xl">Kolabora telah membantu ribuan profesional dan tim untuk menemukan peluang kerja dan berkolaborasi lebih efektif. Ini pengalaman mereka!</p>
         </div>
     
         <div class="relative testimoni-container-section w-full flex  swiper mySwiper items-center py-4">
@@ -71,7 +71,7 @@
                         </div>
                     </div>
                     <div class="testimoni-card-description">
-                        <p class="text-justify text-md hyphens-manual">Saya tidak menyangka bisa menemukan banyak proyek menarik di Kolabora. Ada banyak pilihan pekerjaan, mulai dari proyek kecil hingga yang berdurasi panjang, sehingga saya bisa menyesuaikannya dengan jadwal saya.</p>
+                        <p class="text-justify text-md hyphens-manual line-clamp-6">Saya tidak menyangka bisa menemukan banyak proyek menarik di Kolabora. Ada banyak pilihan pekerjaan, mulai dari proyek kecil hingga yang berdurasi panjang, sehingga saya bisa menyesuaikannya dengan jadwal saya.</p>
                     </div>
                     <div class="testimoni-card-underline w-full h-1 bg-gray-100"></div>
                     <div class="testimoni-card-name">  
@@ -95,7 +95,7 @@
                         </div>
                     </div>
                     <div class="testimoni-card-description">
-                        <p class="text-justify text-md hyphens-manual">Berkat Kolabora, saya bisa membangun portofolio yang lebih baik. Setiap proyek yang saya selesaikan bisa saya tunjukkan ke klien lain, dan itu membantu saya mendapatkan lebih banyak pekerjaan.</p>
+                        <p class="text-justify text-md hyphens-manual line-clamp-6">Berkat Kolabora, saya bisa membangun portofolio yang lebih baik. Setiap proyek yang saya selesaikan bisa saya tunjukkan ke klien lain, dan itu membantu saya mendapatkan lebih banyak pekerjaan.</p>
                     </div>
                     <div class="testimoni-card-underline w-full h-1 bg-gray-100"></div>
                     <div class="testimoni-card-name">  

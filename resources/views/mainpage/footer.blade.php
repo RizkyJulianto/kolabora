@@ -1,60 +1,96 @@
-<footer class="relative footer w-full px-14 mx-auto py-9 scroll-mt-24"  id="footer">
-    <div class="footer-container w-full bg-gray-300 border-2 border-gray-300 flex gap-x-5 rounded-xl py-5 px-10 justify-between items-center g-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-20 ">
-        <div class="footer-col flex flex-col gap-y-4 basis-1/3">
-            <div class="footer-col-logo flex items-center gap-x-1">
-            <img src="images/logo-kolabora.png" alt="" class="w-12 h-12">
-            <div class="header-logo-text">
-                <a href="" class="text-2xl font-bold text-white cursor-pointer">Kola<span class="text-blue-600">Bora</span></a>
-            </div>
-            </div>
-            <div class="footer-col-description">
-            <p class="text-justify font-light text-lg">Kolabora adalah platform yang menghubungkan individu dan tim untuk bekerja sama dalam proyek berbasis keterampilan. 
-            Dengan konsep <strong class="text-orange-500">Skill-to<span class="text-blue-600">-Earn</span></strong>, setiap kontribusi dihargai dengan poin dan reward, 
-            mendukung ekosistem kerja yang lebih inklusif dan produktif.</p>
-            </div>
-            <div class="footer-col-identity flex gap-x-2">
-                <div class="footer-col-identity-address flex gap-x-2 items-center">
-                <i class="ph ph-map-pin text-xl font-semibold"></i>
-                <p class="font-semibold">Indonesia</p>
+<footer class="shadow">
+        <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 py-9 w-full px-[5%] lg:px-[3%] border-t border-slate-200 relative">
+            <div class="logo-footer">
+                <div class="logo flex items-center">
+                    <img class="w-12" src="{{ asset('images/logo/kolabora-transparent.png') }}" alt="">
+                    <h1 class="text-2xl font-bold text-orange-300">Kola<span class="text-primary">Bora</span></h1>
                 </div>
-                <div class="footer-col-identity-phone flex gap-x-2 items-center">
-                <i class="ph ph-phone text-xl font-semibold"></i>
-                <p class="font-semibold">+62 812-3456-7890</p>
+                <p class="text-[15px] mt-2 mb-4">Kolaborasi Tanpa Batas Peluang Tak Terbatas!</p>
+                <div class="border border-slate-200 shadow flex rounded p-1">
+                    <input class="w-[70%] py-2 px-3 outline-none placeholder:text-[15px]" type="email" name=""
+                        id="" placeholder="Masukan email anda">
+                    <button
+                        class="w-[30%] py-2 px-3 bg-gradient-to-r from-orange-400 to-orange_normal text-white tracking-wide text-[15px] rounded hover:opacity-85"
+                        type="submit">Kirim</button>
+                </div>
+            </div>
+            <div class="permalinks">
+                <div>
+                    <h5 class="font-semibold pb-1">Permalinks</h5>
+                    <div class="w-full h-[1.5px] bg-slate-400 relative">
+                        <div class="absolute -top-1 right-0 w-10 h-2 bg-gradient-to-r from-sky_light to-primary"></div>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-1 text-[15px] mt-2">
+                    <a href=""
+                        class="pemalinks-footer inline-block text-transparent bg-clip-text font-semibold bg-gradient-to-r from-sky_light to-primary hover:translate-x-1 transition-all">Find
+                        Job</a>
+                    <a href="" class="pemalinks-footer hover:translate-x-1 transition-all">Message</a>
+                    <a href="" class="pemalinks-footer hover:translate-x-1 transition-all">Hiring</a>
+                    <a href="" class="pemalinks-footer hover:translate-x-1 transition-all">Community</a>
+                    <a href="" class="pemalinks-footer hover:translate-x-1 transition-all">FAQ</a>
+                </div>
+            </div>
+            <div class="social_media">
+                <div>
+                    <h5 class="font-semibold pb-1">Social Media</h5>
+                    <div class="w-full h-[1.5px] bg-slate-400 relative">
+                        <div class="absolute -top-1 right-0 w-10 h-2 bg-gradient-to-r from-sky_light to-primary"></div>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-1 text-[15px] mt-2">
+                    <div class="flex items-center gap-2">
+                        <div
+                            class="flex items-center w-[34px] h-[34px] rounded justify-center bg-gradient-to-r from-sky_light to-primary text-white text-lg">
+                            <i class="ph ph-youtube-logo"></i>
+                        </div>
+                        <a href="{{ url('www.youtube.com') }}" class="pemalinks-footer">kolabora</a>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div
+                            class="flex items-center w-[34px] h-[34px] rounded justify-center bg-gradient-to-r from-sky_light to-primary text-white text-lg">
+                            <i class="ph ph-envelope"></i>
+                        </div>
+                        <a href="{{ url('mailto:juliantorizky01@gmail.com') }}"
+                            class="pemalinks-footer">kolabora@gmail.com</a>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div
+                            class="flex items-center w-[34px] h-[34px] rounded justify-center bg-gradient-to-r from-sky_light to-primary text-white text-[16px]">
+                            <i class="ph ph-phone"></i>
+                        </div>
+                        <a href="{{ url('www.youtube.com') }}" class="pemalinks-footer">(0281) 5161 1234</a>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div
+                            class="flex items-center w-[34px] h-[34px] rounded justify-center bg-gradient-to-r from-sky_light to-primary text-white text-lg">
+                            <i class="ph ph-facebook-logo"></i>
+                        </div>
+                        <a href="{{ url('www.youtube.com') }}" class="pemalinks-footer">kolabora</a>
+                    </div>
+                </div>
+            </div>
+            <div class="permalinks">
+                <div>
+                    <h5 class="font-semibold pb-1">Alamat</h5>
+                    <div class="w-full h-[1.5px] bg-slate-400 relative">
+                        <div class="absolute -top-1 right-0 w-10 h-2 bg-gradient-to-r from-sky_light to-primary"></div>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-1 mt-2">
+                    <p class="text-[15px]">Jl. Jenderal Soedirman No. 41, Purbalingga Tenggara, Purbalingga, Jawa
+                        Tengah 53373</p>
                 </div>
             </div>
         </div>
-
-        <div class="footer-col-line w-1 h-60 bg-white"></div>
-
-
-        <div class="footer-col basis-[20%] flex flex-col gap-y-3">
-            <div class="footer-col-title w-full">
-                <h3 class="font-bold text-2xl">Tetap Terhubung</h3>
-            </div>
-            <div class="footer-col-description w-full ">
-                <p>Hubungi kami untuk mendapatkan pembaruan terbaru, tips eksklusif, dan pengumuman penting.</p>
-            </div>
-            <form action="" class="flex gap-x-3  items-center">
-                <input type="email" name="email" id="email" placeholder="Masukan Email Anda" class="p-3 rounded-md outline-orange-500">
-
-                <div class="btn-submit">
-                    <button type="submit" class="bg-blue-600 py-3 px-5 rounded-md text-white font-semibold">Kirim</button>
-                </div>
-            </form>
+        <div class="copyrigt text-sm text-center bg-slate-50">
+            <p class="py-4">&copy; <span id="copyright">
+                    <script>
+                        document.getElementById('copyright').innerHTML = new Date().getFullYear();
+                    </script>
+                </span> <span class="text-orange_light font-semibold">Kola</span><span
+                    class="text-primary font-semibold">Bora</span>. All
+                Rights Reserved</p>
         </div>
-
-        <div class="footer-col-line w-1 h-60 bg-white"></div>
-
-        <div class="footer-col">
-            <ul class="quick-links flex flex-col gap-y-3 font-semibold text-lg">
-                <li><a href="#beranda">Beranda</a></li>
-                <li><a href="#tentang">Tentang</a></li>
-                <li><a href="#keunggulan">Keunggulan</a></li>
-                <li><a href="#carakerja">Cara Kerja</a></li>
-                <li><a href="#testimoni">Testimoni</a></li>
-                <li><a href="#faq">FAQ</a></li>
-            </ul>
-        </div>
-    </div>
-
-</footer>
+    </footer>

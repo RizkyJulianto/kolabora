@@ -13,7 +13,7 @@
     <title>Kolabora</title>
     @vite('resources/css/app.css')
 </head>
-<body class="font-primary ">
+<body class="font-primary overflow-x-hidden">
     @include('mainpage.header')
     @include('mainpage.about')
     @include('mainpage.goals')
@@ -28,31 +28,6 @@
 
     <!-- Swiper -->
     <script src="{{asset('library/swiper/swiper-bundle.min.js')}}"></script>
-    <script>
-    var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 1, // Default untuk layar kecil
-        spaceBetween: 20,
-        autoplay: {
-            delay: 2000,
-            disableOnInteraction: false,
-        },
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-        breakpoints: {
-            768: {
-                slidesPerView: 2, // Untuk tablet
-            },
-            1024: {
-                slidesPerView: 3, // Untuk layar besar (menampilkan 3 card per slide)
-            }
-        }
-    });
-    </script>
+    <script src="{{asset('js/main.js')}}"></script>
 </body>
 </html>
