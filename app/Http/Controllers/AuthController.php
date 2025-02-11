@@ -31,7 +31,8 @@ class AuthController extends Controller
         ];
 
         if (Auth::attempt($data)) {
-            return redirect('/');
+            Session::flash('success', 'Login success');
+            return redirect('/dashboard');
         } else {
             Session::flash('error', 'Username or password incorrect');
             return redirect('auth/login');
@@ -84,4 +85,3 @@ class AuthController extends Controller
         return redirect('auth/login');
     }
 }
-
