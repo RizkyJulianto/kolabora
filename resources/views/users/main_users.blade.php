@@ -100,7 +100,7 @@
         </div>
         <div class="right-col flex-[1_1_100%] lg:flex-[1_1_75%] w-full">
             <div class="content-find-jobs">
-                <div class="flex items-center justify-between mb-10">
+                <div class="flex gap-3 md:gap-0 flex-col md:flex-row md:justify-between md:items-center mb-10">
                     <div class="flex items-center gap-2">
                         <h1 class="text-xl font-bold">Recommended Jobs</h1>
                         <h4 class="bg-gradient-to-r from-sky_light to-primary py-1 px-2 rounded-full text-white">136</h4>
@@ -115,22 +115,27 @@
                 </div>
                 <main class="content flex flex-col gap-5">
                     <div class="box shadow w-full border border-slate-200 rounded p-4">
-                        <div class="up flex justify-between">
+                        <div class="up flex flex-col lg:flex-row lg:justify-between lg:gap-0 gap-4">
                             <div class="left">
                                 <div class="flex gap-2">
-                                    <img class="rounded w-12 h-12 shadow" src="{{ asset('images/logo-kolabora.png') }}"
+                                    <img class="rounded w-14 h-14 shadow" src="{{ asset('images/logo-kolabora.png') }}"
                                         alt="">
                                     <div class="">
-                                        <h3 class="text-md font-bold">Product Designer</h3>
-                                        <div class="flex gap-2">
-                                            <h5 class="text-sm text-slate-400">tokopedia</h5>
-                                            <p class="bg-orange-100 text-orange_normal text-xs px-2 py-[2px] rounded-full">
+                                        <h3 class="text-md font-bold mb-2 md:mb-1">Product Designer</h3>
+                                        <div class="grid grid-cols-2 md:grid-cols-4 gap-y-2 gap-x-2 md:gap-x-3 w-full">
+                                            <h5
+                                                class="bg-blue-100 text-primary text-center text-xs px-2 py-[2px] rounded-full">
+                                                tokopedia</h5>
+                                            <p
+                                                class="bg-orange-100 text-orange_normal text-center text-xs px-2 py-[2px] rounded-full">
                                                 Part Time</p>
-                                            <div class="flex items-center gap-1 text-sm text-slate-400">
+                                            <div
+                                                class="flex items-center justify-center gap-1 bg-yellow-100 text-yellow_dark text-xs px-2 py-[2px] rounded-full">
                                                 <i class="fa-solid fa-money-check"></i>
                                                 <p>$200 - $500</p>
                                             </div>
-                                            <div class="flex items-center gap-1 text-sm text-slate-400">
+                                            <div
+                                                class="flex items-center justify-center gap-1 bg-yellow-100 text-yellow_dark text-center text-xs px-2 py-[2px] rounded-full">
                                                 <i class="fa-solid fa-briefcase"></i>
                                                 <p>2 year</p>
                                             </div>
@@ -152,7 +157,7 @@
                                 voluptates. Accusamus hic adipisci obcaecati eius est fuga modi necessitatibus harum quasi
                                 voluptates, laborum cum eum soluta doloribus placeat omnis sint dolore ducimus esse earum
                                 vitae consequatur! Non harum maiores tempora perferendis.</p>
-                            <p class="text-sm my-2 text-slate-500 flex items-center gap-2"><i
+                            <p class="text-sm my-5 md:my-4 lg:my-3 text-slate-500 flex items-center gap-2"><i
                                     class="fa-solid fa-location-dot"></i>Semarang
                             </p>
                             <div class="flex items-center gap-2">
@@ -172,22 +177,27 @@
                         </div>
                     </div>
                     <div class="box shadow w-full border border-slate-200 rounded p-4">
-                        <div class="up flex justify-between">
+                        <div class="up flex flex-col lg:flex-row lg:justify-between lg:gap-0 gap-4">
                             <div class="left">
                                 <div class="flex gap-2">
-                                    <img class="rounded w-12 h-12 shadow" src="{{ asset('images/logo-kolabora.png') }}"
+                                    <img class="rounded w-14 h-14 shadow" src="{{ asset('images/logo-kolabora.png') }}"
                                         alt="">
                                     <div class="">
-                                        <h3 class="text-md font-bold">Product Designer</h3>
-                                        <div class="flex gap-2">
-                                            <h5 class="text-sm text-slate-400">tokopedia</h5>
-                                            <p class="bg-orange-100 text-orange_normal text-xs px-2 py-[2px] rounded-full">
+                                        <h3 class="text-md font-bold mb-2 md:mb-1">Product Designer</h3>
+                                        <div class="grid grid-cols-2 md:grid-cols-4 gap-y-2 gap-x-2 md:gap-x-3 w-full">
+                                            <h5
+                                                class="bg-blue-100 text-primary text-center text-xs px-2 py-[2px] rounded-full">
+                                                tokopedia</h5>
+                                            <p
+                                                class="bg-orange-100 text-orange_normal text-center text-xs px-2 py-[2px] rounded-full">
                                                 Part Time</p>
-                                            <div class="flex items-center gap-1 text-sm text-slate-400">
+                                            <div
+                                                class="flex items-center justify-center gap-1 bg-yellow-100 text-yellow_dark text-xs px-2 py-[2px] rounded-full">
                                                 <i class="fa-solid fa-money-check"></i>
                                                 <p>$200 - $500</p>
                                             </div>
-                                            <div class="flex items-center gap-1 text-sm text-slate-400">
+                                            <div
+                                                class="flex items-center justify-center gap-1 bg-yellow-100 text-yellow_dark text-center text-xs px-2 py-[2px] rounded-full">
                                                 <i class="fa-solid fa-briefcase"></i>
                                                 <p>2 year</p>
                                             </div>
@@ -209,7 +219,7 @@
                                 voluptates. Accusamus hic adipisci obcaecati eius est fuga modi necessitatibus harum quasi
                                 voluptates, laborum cum eum soluta doloribus placeat omnis sint dolore ducimus esse earum
                                 vitae consequatur! Non harum maiores tempora perferendis.</p>
-                            <p class="text-sm my-2 text-slate-500 flex items-center gap-2"><i
+                            <p class="text-sm my-5 md:my-4 lg:my-3 text-slate-500 flex items-center gap-2"><i
                                     class="fa-solid fa-location-dot"></i>Semarang
                             </p>
                             <div class="flex items-center gap-2">
@@ -229,22 +239,27 @@
                         </div>
                     </div>
                     <div class="box shadow w-full border border-slate-200 rounded p-4">
-                        <div class="up flex justify-between">
+                        <div class="up flex flex-col lg:flex-row lg:justify-between lg:gap-0 gap-4">
                             <div class="left">
                                 <div class="flex gap-2">
-                                    <img class="rounded w-12 h-12 shadow" src="{{ asset('images/logo-kolabora.png') }}"
+                                    <img class="rounded w-14 h-14 shadow" src="{{ asset('images/logo-kolabora.png') }}"
                                         alt="">
                                     <div class="">
-                                        <h3 class="text-md font-bold">Product Designer</h3>
-                                        <div class="flex gap-2">
-                                            <h5 class="text-sm text-slate-400">tokopedia</h5>
-                                            <p class="bg-orange-100 text-orange_normal text-xs px-2 py-[2px] rounded-full">
+                                        <h3 class="text-md font-bold mb-2 md:mb-1">Product Designer</h3>
+                                        <div class="grid grid-cols-2 md:grid-cols-4 gap-y-2 gap-x-2 md:gap-x-3 w-full">
+                                            <h5
+                                                class="bg-blue-100 text-primary text-center text-xs px-2 py-[2px] rounded-full">
+                                                tokopedia</h5>
+                                            <p
+                                                class="bg-orange-100 text-orange_normal text-center text-xs px-2 py-[2px] rounded-full">
                                                 Part Time</p>
-                                            <div class="flex items-center gap-1 text-sm text-slate-400">
+                                            <div
+                                                class="flex items-center justify-center gap-1 bg-yellow-100 text-yellow_dark text-xs px-2 py-[2px] rounded-full">
                                                 <i class="fa-solid fa-money-check"></i>
                                                 <p>$200 - $500</p>
                                             </div>
-                                            <div class="flex items-center gap-1 text-sm text-slate-400">
+                                            <div
+                                                class="flex items-center justify-center gap-1 bg-yellow-100 text-yellow_dark text-center text-xs px-2 py-[2px] rounded-full">
                                                 <i class="fa-solid fa-briefcase"></i>
                                                 <p>2 year</p>
                                             </div>
@@ -266,7 +281,7 @@
                                 voluptates. Accusamus hic adipisci obcaecati eius est fuga modi necessitatibus harum quasi
                                 voluptates, laborum cum eum soluta doloribus placeat omnis sint dolore ducimus esse earum
                                 vitae consequatur! Non harum maiores tempora perferendis.</p>
-                            <p class="text-sm my-2 text-slate-500 flex items-center gap-2"><i
+                            <p class="text-sm my-5 md:my-4 lg:my-3 text-slate-500 flex items-center gap-2"><i
                                     class="fa-solid fa-location-dot"></i>Semarang
                             </p>
                             <div class="flex items-center gap-2">
@@ -286,22 +301,27 @@
                         </div>
                     </div>
                     <div class="box shadow w-full border border-slate-200 rounded p-4">
-                        <div class="up flex justify-between">
+                        <div class="up flex flex-col lg:flex-row lg:justify-between lg:gap-0 gap-4">
                             <div class="left">
                                 <div class="flex gap-2">
-                                    <img class="rounded w-12 h-12 shadow" src="{{ asset('images/logo-kolabora.png') }}"
+                                    <img class="rounded w-14 h-14 shadow" src="{{ asset('images/logo-kolabora.png') }}"
                                         alt="">
                                     <div class="">
-                                        <h3 class="text-md font-bold">Product Designer</h3>
-                                        <div class="flex gap-2">
-                                            <h5 class="text-sm text-slate-400">tokopedia</h5>
-                                            <p class="bg-orange-100 text-orange_normal text-xs px-2 py-[2px] rounded-full">
+                                        <h3 class="text-md font-bold mb-2 md:mb-1">Product Designer</h3>
+                                        <div class="grid grid-cols-2 md:grid-cols-4 gap-y-2 gap-x-2 md:gap-x-3 w-full">
+                                            <h5
+                                                class="bg-blue-100 text-primary text-center text-xs px-2 py-[2px] rounded-full">
+                                                tokopedia</h5>
+                                            <p
+                                                class="bg-orange-100 text-orange_normal text-center text-xs px-2 py-[2px] rounded-full">
                                                 Part Time</p>
-                                            <div class="flex items-center gap-1 text-sm text-slate-400">
+                                            <div
+                                                class="flex items-center justify-center gap-1 bg-yellow-100 text-yellow_dark text-xs px-2 py-[2px] rounded-full">
                                                 <i class="fa-solid fa-money-check"></i>
                                                 <p>$200 - $500</p>
                                             </div>
-                                            <div class="flex items-center gap-1 text-sm text-slate-400">
+                                            <div
+                                                class="flex items-center justify-center gap-1 bg-yellow-100 text-yellow_dark text-center text-xs px-2 py-[2px] rounded-full">
                                                 <i class="fa-solid fa-briefcase"></i>
                                                 <p>2 year</p>
                                             </div>
@@ -323,7 +343,7 @@
                                 voluptates. Accusamus hic adipisci obcaecati eius est fuga modi necessitatibus harum quasi
                                 voluptates, laborum cum eum soluta doloribus placeat omnis sint dolore ducimus esse earum
                                 vitae consequatur! Non harum maiores tempora perferendis.</p>
-                            <p class="text-sm my-2 text-slate-500 flex items-center gap-2"><i
+                            <p class="text-sm my-5 md:my-4 lg:my-3 text-slate-500 flex items-center gap-2"><i
                                     class="fa-solid fa-location-dot"></i>Semarang
                             </p>
                             <div class="flex items-center gap-2">
@@ -343,22 +363,27 @@
                         </div>
                     </div>
                     <div class="box shadow w-full border border-slate-200 rounded p-4">
-                        <div class="up flex justify-between">
+                        <div class="up flex flex-col lg:flex-row lg:justify-between lg:gap-0 gap-4">
                             <div class="left">
                                 <div class="flex gap-2">
-                                    <img class="rounded w-12 h-12 shadow" src="{{ asset('images/logo-kolabora.png') }}"
+                                    <img class="rounded w-14 h-14 shadow" src="{{ asset('images/logo-kolabora.png') }}"
                                         alt="">
                                     <div class="">
-                                        <h3 class="text-md font-bold">Product Designer</h3>
-                                        <div class="flex gap-2">
-                                            <h5 class="text-sm text-slate-400">tokopedia</h5>
-                                            <p class="bg-orange-100 text-orange_normal text-xs px-2 py-[2px] rounded-full">
+                                        <h3 class="text-md font-bold mb-2 md:mb-1">Product Designer</h3>
+                                        <div class="grid grid-cols-2 md:grid-cols-4 gap-y-2 gap-x-2 md:gap-x-3 w-full">
+                                            <h5
+                                                class="bg-blue-100 text-primary text-center text-xs px-2 py-[2px] rounded-full">
+                                                tokopedia</h5>
+                                            <p
+                                                class="bg-orange-100 text-orange_normal text-center text-xs px-2 py-[2px] rounded-full">
                                                 Part Time</p>
-                                            <div class="flex items-center gap-1 text-sm text-slate-400">
+                                            <div
+                                                class="flex items-center justify-center gap-1 bg-yellow-100 text-yellow_dark text-xs px-2 py-[2px] rounded-full">
                                                 <i class="fa-solid fa-money-check"></i>
                                                 <p>$200 - $500</p>
                                             </div>
-                                            <div class="flex items-center gap-1 text-sm text-slate-400">
+                                            <div
+                                                class="flex items-center justify-center gap-1 bg-yellow-100 text-yellow_dark text-center text-xs px-2 py-[2px] rounded-full">
                                                 <i class="fa-solid fa-briefcase"></i>
                                                 <p>2 year</p>
                                             </div>
@@ -380,7 +405,7 @@
                                 voluptates. Accusamus hic adipisci obcaecati eius est fuga modi necessitatibus harum quasi
                                 voluptates, laborum cum eum soluta doloribus placeat omnis sint dolore ducimus esse earum
                                 vitae consequatur! Non harum maiores tempora perferendis.</p>
-                            <p class="text-sm my-2 text-slate-500 flex items-center gap-2"><i
+                            <p class="text-sm my-5 md:my-4 lg:my-3 text-slate-500 flex items-center gap-2"><i
                                     class="fa-solid fa-location-dot"></i>Semarang
                             </p>
                             <div class="flex items-center gap-2">

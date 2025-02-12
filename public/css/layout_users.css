@@ -1,3 +1,11 @@
+.active-menu {
+    background: linear-gradient(to right, #38bdf8, #2563eb);
+    color: transparent;
+    background-clip: text;
+    display: inline-block;
+    font-weight: 600;
+}
+
 .dropdown {
     position: relative;
     display: inline-block;
@@ -5,8 +13,6 @@
 
 .dropdown-content {
     display: none;
-    left: -10px;
-    bottom: -90px;
     min-width: 100px;
 }
 

@@ -19,41 +19,53 @@
 
 <body class="font-primary">
     <header>
-        <nav class="navbar flex items-center justify-between px-[5%] py-4 lg:px-[3%] shadow-sm">
+        <nav class="navbar flex items-center justify-between px-[5%] py-4 lg:px-[3%] shadow-sm relative">
             <div class="logo flex items-center">
                 <img class="w-12" src="{{ asset('images/logo/kolabora-transparent.png') }}" alt="">
                 <h1 class="text-2xl font-bold text-orange-300">Kola<span class="text-primary">Bora</span></h1>
             </div>
-            <div class="nav-list flex items-center gap-5">
-                <a href=""
-                    class="nav-link inline-block text-transparent bg-clip-text font-semibold bg-gradient-to-r from-sky_light to-primary">Find
+            <div class="absolute top-full left-[-100%] w-full min-h-[100vh] bg-slate-100/60 gap-5 backdrop-blur-sm lg:backdrop-blur-none flex flex-col lg:flex-row items-center justify-center duration-300 z-50 overflow-hidden lg:static lg:min-h-fit lg:bg-transparent lg:w-auto"
+                id="navbar-nav">
+                <a href="" class="nav-link active-menu">Find
                     Job</a>
                 <a href="" class="nav-link">Message</a>
                 <a href="" class="nav-link">Hiring</a>
                 <a href="" class="nav-link">Community</a>
                 <a href="" class="nav-link">FAQ</a>
             </div>
-            <div class="nav-profie flex items-center gap-2">
+            <div class="nav-profie flex items-center gap-7">
                 <div class="flex items-center gap-4">
                     <div class="dropdown">
                         <img onclick="dropDownMenu()" class="dropbtn w-11 cursor-pointer rounded-full"
                             src="{{ asset('images/logo-kolabora.png') }}" alt="">
-                        <div id="myDropdown" class="dropdown-content bg-white shadow text-sm absolute z-10 ">
+                        <div id="myDropdown"
+                            class="dropdown-content bg-white shadow text-sm absolute z-10 -left-[25px] -bottom-[125px] md:-left-[10px] md:-bottom-[90px]">
                             <div
+                                class="flex items-center md:hidden text-slate-500 gap-2 p-2 hover:bg-gradient-to-r from-sky_light to-primary hover:text-white">
+                                <P class="block decoration-transparent">
+                                    @if ($name = auth()->user()->name)
+                                        <p>{{ $name }}</p>
+                                    @endif
+                                </P>
+                            </div>
+                            <a href="{{ route('logout') }}"
                                 class="flex items-center gap-2 p-2 text-slate-500 hover:bg-gradient-to-r from-sky_light to-primary hover:text-white">
                                 <i class="fa-solid fa-user"></i>
-                                <a class="block decoration-transparent" href="{{ route('logout') }}">Profile</a>
-                            </div>
-                            <div
+                                <p class="block decoration-transparent">Profile</p>
+                            </a>
+                            <a href="{{ route('logout') }}"
                                 class="flex items-center text-slate-500 gap-2 p-2 hover:bg-gradient-to-r from-sky_light to-primary hover:text-white">
                                 <i class="fa-solid fa-right-from-bracket"></i>
-                                <a class="block decoration-transparent" href="{{ route('logout') }}">Logout</a>
-                            </div>
+                                <p class="block decoration-transparent">Logout</p>
+                            </a>
                         </div>
                     </div>
                     @if ($name = auth()->user()->name)
-                        <p>{{ $name }}</p>
+                        <p class="lg:inline-block hidden">{{ $name }}</p>
                     @endif
+                </div>
+                <div class="text-lg cursor-pointer z-50 lg:hidden">
+                    <i class="fa-solid fa-bars-staggered" id="hamburger"></i>
                 </div>
             </div>
         </nav>
@@ -87,12 +99,16 @@
                 </div>
                 <div class="flex flex-col gap-1 text-[15px] mt-2">
                     <a href=""
-                        class="pemalinks-footer inline-block text-transparent bg-clip-text font-semibold bg-gradient-to-r from-sky_light to-primary hover:translate-x-1 transition-all">Find
+                        class="pemalinks-footer hover:opacity-60 active-menu hover:translate-x-1 transition-all">Find
                         Job</a>
-                    <a href="" class="pemalinks-footer hover:translate-x-1 transition-all">Message</a>
-                    <a href="" class="pemalinks-footer hover:translate-x-1 transition-all">Hiring</a>
-                    <a href="" class="pemalinks-footer hover:translate-x-1 transition-all">Community</a>
-                    <a href="" class="pemalinks-footer hover:translate-x-1 transition-all">FAQ</a>
+                    <a href=""
+                        class="pemalinks-footer hover:opacity-60 hover:translate-x-1 transition-all">Message</a>
+                    <a href=""
+                        class="pemalinks-footer hover:opacity-60 hover:translate-x-1 transition-all">Hiring</a>
+                    <a href=""
+                        class="pemalinks-footer hover:opacity-60 hover:translate-x-1 transition-all">Community</a>
+                    <a href=""
+                        class="pemalinks-footer hover:opacity-60 hover:translate-x-1 transition-all">FAQ</a>
                 </div>
             </div>
             <div class="social_media">
@@ -108,7 +124,8 @@
                             class="flex items-center w-[34px] h-[34px] rounded justify-center bg-gradient-to-r from-sky_light to-primary text-white text-lg">
                             <i class="fa-brands fa-instagram"></i>
                         </div>
-                        <a href="{{ url('www.youtube.com') }}" class="pemalinks-footer">kolabora</a>
+                        <a href="{{ url('www.youtube.com') }}"
+                            class="social-footer hover:text-orange_normal">kolabora</a>
                     </div>
                     <div class="flex items-center gap-2">
                         <div
@@ -116,21 +133,23 @@
                             <i class="fa-regular fa-envelope"></i>
                         </div>
                         <a href="{{ url('mailto:juliantorizky01@gmail.com') }}"
-                            class="pemalinks-footer">kolabora@gmail.com</a>
+                            class="social-footer hover:text-orange_normal">kolabora@gmail.com</a>
                     </div>
                     <div class="flex items-center gap-2">
                         <div
                             class="flex items-center w-[34px] h-[34px] rounded justify-center bg-gradient-to-r from-sky_light to-primary text-white text-[16px]">
                             <i class="fa-solid fa-phone"></i>
                         </div>
-                        <a href="{{ url('www.youtube.com') }}" class="pemalinks-footer">(0281) 5161 1234</a>
+                        <a href="{{ url('www.youtube.com') }}" class="social-footer hover:text-orange_normal">(0281)
+                            5161 1234</a>
                     </div>
                     <div class="flex items-center gap-2">
                         <div
                             class="flex items-center w-[34px] h-[34px] rounded justify-center bg-gradient-to-r from-sky_light to-primary text-white text-lg">
                             <i class="fa-brands fa-facebook-f"></i>
                         </div>
-                        <a href="{{ url('www.youtube.com') }}" class="pemalinks-footer">kolabora</a>
+                        <a href="{{ url('www.youtube.com') }}"
+                            class="social-footer hover:text-orange_normal">kolabora</a>
                     </div>
                 </div>
             </div>
