@@ -23,3 +23,7 @@ Route::middleware(['AuthIsLogin'])->group(function() {
 Route::fallback(function () {
     return view('errors.404');
 });
+
+Route::get('/layout_1', function () {
+    return view('template/layout_1') ;
+});
