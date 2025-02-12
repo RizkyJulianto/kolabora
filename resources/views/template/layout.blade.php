@@ -188,14 +188,6 @@
     <script src="{{ asset('library/swiper/swiper-bundle.min.js') }}"></script>
     <script src="{{ asset('js/layout_users.js') }}"></script>
 
-    <script>
-        history.pushState(null, null, `{{ route('logout') }}`);
-        window.addEventListener('popstate', function() {
-            history.pushState(null, null, `{{ route('logout') }}`);
-        });
-    </script>
-
-
     @if (session('success'))
         <script>
             Swal.fire({
