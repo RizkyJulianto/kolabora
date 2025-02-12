@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
     <title>Kolabora</title>
     <link rel="shortcut icon" href="{{ asset('images/logo/kolabora.ico') }}" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -55,11 +58,13 @@
                                 <i class="fa-solid fa-user"></i>
                                 <p class="block decoration-transparent">Profile</p>
                             </a>
-                            <a href="{{ route('logout') }}"
-                                class="flex items-center text-slate-500 gap-2 p-2 hover:bg-gradient-to-r from-sky_light to-primary hover:text-white">
-                                <i class="fa-solid fa-right-from-bracket"></i>
-                                <p class="block decoration-transparent">Logout</p>
-                            </a>
+                            @auth()
+                                <a href="{{ route('logout') }}"
+                                    class="flex items-center text-slate-500 gap-2 p-2 hover:bg-gradient-to-r from-sky_light to-primary hover:text-white">
+                                    <i class="fa-solid fa-right-from-bracket"></i>
+                                    <p class="block decoration-transparent">Logout</p>
+                                </a>
+                            @endauth
                         </div>
                     </div>
                     @if ($name = auth()->user()->name)
@@ -182,6 +187,14 @@
     <script src="{{ asset('library/sweetalert/sweetalert2.min.js') }}"></script>
     <script src="{{ asset('library/swiper/swiper-bundle.min.js') }}"></script>
     <script src="{{ asset('js/layout_users.js') }}"></script>
+
+    <script>
+        history.pushState(null, null, `{{ route('logout') }}`);
+        window.addEventListener('popstate', function() {
+            history.pushState(null, null, `{{ route('logout') }}`);
+        });
+    </script>
+
 
     @if (session('success'))
         <script>

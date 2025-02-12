@@ -16,7 +16,7 @@ Route::prefix('auth')->group(function() {
     Route::get('logout', [AuthController::class, 'logout'])->name('logout');
 });
 
-Route::middleware(['AuthIsLogin'])->group(function() {
+Route::middleware(['AuthIsLogin', 'PreventBackLogout'])->group(function() {
     Route::get('/main-users', [UsersController::class, 'index']);
     Route::get('/profile/{id}', [UsersController::class, 'show'])->name('profile.show');
     Route::post('/profile/{id}', [UsersController::class, 'updatedData'])->name('updatedData');

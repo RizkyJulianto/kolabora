@@ -94,6 +94,7 @@ class AuthController extends Controller
     public function logout()
     {
         Auth::logout();
+        Session::flush();
         Session::flash('success', 'Logout successfully');
         return redirect('auth/login');
     }
