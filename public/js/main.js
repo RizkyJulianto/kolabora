@@ -26,16 +26,21 @@ var swiper = new Swiper(".mySwiper", {
 
 
 // Responsive Navbar
-const navLinks = document.getElementById('navLinks');
-const hambugerMenu = document.getElementById('hamburger-menu');
-const closeMenu = document.getElementById('close');
+const navigation = document.getElementById('navigation');
+const navLinks = document.querySelectorAll('.nav-links');
+const hamburger = document.querySelector('#hamburger');
 
 
-hambugerMenu.addEventListener('click', function() {
-    navLinks.style.right = '0px';
-}); 
+hamburger.addEventListener('click', function() {
+    hamburger.classList.toggle('hamburger-active');
+    navigation.classList.toggle('nav-active');
+});
 
-closeMenu.addEventListener('click', function() {
-    navLinks.style.right = '-250px';
-}); 
+navLinks.forEach(anchor => {
+    anchor.addEventListener('click', function() {
+        navigation.classList.remove('nav-active');
+        hamburger.classList.remove('hamburger-active');
+    });
+});
+
 

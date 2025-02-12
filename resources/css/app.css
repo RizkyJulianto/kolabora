@@ -3,4 +3,16 @@
 @tailwind utilities;
 @source "../views";
 
+.nav-active {
+    @apply opacity-100;
+}
 
+.hamburger-active > span:nth-child(1){
+    @apply rotate-45;
+}   
+.hamburger-active > span:nth-child(2){
+    @apply scale-0;
+}   
+.hamburger-active > span:nth-child(3){
+    @apply -rotate-45;
+}   

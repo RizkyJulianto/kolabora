@@ -34,7 +34,7 @@
         </div>
         <div class="goals-col-right h-full">
             <div class="goals-img">
-                <img src="images/goals-img.png" alt="" >
+                <img src="{{ asset('images/goals-img.png')}}" alt="" >
             </div>
         </div>
     </div>

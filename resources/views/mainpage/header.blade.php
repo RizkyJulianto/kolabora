@@ -3,49 +3,56 @@
 <div class="navigation w-full py-5 fixed top-0 left-0 right-0 z-50 px-3 md:px-6 lg:px-0">
     <nav class="container mx-auto flex justify-between px-6 py-4 bg-gray-300 rounded-full bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-20 border border-gray-300 shadow-3xl">
         <div class="header-logo flex items-center gap-x-1">
-            <img src="images/logo-kolabora.png" alt="" class="md:w-12 md:h-12 w-10 h-10">
+            <img src="{{asset('images/logo-kolabora.png')}}" alt="" class="md:w-12 md:h-12 w-10 h-10">
             <div class="header-logo-text">
                 <a href="" class="text-xl md:text-2xl font-bold text-orange-300 cursor-pointer">Kola<span class="text-blue-600">Bora</span></a>
             </div>
         </div>
         
 
-            <ul class="nav-links  gap-x-3 items-start lg:items-center flex flex-col lg:flex-row absolute lg:static md:mt-[20%] mt-[50%] lg:mt-0 gap-y-2 bg-white lg:bg-transparent rounded-md border lg:border-none
-             border-gray-300 shadow-md lg:shadow-none py-5 pr-16 pl-4 lg:pl-0 lg:pr-0 lg:py-0 -right-[250px] transition-all duration-500" id="navLinks">
-                <!-- btn close -->
-               <li class="relative w-full bg-red-500 flex justify-center items-center lg:hidden"><i class="ph ph-x absolute left-[118px] -top-2 text-2xl font-bold" id="close"></i></li>
-               <li><a href="#beranda" class="hover:text-gray-700 duration-300">Beranda</a></li>
-               <li><a href="#tentang" class="hover:text-gray-700 duration-300">Tentang</a></li>
-               <li><a href="#keunggulan" class="hover:text-gray-700 duration-300">Keunggulan</a></li>
-               <li><a href="#carakerja" class="hover:text-gray-700 duration-300">Cara Kerja</a></li>
-               <li><a href="#testimoni" class="hover:text-gray-700 duration-300">Testimoni</a></li>
-               <li><a href="#faq" class="hover:text-gray-700 duration-300">FAQ</a></li>
-               
+            <ul class="nav-container-links gap-x-3 items-start lg:items-center flex flex-col lg:flex-row absolute lg:relative md:mt-[13%] mt-[20%] lg:mt-0 gap-y-2 bg-white lg:bg-transparent rounded-md border lg:border-none
+             border-gray-300 shadow-md lg:shadow-none w-full lg:w-auto  py-4 px-4 lg:py-0 lg:px-0 left-0 opacity-0 lg:opacity-100   transition-all duration-700" id="navigation">
+               <li class="w-full lg:w-fit"><a href="#beranda" class="nav-links hover:text-gray-700 w-full lg:w-fit inline-block py-3 lg:py-0 duration-300  text-lg lg:text-base border-b-2 border-gray-200 lg:border-none">Beranda</a></li>
+               <li class="w-full lg:w-fit"><a href="#tentang" class="nav-links hover:text-gray-700 w-full lg:w-fit inline-block py-3 lg:py-0 duration-300  text-lg lg:text-base border-b-2 border-gray-200 lg:border-none">Tentang</a></li>
+               <li class="w-full lg:w-fit"><a href="#keunggulan" class="nav-links hover:text-gray-700 w-full lg:w-fit inline-block py-3 lg:py-0 duration-300  text-lg lg:text-base border-b-2 border-gray-200 lg:border-none">Keunggulan</a></li>
+               <li class="w-full lg:w-fit"><a href="#carakerja" class="nav-links hover:text-gray-700 w-full lg:w-fit inline-block py-3 lg:py-0 duration-300  text-lg lg:text-base border-b-2 border-gray-200 lg:border-none">Cara Kerja</a></li>
+               <li class="w-full lg:w-fit"><a href="#testimoni" class="nav-links hover:text-gray-700 w-full lg:w-fit inline-block py-3 lg:py-0 duration-300  text-lg lg:text-base border-b-2 border-gray-200 lg:border-none">Testimoni</a></li>
+               <li class="w-full lg:w-fit"><a href="#faq" class="nav-links hover:text-gray-700 w-full lg:w-fit inline-block py-3 lg:py-0 duration-300  text-lg lg:text-base border-b-2 border-gray-200 lg:border-none">FAQ</a></li>
+               <div class="btn-login w-full lg:hidden">
+                    <a href="{{url('auth/login')}}" class=" bg-gradient-to-r from-orange-400 to-orange_normal py-2 px-4 rounded-md text-white font-semibold w-full text-center lg:w-fit inline-block">Sign In</a>
+                </div>
+                <div class="btn-signup w-full lg:hidden">
+                    <a href="{{url('auth/registrasi')}}" class="font-semibold rounded-md  bg-gradient-to-r from-sky_light to-primary py-2 px-4 text-white hover:bg-blue-800 duration-300  w-full text-center inline-block">Sign Up</a>
+                </div>
             </ul>
             <div class="btn-right items-center gap-x-3 flex">
                 <div class="btn-login">
-                    <a href="{{url('auth/login')}}" class="hidden md:flex">Login</a>
+                    <a href="{{url('auth/login')}}" class="hidden md:flex font-semibold">Sign In</a>
                 </div>
                 <div class="btn-signup">
-                    <a href="{{url('auth/registrasi')}}" class="font-semibold rounded-full inline-block bg-gradient-to-r from-sky_light to-primary py-2 px-4 text-white hover:bg-blue-800 duration-300 hidden md:flex">Sign Up</a>
+                    <a href="{{url('auth/registrasi')}}" class="font-semibold rounded-full md:inline-block bg-gradient-to-r from-sky_light to-primary py-2 px-4 text-white hover:bg-blue-800 duration-300 hidden">Sign Up</a>
                 </div>
-                <div class="hamburger-menu flex lg:hidden">
-            <i class="ph ph-list text-4xl" id="hamburger-menu"></i>
-            </div>
+                <div class="button-hamburger relative flex items-center lg:hidden">
+                    <button id="hamburger" name="hamburger" type="button" class="block">
+                        <span class="hamburger-bar bg-black block w-[30px] h-[2px] my-2 rounded-md origin-top-left transiton-all duration-500"></span>
+                        <span class="hamburger-bar bg-black block w-[30px] h-[2px] my-2 rounded-md transition-all duration-500"></span>
+                        <span class="hamburger-bar bg-black block w-[30px] h-[2px] my-2 rounded-md origin-bottom-left transiton-all duration-500"></span>
+                    </button>
+                </div>
             </div>
         </nav>
     </div>
     <div class="illustration-img absolute z-10 lg:top-[25%] md:top-[27%]  md:right-[5%] top-[21%] right-[5%]   rotate-[10deg] bg-white rounded-xl shadow-xl">
-            <img src="/images/work.png" alt="" class="lg:w-40 lg:h-32 md:w-24 md:h-24 w-20 h-20 object-contain " >
+            <img src="{{ asset ('/images/work.png')}}" alt="" class="lg:w-40 lg:h-32 md:w-24 md:h-24 w-20 h-20 object-contain " >
     </div>
-    <div class="illustration-img absolute z-10 lg:top-[60%] top-[70%] lg:right-[5%] md:right-[8%] right-[5%] bg-white rounded-xl shadow-xl rotate-[10deg]">
-            <img src="/images/goals.png" alt="" class="lg:w-36 lg:h-32 md:w-24 md:h-24 w-20 h-20 object-contain " >
+    <div class="illustration-img absolute z-10 lg:top-[60%] top-[70%] md:top-[68%] lg:right-[5%] md:right-[8%] right-[5%] bg-white rounded-xl shadow-xl rotate-[10deg]">
+            <img src="{{ asset ('/images/goals.png')}}" alt="" class="lg:w-36 lg:h-32 md:w-24 md:h-24 w-20 h-20 object-contain " >
     </div>
-    <div class="illustration-img absolute z-10 md:top-[64%] top-[70%] left-[4%] bg-white rounded-xl shadow-xl -rotate-[10deg]">
-            <img src="/images/Portfolio.png" alt="" class="lg:w-40 lg:h-32 md:w-24 md:h-24 w-20 h-20 object-contain " >
+    <div class="illustration-img absolute z-10 md:top-[60%] top-[70%] left-[4%] bg-white rounded-xl shadow-xl -rotate-[10deg]">
+            <img src="{{ asset ('/images/Portfolio.png')}}" alt="" class="lg:w-40 lg:h-32 md:w-24 md:h-24 w-20 h-20 object-contain " >
     </div>
     <div class="illustration-img absolute z-10 md:top-[27%] top-[22%] left-[4%] bg-white rounded-xl shadow-xl -rotate-[10deg]">
-            <img src="/images/chart.png" alt="" class="lg:w-40 lg:h-32 md:w-24 md:h-24 w-20 h-20 object-contain " >
+            <img src="{{ asset ('/images/chart.png')}}" alt="" class="lg:w-40 lg:h-32 md:w-24 md:h-24 w-20 h-20 object-contain " >
     </div>
     <div class="relative textbox-container flex w-full h-full justify-center z-10 py-16 lg:top-[20%] md:top-[24%] top-[21%]">
         <div class="textbox-content">

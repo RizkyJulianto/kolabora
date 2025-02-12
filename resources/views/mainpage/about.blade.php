@@ -9,26 +9,41 @@
             mendukung ekosistem kerja yang lebih inklusif dan produktif.</p>
         </div>
     
-        <!-- <div class="about-container-card w-full flex flex-col lg:flex-row flex-wrap mt-10 gap-x-6 gap-y-4 justify-center">
-            <div class="about-card flex gap-x-6 bg-gradient-to-r from-sky_light to-primary basis-[47%] text-white items-center py-4 px-6 rounded-xl shadow-md">
-                <div class="about-card-icon border-white border-r-4 h-[150%] flex items-center">
-                <i class="ph ph-share-network text-7xl pr-7"></i>
+        <div class="about-container-card w-full flex flex-col lg:flex-row flex-wrap mt-10 gap-x-6 gap-y-4 justify-center">
+            <div class="about-card flex flex-col gap-y-3 md:flex-row gap-x-6 bg-gradient-to-r from-sky_light to-primary basis-[47%] text-white items-center py-4 px-6 rounded-xl shadow-md">
+                <div class="about-card-icon flex items-center  gap-x-3 md:pr-7 md:border-white md:border-r-4 md:h-[150%]">
+                <i class="ph ph-share-network md:text-7xl text-6xl"></i>
+                <div class="about-card-title md:hidden">
+                        <h3 class="font-bold text-[19px]">Peluang Kolaborasi</h3>
+                    </div>
                 </div>
+                <div class="bg-white md:hidden w-[100%] h-1"></div>
+
+                <!-- Card 1 For Medium viewport -->
                 <div class="about-card-text flex flex-col gap-y-2">
-                    <div class="about-card-title">
+                    <div class="about-card-title hidden md:block">
                         <h3 class="font-bold text-2xl">Peluang Kolaborasi</h3>
                     </div>
                     <div class="about-card-description">
                         <p class="text-justify">Temukan proyek berbasis tim di berbagai bidang, mulai dari teknologi, desain, hingga bisnis. Bangun jaringan profesional dan tingkatkan pengalaman kerja dalam lingkungan yang mendukung.</p>
                     </div>
                 </div>
+                
             </div>
-            <div class="about-card flex gap-x-6  bg-gradient-to-r from-orange-400 to-orange_normal  basis-[47%] text-white items-center py-4 px-6 rounded-xl">
-                <div class="about-card-icon border-white border-r-4 h-[150%] flex items-center">
-                <i class="ph ph-crown text-7xl pr-7"></i>
+
+            <div class="about-card flex flex-col md:flex-row gap-x-6 gap-y-3  bg-gradient-to-r from-orange-400 to-orange_normal  basis-[47%] text-white items-center py-4 px-6 rounded-xl">
+                <div class="about-card-icon gap-x-3 md:pr-7 md:border-white md:border-r-4 md:h-[150%] flex items-center ">
+                <i class="ph ph-crown md:text-7xl text-[53px]"></i>
+                <div class="about-card-title md:hidden">
+                        <h3 class="font-bold text-lg">Reward dari Kontribusi</h3>
+                    </div>
                 </div>
+
+                <div class="bg-white md:hidden w-[100%] h-1"></div>
+
+                <!-- Card 2 For Medium Viewport -->
                 <div class="about-card-text flex flex-col gap-y-2">
-                    <div class="about-card-title">
+                    <div class="about-card-title hidden md:block">
                         <h3 class="font-bold text-2xl">Reward dari Kontribusi</h3>
                     </div>
                     <div class="about-card-description">
@@ -36,12 +51,21 @@
                     </div>
                 </div>
             </div>
-            <div class="about-card flex gap-x-6  bg-gradient-to-r from-orange-400 to-orange_normal  basis-[47%] text-white items-center py-4 px-6 rounded-xl">
-                <div class="about-card-icon border-white border-r-4 h-[150%] flex items-center">
-                <i class="ph ph-map-pin-area text-7xl pr-7"></i>
+
+
+            <div class="about-card flex flex-col md:flex-row gap-x-6 gap-y-3 bg-gradient-to-r from-orange-400 to-orange_normal  basis-[47%] text-white items-center py-4 px-6 rounded-xl">
+                <div class="about-card-icon gap-x-2 md:pr-7 md:border-white md:border-r-4 md:h-[150%] flex items-center">
+                <i class="ph ph-map-pin-area md:text-7xl text-[53px]"></i>
+                <div class="about-card-title md:hidden">
+                        <h3 class="font-bold text-lg">Dukungan Ekonomi Lokal</h3>
+                    </div>
                 </div>
+
+                <div class="bg-white md:hidden w-[100%] h-1"></div>
+
+                <!-- Card 3 For Medium Viewport -->
                 <div class="about-card-text flex flex-col gap-y-2">
-                    <div class="about-card-title">
+                    <div class="about-card-title hidden md:block">
                         <h3 class="font-bold text-2xl">Dukungan Ekonomi Lokal</h3>
                     </div>
                     <div class="about-card-description">
@@ -49,12 +73,19 @@
                     </div>
                 </div>
             </div>
-            <div class="about-card flex gap-x-6 bg-gradient-to-r from-sky_light to-primary basis-[47%] text-white items-center py-4 px-6 rounded-xl">
-                <div class="about-card-icon border-white border-r-4 h-[150%] flex items-center">
-                <i class="ph ph-rocket-launch text-7xl pr-7"></i>
+
+            <div class="about-card flex flex-col md:flex-row gap-x-6 gap-y-3 bg-gradient-to-r from-sky_light to-primary basis-[47%] text-white items-center py-4 px-6 rounded-xl">
+                <div class="about-card-icon md:pr-7 md:border-white md:border-r-4 md:h-[150%] gap-x-3 flex items-center">
+                <i class="ph ph-rocket-launch md:text-7xl text-[53px]"></i>
+                <div class="about-card-title md:hidden">
+                        <h3 class="font-bold text-lg">Pengembangan Skill </h3>
+                    </div>
                 </div>
+                <div class="bg-white md:hidden w-[100%] h-1"></div>
+
+                <!-- Card 4 For Medium Viewport -->
                 <div class="about-card-text flex flex-col gap-y-2">
-                    <div class="about-card-title">
+                    <div class="about-card-title hidden md:block">
                         <h3 class="font-bold text-2xl">Pengembangan Skill </h3>
                     </div>
                     <div class="about-card-description">
@@ -62,6 +93,6 @@
                     </div>
                 </div>
             </div>
-        </div> -->
+        </div>
     </div>
 </section>
