@@ -1,10 +1,10 @@
-<section class="how-works w-full px-14 mx-auto mb-32 scroll-mt-24" id="carakerja">
+<section class="how-works w-full px-5 md:px-14 mx-auto mb-32 scroll-mt-24" id="carakerja">
     <div class="how-works-container flex flex-col gap-y-4 w-full items-center">
             <div class="how-works-tagline">
-                <h3 class="mt-5 font-semibold text-lg bg-gray-100 rounded-full py-3 px-8 shadow-md">🛠️ Cara Menggunakan Kolabora</h3>
+                <h3 class="text-center md:text-left mt-5 font-semibold text-base md:text-lg bg-gray-100 rounded-full py-3  px-5 shadow-md">🛠️ Cara Menggunakan Kolabora</h3>
             </div>
-            <div class="how-works-description max-w-[80%]">
-            <p class="text-center font-light lg:text-2xl text-xl">Kolabora memudahkan Anda untuk menemukan proyek, berkontribusi, dan mendapatkan reward. Ikuti langkah-langkah berikut untuk mulai berkolaborasi!</p>
+            <div class="how-works-description  md:max-w-[80%]">
+            <p class="text-center font-light lg:text-2xl md:text-xl text-lg">Kolabora memudahkan Anda untuk menemukan proyek, berkontribusi, dan mendapatkan reward. Ikuti langkah-langkah berikut untuk mulai berkolaborasi!</p>
         </div>
     
         <div class="relative how-works-container-card w-full flex-row flex-wrap mt-10 gap-x-6 gap-y-4 justify-center">

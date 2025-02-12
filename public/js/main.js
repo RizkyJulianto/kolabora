@@ -27,10 +27,15 @@ var swiper = new Swiper(".mySwiper", {
 
 // Responsive Navbar
 const navLinks = document.getElementById('navLinks');
-function showMenu() {
-    navLinks.style.right = '0px';
-}
+const hambugerMenu = document.getElementById('hamburger-menu');
+const closeMenu = document.getElementById('close');
 
-function hideMenu() {
+
+hambugerMenu.addEventListener('click', function() {
+    navLinks.style.right = '0px';
+}); 
+
+closeMenu.addEventListener('click', function() {
     navLinks.style.right = '-250px';
-}
+}); 
+

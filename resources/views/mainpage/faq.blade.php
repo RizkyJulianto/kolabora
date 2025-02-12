@@ -1,10 +1,10 @@
-<section class="testimoni w-full px-14 mx-auto mb-40 scroll-mt-24" id="faq">
+<section class="testimoni w-full px-5 md:px-14 mx-auto mb-40 scroll-mt-24" id="faq">
     <div class="testimoni-container flex flex-col gap-y-4 w-full items-center">
             <div class="testimoni-tagline">
-                <h3 class="mt-5 font-semibold text-lg bg-gray-100 rounded-full py-3 px-8 shadow-md">🎯 Pertanyaan yang Sering Diajukan</h3>
+                <h3 class="mt-5 font-semibold text-base md:text-lg bg-gray-100 rounded-full py-3 px-5 text-center md:text-left shadow-md">🎯 Pertanyaan yang Sering Diajukan</h3>
             </div>
-            <div class="testimoni-description max-w-[90%]">
-            <p class="text-center font-light lg:text-2xl text-xl">Ada pertanyaan tentang Kolabora? Berikut beberapa pertanyaan umum yang mungkin bisa membantu Anda memahami cara kerja, fitur, dan manfaat dari platform ini.</p>
+            <div class="testimoni-description md:max-w-[90%] ">
+            <p class="text-center font-light lg:text-2xl md:text-xl text-lg">Ada pertanyaan tentang Kolabora? Berikut beberapa pertanyaan umum yang mungkin bisa membantu Anda memahami cara kerja, fitur, dan manfaat dari platform ini.</p>
         </div>
     
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-y-5 gap-x-8 py-12">

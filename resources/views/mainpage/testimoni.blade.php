@@ -1,10 +1,10 @@
-<section class="testimoni w-full px-14 mx-auto mb-32 scroll-mt-24" id="testimoni">
+<section class="testimoni w-full px-5 md:px-14 mx-auto mb-32 scroll-mt-24" id="testimoni">
     <div class="testimoni-container flex flex-col gap-y-4 w-full items-center">
             <div class="testimoni-tagline">
-                <h3 class="mt-5 font-semibold text-lg bg-gray-100 rounded-full py-3 px-8 shadow-md">🌟 Apa Kata Mereka Tentang Kolabora</h3>
+                <h3 class="mt-5 font-semibold md:text-lg text-base bg-gray-100 rounded-full py-3 px-5 text-center md:text-left shadow-md">🌟 Apa Kata Mereka Tentang Kolabora</h3>
             </div>
-            <div class="testimoni-description max-w-[80%]">
-            <p class="text-center font-light lg:text-2xl text-xl">Kolabora telah membantu ribuan profesional dan tim untuk menemukan peluang kerja dan berkolaborasi lebih efektif. Ini pengalaman mereka!</p>
+            <div class="testimoni-description md:max-w-[80%]">
+            <p class="text-center font-light lg:text-2xl md:text-xl text-lg">Kolabora telah membantu ribuan profesional dan tim untuk menemukan peluang kerja dan berkolaborasi lebih efektif. Ini pengalaman mereka!</p>
         </div>
     
         <div class="relative testimoni-container-section w-full flex  swiper mySwiper items-center py-4">
