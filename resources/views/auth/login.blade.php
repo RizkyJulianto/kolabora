@@ -74,11 +74,11 @@
     <script src="{{ asset('js/auth.js') }}"></script>
 
     <script>
-        history.pushState(null, null, `{{ route('logout') }}`);
-        window.addEventListener('popstate', function() {
-            history.pushState(null, null, `{{ route('logout') }}`);
-        });
+        if (window.history.replaceState) {
+            window.history.replaceState(null, null, window.location.href);
+        }
     </script>
+
 
     @if (session('success'))
         <script>
