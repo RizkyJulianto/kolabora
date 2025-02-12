@@ -18,6 +18,8 @@ Route::prefix('auth')->group(function() {
 
 Route::middleware(['AuthIsLogin'])->group(function() {
     Route::get('/main-users', [UsersController::class, 'index']);
+    Route::get('/profile/{id}', [UsersController::class, 'show'])->name('profile.show');
+    Route::post('/profile/{id}', [UsersController::class, 'updatedData'])->name('updatedData');
 });
 
 Route::fallback(function () {

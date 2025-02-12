@@ -1,6 +1,6 @@
 // navbar
 const hamburger = document.getElementById("hamburger");
-const navbarNav = document.getElementById("navbar-nav");
+const navbarNav = document.getElementById("nav_menu");
 const navLinks = document.querySelectorAll(".nav-link");
 
 hamburger.addEventListener("click", () => {

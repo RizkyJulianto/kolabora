@@ -25,10 +25,10 @@
                 <h1 class="text-2xl font-bold text-orange-300">Kola<span class="text-primary">Bora</span></h1>
             </div>
             <div class="absolute top-full left-[-100%] w-full min-h-[100vh] bg-slate-100/60 gap-5 backdrop-blur-sm lg:backdrop-blur-none flex flex-col lg:flex-row items-center justify-center duration-300 z-50 overflow-hidden lg:static lg:min-h-fit lg:bg-transparent lg:w-auto"
-                id="navbar-nav">
-                <a href="" class="nav-link active-menu">Find
+                id="nav_menu">
+                <a href="{{ url('main-users') }}" class="nav-link active-menu">Find
                     Job</a>
-                <a href="" class="nav-link">Message</a>
+                <a href="{{ url('main-users') }}" class="nav-link">Message</a>
                 <a href="" class="nav-link">Hiring</a>
                 <a href="" class="nav-link">Community</a>
                 <a href="" class="nav-link">FAQ</a>
@@ -36,8 +36,10 @@
             <div class="nav-profie flex items-center gap-7">
                 <div class="flex items-center gap-4">
                     <div class="dropdown">
-                        <img onclick="dropDownMenu()" class="dropbtn w-11 cursor-pointer rounded-full"
-                            src="{{ asset('images/logo-kolabora.png') }}" alt="">
+                        @if ($profile_img = auth()->user()->profile_img)
+                            <img onclick="dropDownMenu()" class="dropbtn w-9 h-9 cursor-pointer rounded-full"
+                                src="{{ asset('uploads/profile/' . $profile_img) }}" alt="{{ $profile_img }}">
+                        @endif
                         <div id="myDropdown"
                             class="dropdown-content bg-white shadow text-sm absolute z-10 -left-[25px] -bottom-[125px] md:-left-[10px] md:-bottom-[90px]">
                             <div
@@ -48,7 +50,7 @@
                                     @endif
                                 </P>
                             </div>
-                            <a href="{{ route('logout') }}"
+                            <a href="{{ route('profile.show', auth()->user()->id) }}"
                                 class="flex items-center gap-2 p-2 text-slate-500 hover:bg-gradient-to-r from-sky_light to-primary hover:text-white">
                                 <i class="fa-solid fa-user"></i>
                                 <p class="block decoration-transparent">Profile</p>
