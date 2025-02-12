@@ -29,9 +29,9 @@
                 <a href="{{ url('main-users') }}" class="nav-link active-menu">Find
                     Job</a>
                 <a href="{{ url('main-users') }}" class="nav-link">Message</a>
-                <a href="" class="nav-link">Hiring</a>
-                <a href="" class="nav-link">Community</a>
-                <a href="" class="nav-link">FAQ</a>
+                <a href="{{ url('main-users') }}" class="nav-link">Hiring</a>
+                <a href="{{ url('main-users') }}" class="nav-link">Community</a>
+                <a href="{{ url('main-users') }}" class="nav-link">FAQ</a>
             </div>
             <div class="nav-profie flex items-center gap-7">
                 <div class="flex items-center gap-4">
