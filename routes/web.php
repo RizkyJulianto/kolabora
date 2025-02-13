@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\UsersController;
 use Illuminate\Support\Facades\Route;
 
@@ -20,6 +21,7 @@ Route::middleware(['AuthIsLogin', 'PreventBackLogout'])->group(function() {
     Route::get('/main-users', [UsersController::class, 'index']);
     Route::get('/profile/{id}', [UsersController::class, 'show'])->name('profile.show');
     Route::post('/profile/{id}', [UsersController::class, 'updatedData'])->name('updatedData');
+    Route::get('/company', [CompanyController::class, 'index']);
 });
 
 Route::fallback(function () {

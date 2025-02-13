@@ -1,4 +1,3 @@
-// navbar
 const hamburger = document.getElementById("hamburger");
 const navbarNav = document.getElementById("nav_menu");
 const navLinks = document.querySelectorAll(".nav-link");

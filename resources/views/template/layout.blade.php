@@ -8,7 +8,7 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
-    <title>Kolabora</title>
+    <title>@yield('title_web')</title>
     <link rel="shortcut icon" href="{{ asset('images/logo/kolabora.ico') }}" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
@@ -27,14 +27,14 @@
                 <img class="w-12" src="{{ asset('images/logo/kolabora-transparent.png') }}" alt="">
                 <h1 class="text-2xl font-bold text-orange-300">Kola<span class="text-primary">Bora</span></h1>
             </div>
-            <div class="absolute top-full left-[-100%] w-full min-h-[100vh] bg-slate-100/60 gap-5 backdrop-blur-sm lg:backdrop-blur-none flex flex-col lg:flex-row items-center justify-center duration-300 z-50 overflow-hidden lg:static lg:min-h-fit lg:bg-transparent lg:w-auto"
+            <div class="absolute py-10 lg:py-0 top-full left-[-100%] w-full min-h-full bg-slate-100/70 gap-5 backdrop-blur-sm lg:backdrop-blur-none flex flex-col lg:flex-row items-center justify-center duration-300 z-50 overflow-hidden lg:static lg:min-h-fit lg:bg-transparent lg:w-auto"
                 id="nav_menu">
                 <a href="{{ url('main-users') }}" class="nav-link active-menu">Find
-                    Job</a>
-                <a href="{{ url('main-users') }}" class="nav-link">Message</a>
-                <a href="{{ url('main-users') }}" class="nav-link">Hiring</a>
-                <a href="{{ url('main-users') }}" class="nav-link">Community</a>
-                <a href="{{ url('main-users') }}" class="nav-link">FAQ</a>
+                    Jobs</a>
+                <a href="{{ url('company') }}" class="nav-link">Company</a>
+                <a href="{{ url('main-users') }}" class="nav-link">Article</a>
+                <a href="{{ url('main-users') }}" class="nav-link">Notifikasi</a>
+                <a href="{{ url('main-users') }}" class="nav-link">Partner</a>
             </div>
             <div class="nav-profie flex items-center gap-7">
                 <div class="flex items-center gap-4">
@@ -71,7 +71,7 @@
                         <p class="lg:inline-block hidden">{{ $name }}</p>
                     @endif
                 </div>
-                <div class="text-lg cursor-pointer z-50 lg:hidden">
+                <div class="text-lg inline-block cursor-pointer z-50 lg:hidden">
                     <i class="fa-solid fa-bars-staggered" id="hamburger"></i>
                 </div>
             </div>
@@ -107,7 +107,7 @@
                 <div class="flex flex-col gap-1 text-[15px] mt-2">
                     <a href=""
                         class="pemalinks-footer hover:opacity-60 active-menu hover:translate-x-1 transition-all">Find
-                        Job</a>
+                        Jobs</a>
                     <a href=""
                         class="pemalinks-footer hover:opacity-60 hover:translate-x-1 transition-all">Message</a>
                     <a href=""

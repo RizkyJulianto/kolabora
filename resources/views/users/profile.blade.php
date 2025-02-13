@@ -1,4 +1,5 @@
 @extends('template.layout')
+@section('title_web', 'Profile | KolaBora')
 @section('content')
     <form action="{{ route('updatedData', auth()->user()->id) }}" method="post">
         <main class="profile flex flex-col lg:flex-row px-[5%] lg:px-[3%] gap-6 pt-11 pb-20">

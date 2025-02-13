@@ -1,4 +1,5 @@
 @extends('template.layout')
+@section('title_web', 'Find Jobs | KolaBora')
 @section('content')
     <div class="w-full px-[5%] lg:px-[3%] py-9 overflow-hidden shadow-sm relative">
         <div class="blob-1 w-1/2 h-64 bg-primary blur-3xl rounded-full opacity-35 -z-10 absolute -top-20 right-0">
