@@ -12,10 +12,10 @@
     </div>
     <div class="find-jobs flex flex-col lg:flex-row px-[5%] lg:px-[3%] gap-6 pt-11 pb-20">
         <div class="left-col flex-[1_1_100%] lg:flex-[1_1_25%] w-full">
-            <div class="filter-col shadow-sm border border-slate-200 rounded">
+            <div class="filter-col shadow border border-slate-200 rounded">
                 <div class="flex justify-between items-center border-b border-slate-200 py-2 px-3">
                     <h1 class="font-semibold">Filter</h1>
-                    <p class="text-sm text-red-500">clear all</p>
+                    <p class="text-sm text-red-800 rounded-full bg-red-200 py-[2px] px-2 cursor-pointer">clear all</p>
                 </div>
                 <div class="px-3 text-sm">
                     <div class="border-b border-slate-200 py-5">
@@ -101,7 +101,8 @@
         </div>
         <div class="right-col flex-[1_1_100%] lg:flex-[1_1_75%] w-full">
             <div class="content-find-jobs">
-                <div class="flex gap-3 md:gap-0 flex-col md:flex-row md:justify-between md:items-center mb-10">
+                <div
+                    class="flex gap-3 md:gap-0 flex-col md:flex-row md:justify-between md:items-center mb-6 w-full shadow border border-slate-200 rounded p-4">
                     <div class="flex items-center gap-2">
                         <h1 class="text-xl font-bold">Recommended Jobs</h1>
                         <h4 class="bg-gradient-to-r from-sky_light to-primary py-1 px-2 rounded-full text-white">136</h4>
@@ -124,22 +125,24 @@
                                             src="{{ asset('images/logo-kolabora.png') }}" alt="">
                                         <div class="">
                                             <h3 class="text-md font-bold mb-2 md:mb-1">Product Designer</h3>
-                                            <div class="grid grid-cols-2 md:grid-cols-4 gap-y-2 gap-x-2 md:gap-x-3 w-full">
-                                                <h5
-                                                    class="bg-blue-100 text-primary text-center text-xs px-2 py-[2px] rounded-full">
-                                                    tokopedia</h5>
-                                                <p
-                                                    class="bg-orange-100 text-orange_normal text-center text-xs px-2 py-[2px] rounded-full">
-                                                    Part Time</p>
+                                            <div class="block md:flex md:flex-row gap-y-2 gap-x-2 md:gap-x-3 w-full">
                                                 <div
-                                                    class="flex items-center justify-center gap-1 bg-yellow-100 text-yellow_dark text-xs px-2 py-[2px] rounded-full">
-                                                    <i class="fa-solid fa-money-check"></i>
-                                                    <p>$200 - $500</p>
+                                                    class="bg-blue-100 w-auto inline-block text-center text-primary px-2 py-[2px] rounded-full text-xs">
+                                                    <p><i class="fas fa-city"></i>
+                                                        Tokopedia</p>
                                                 </div>
                                                 <div
-                                                    class="flex items-center justify-center gap-1 bg-yellow-100 text-yellow_dark text-center text-xs px-2 py-[2px] rounded-full">
-                                                    <i class="fa-solid fa-briefcase"></i>
-                                                    <p>2 year</p>
+                                                    class="bg-orange-100 w-auto inline-block text-center text-orange_normal px-2 py-[2px] rounded-full text-xs">
+                                                    <p><i class="fas fa-clock"></i>
+                                                        Part Time</h>
+                                                </div>
+                                                <div
+                                                    class="bg-green-100 w-auto inline-block text-center text-green-700 px-2 py-[2px] rounded-full text-xs">
+                                                    <p><i class="fa-solid fa-money-check"></i> $200 - $500</p>
+                                                </div>
+                                                <div
+                                                    class="bg-yellow-100 w-auto inline-block text-center text-yellow-700 px-2 py-[2px] rounded-full text-xs">
+                                                    <p><i class="fa-solid fa-briefcase"></i> 2 year</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -162,7 +165,7 @@
                                     earum
                                     vitae consequatur! Non harum maiores tempora perferendis.</p>
                                 <p class="text-sm my-5 md:my-4 lg:my-3 text-slate-500 flex items-center gap-2"><i
-                                        class="fa-solid fa-location-dot"></i>Semarang
+                                        class="fa-solid fa-location-dot"></i>Semarang, Central Java
                                 </p>
                                 <div class="flex items-center gap-2">
                                     <p
@@ -188,22 +191,24 @@
                                             src="{{ asset('images/logo-kolabora.png') }}" alt="">
                                         <div class="">
                                             <h3 class="text-md font-bold mb-2 md:mb-1">Product Designer</h3>
-                                            <div class="grid grid-cols-2 md:grid-cols-4 gap-y-2 gap-x-2 md:gap-x-3 w-full">
-                                                <h5
-                                                    class="bg-blue-100 text-primary text-center text-xs px-2 py-[2px] rounded-full">
-                                                    tokopedia</h5>
-                                                <p
-                                                    class="bg-orange-100 text-orange_normal text-center text-xs px-2 py-[2px] rounded-full">
-                                                    Part Time</p>
+                                            <div class="block md:flex md:flex-row gap-y-2 gap-x-2 md:gap-x-3 w-full">
                                                 <div
-                                                    class="flex items-center justify-center gap-1 bg-yellow-100 text-yellow_dark text-xs px-2 py-[2px] rounded-full">
-                                                    <i class="fa-solid fa-money-check"></i>
-                                                    <p>$200 - $500</p>
+                                                    class="bg-blue-100 w-auto inline-block text-center text-primary px-2 py-[2px] rounded-full text-xs">
+                                                    <p><i class="fas fa-city"></i>
+                                                        Tokopedia</p>
                                                 </div>
                                                 <div
-                                                    class="flex items-center justify-center gap-1 bg-yellow-100 text-yellow_dark text-center text-xs px-2 py-[2px] rounded-full">
-                                                    <i class="fa-solid fa-briefcase"></i>
-                                                    <p>2 year</p>
+                                                    class="bg-orange-100 w-auto inline-block text-center text-orange_normal px-2 py-[2px] rounded-full text-xs">
+                                                    <p><i class="fas fa-clock"></i>
+                                                        Part Time</h>
+                                                </div>
+                                                <div
+                                                    class="bg-green-100 w-auto inline-block text-center text-green-700 px-2 py-[2px] rounded-full text-xs">
+                                                    <p><i class="fa-solid fa-money-check"></i> $200 - $500</p>
+                                                </div>
+                                                <div
+                                                    class="bg-yellow-100 w-auto inline-block text-center text-yellow-700 px-2 py-[2px] rounded-full text-xs">
+                                                    <p><i class="fa-solid fa-briefcase"></i> 2 year</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -226,7 +231,7 @@
                                     earum
                                     vitae consequatur! Non harum maiores tempora perferendis.</p>
                                 <p class="text-sm my-5 md:my-4 lg:my-3 text-slate-500 flex items-center gap-2"><i
-                                        class="fa-solid fa-location-dot"></i>Semarang
+                                        class="fa-solid fa-location-dot"></i>Semarang, Central Java
                                 </p>
                                 <div class="flex items-center gap-2">
                                     <p
@@ -252,22 +257,24 @@
                                             src="{{ asset('images/logo-kolabora.png') }}" alt="">
                                         <div class="">
                                             <h3 class="text-md font-bold mb-2 md:mb-1">Product Designer</h3>
-                                            <div class="grid grid-cols-2 md:grid-cols-4 gap-y-2 gap-x-2 md:gap-x-3 w-full">
-                                                <h5
-                                                    class="bg-blue-100 text-primary text-center text-xs px-2 py-[2px] rounded-full">
-                                                    tokopedia</h5>
-                                                <p
-                                                    class="bg-orange-100 text-orange_normal text-center text-xs px-2 py-[2px] rounded-full">
-                                                    Part Time</p>
+                                            <div class="block md:flex md:flex-row gap-y-2 gap-x-2 md:gap-x-3 w-full">
                                                 <div
-                                                    class="flex items-center justify-center gap-1 bg-yellow-100 text-yellow_dark text-xs px-2 py-[2px] rounded-full">
-                                                    <i class="fa-solid fa-money-check"></i>
-                                                    <p>$200 - $500</p>
+                                                    class="bg-blue-100 w-auto inline-block text-center text-primary px-2 py-[2px] rounded-full text-xs">
+                                                    <p><i class="fas fa-city"></i>
+                                                        Tokopedia</p>
                                                 </div>
                                                 <div
-                                                    class="flex items-center justify-center gap-1 bg-yellow-100 text-yellow_dark text-center text-xs px-2 py-[2px] rounded-full">
-                                                    <i class="fa-solid fa-briefcase"></i>
-                                                    <p>2 year</p>
+                                                    class="bg-orange-100 w-auto inline-block text-center text-orange_normal px-2 py-[2px] rounded-full text-xs">
+                                                    <p><i class="fas fa-clock"></i>
+                                                        Part Time</h>
+                                                </div>
+                                                <div
+                                                    class="bg-green-100 w-auto inline-block text-center text-green-700 px-2 py-[2px] rounded-full text-xs">
+                                                    <p><i class="fa-solid fa-money-check"></i> $200 - $500</p>
+                                                </div>
+                                                <div
+                                                    class="bg-yellow-100 w-auto inline-block text-center text-yellow-700 px-2 py-[2px] rounded-full text-xs">
+                                                    <p><i class="fa-solid fa-briefcase"></i> 2 year</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -290,7 +297,7 @@
                                     earum
                                     vitae consequatur! Non harum maiores tempora perferendis.</p>
                                 <p class="text-sm my-5 md:my-4 lg:my-3 text-slate-500 flex items-center gap-2"><i
-                                        class="fa-solid fa-location-dot"></i>Semarang
+                                        class="fa-solid fa-location-dot"></i>Semarang, Central Java
                                 </p>
                                 <div class="flex items-center gap-2">
                                     <p
@@ -316,22 +323,24 @@
                                             src="{{ asset('images/logo-kolabora.png') }}" alt="">
                                         <div class="">
                                             <h3 class="text-md font-bold mb-2 md:mb-1">Product Designer</h3>
-                                            <div class="grid grid-cols-2 md:grid-cols-4 gap-y-2 gap-x-2 md:gap-x-3 w-full">
-                                                <h5
-                                                    class="bg-blue-100 text-primary text-center text-xs px-2 py-[2px] rounded-full">
-                                                    tokopedia</h5>
-                                                <p
-                                                    class="bg-orange-100 text-orange_normal text-center text-xs px-2 py-[2px] rounded-full">
-                                                    Part Time</p>
+                                            <div class="block md:flex md:flex-row gap-y-2 gap-x-2 md:gap-x-3 w-full">
                                                 <div
-                                                    class="flex items-center justify-center gap-1 bg-yellow-100 text-yellow_dark text-xs px-2 py-[2px] rounded-full">
-                                                    <i class="fa-solid fa-money-check"></i>
-                                                    <p>$200 - $500</p>
+                                                    class="bg-blue-100 w-auto inline-block text-center text-primary px-2 py-[2px] rounded-full text-xs">
+                                                    <p><i class="fas fa-city"></i>
+                                                        Tokopedia</p>
                                                 </div>
                                                 <div
-                                                    class="flex items-center justify-center gap-1 bg-yellow-100 text-yellow_dark text-center text-xs px-2 py-[2px] rounded-full">
-                                                    <i class="fa-solid fa-briefcase"></i>
-                                                    <p>2 year</p>
+                                                    class="bg-orange-100 w-auto inline-block text-center text-orange_normal px-2 py-[2px] rounded-full text-xs">
+                                                    <p><i class="fas fa-clock"></i>
+                                                        Part Time</h>
+                                                </div>
+                                                <div
+                                                    class="bg-green-100 w-auto inline-block text-center text-green-700 px-2 py-[2px] rounded-full text-xs">
+                                                    <p><i class="fa-solid fa-money-check"></i> $200 - $500</p>
+                                                </div>
+                                                <div
+                                                    class="bg-yellow-100 w-auto inline-block text-center text-yellow-700 px-2 py-[2px] rounded-full text-xs">
+                                                    <p><i class="fa-solid fa-briefcase"></i> 2 year</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -354,7 +363,7 @@
                                     earum
                                     vitae consequatur! Non harum maiores tempora perferendis.</p>
                                 <p class="text-sm my-5 md:my-4 lg:my-3 text-slate-500 flex items-center gap-2"><i
-                                        class="fa-solid fa-location-dot"></i>Semarang
+                                        class="fa-solid fa-location-dot"></i>Semarang, Central Java
                                 </p>
                                 <div class="flex items-center gap-2">
                                     <p
@@ -380,22 +389,24 @@
                                             src="{{ asset('images/logo-kolabora.png') }}" alt="">
                                         <div class="">
                                             <h3 class="text-md font-bold mb-2 md:mb-1">Product Designer</h3>
-                                            <div class="grid grid-cols-2 md:grid-cols-4 gap-y-2 gap-x-2 md:gap-x-3 w-full">
-                                                <h5
-                                                    class="bg-blue-100 text-primary text-center text-xs px-2 py-[2px] rounded-full">
-                                                    tokopedia</h5>
-                                                <p
-                                                    class="bg-orange-100 text-orange_normal text-center text-xs px-2 py-[2px] rounded-full">
-                                                    Part Time</p>
+                                            <div class="block md:flex md:flex-row gap-y-2 gap-x-2 md:gap-x-3 w-full">
                                                 <div
-                                                    class="flex items-center justify-center gap-1 bg-yellow-100 text-yellow_dark text-xs px-2 py-[2px] rounded-full">
-                                                    <i class="fa-solid fa-money-check"></i>
-                                                    <p>$200 - $500</p>
+                                                    class="bg-blue-100 w-auto inline-block text-center text-primary px-2 py-[2px] rounded-full text-xs">
+                                                    <p><i class="fas fa-city"></i>
+                                                        Tokopedia</p>
                                                 </div>
                                                 <div
-                                                    class="flex items-center justify-center gap-1 bg-yellow-100 text-yellow_dark text-center text-xs px-2 py-[2px] rounded-full">
-                                                    <i class="fa-solid fa-briefcase"></i>
-                                                    <p>2 year</p>
+                                                    class="bg-orange-100 w-auto inline-block text-center text-orange_normal px-2 py-[2px] rounded-full text-xs">
+                                                    <p><i class="fas fa-clock"></i>
+                                                        Part Time</h>
+                                                </div>
+                                                <div
+                                                    class="bg-green-100 w-auto inline-block text-center text-green-700 px-2 py-[2px] rounded-full text-xs">
+                                                    <p><i class="fa-solid fa-money-check"></i> $200 - $500</p>
+                                                </div>
+                                                <div
+                                                    class="bg-yellow-100 w-auto inline-block text-center text-yellow-700 px-2 py-[2px] rounded-full text-xs">
+                                                    <p><i class="fa-solid fa-briefcase"></i> 2 year</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -418,7 +429,7 @@
                                     earum
                                     vitae consequatur! Non harum maiores tempora perferendis.</p>
                                 <p class="text-sm my-5 md:my-4 lg:my-3 text-slate-500 flex items-center gap-2"><i
-                                        class="fa-solid fa-location-dot"></i>Semarang
+                                        class="fa-solid fa-location-dot"></i>Semarang, Central Java
                                 </p>
                                 <div class="flex items-center gap-2">
                                     <p
