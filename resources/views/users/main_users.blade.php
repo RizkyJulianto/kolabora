@@ -114,320 +114,332 @@
                         </div>
                     </div>
                 </div>
-                <main class="content flex flex-col gap-5">
-                    <div class="box shadow w-full border border-slate-200 rounded p-4">
-                        <div class="up flex flex-col lg:flex-row lg:justify-between lg:gap-0 gap-4">
-                            <div class="left">
-                                <div class="flex gap-2">
-                                    <img class="rounded w-14 h-14 shadow" src="{{ asset('images/logo-kolabora.png') }}"
-                                        alt="">
-                                    <div class="">
-                                        <h3 class="text-md font-bold mb-2 md:mb-1">Product Designer</h3>
-                                        <div class="grid grid-cols-2 md:grid-cols-4 gap-y-2 gap-x-2 md:gap-x-3 w-full">
-                                            <h5
-                                                class="bg-blue-100 text-primary text-center text-xs px-2 py-[2px] rounded-full">
-                                                tokopedia</h5>
-                                            <p
-                                                class="bg-orange-100 text-orange_normal text-center text-xs px-2 py-[2px] rounded-full">
-                                                Part Time</p>
-                                            <div
-                                                class="flex items-center justify-center gap-1 bg-yellow-100 text-yellow_dark text-xs px-2 py-[2px] rounded-full">
-                                                <i class="fa-solid fa-money-check"></i>
-                                                <p>$200 - $500</p>
-                                            </div>
-                                            <div
-                                                class="flex items-center justify-center gap-1 bg-yellow-100 text-yellow_dark text-center text-xs px-2 py-[2px] rounded-full">
-                                                <i class="fa-solid fa-briefcase"></i>
-                                                <p>2 year</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="right">
-                                <div class="flex items-center gap-2 text-slate-500 text-sm ">
-                                    <i class="fa-regular fa-calendar"></i>
-                                    <p>12 January 2025</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="down mt-3">
-                            <p class="text-sm text-justify text-slate-600">Lorem ipsum dolor sit, amet consectetur
-                                adipisicing elit. Deserunt placeat iure, minus suscipit dolorem id exercitationem, dolor
-                                modi quos iusto quaerat consectetur voluptatem voluptatum accusantium nostrum, ea nihil
-                                voluptates. Accusamus hic adipisci obcaecati eius est fuga modi necessitatibus harum quasi
-                                voluptates, laborum cum eum soluta doloribus placeat omnis sint dolore ducimus esse earum
-                                vitae consequatur! Non harum maiores tempora perferendis.</p>
-                            <p class="text-sm my-5 md:my-4 lg:my-3 text-slate-500 flex items-center gap-2"><i
-                                    class="fa-solid fa-location-dot"></i>Semarang
-                            </p>
-                            <div class="flex items-center gap-2">
-                                <p
-                                    class="bg-gradient-to-r from-sky_light to-primary text-white rounded-sm text-xs py-1 px-2">
-                                    Figma</p>
-                                <p
-                                    class="bg-gradient-to-r from-sky_light to-primary text-white rounded-sm text-xs py-1 px-2">
-                                    Designer
-                                </p>
-                                <p
-                                    class="bg-gradient-to-r from-sky_light to-primary text-white rounded-sm text-xs py-1 px-2">
-                                    UI
-                                    Desgin
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="box shadow w-full border border-slate-200 rounded p-4">
-                        <div class="up flex flex-col lg:flex-row lg:justify-between lg:gap-0 gap-4">
-                            <div class="left">
-                                <div class="flex gap-2">
-                                    <img class="rounded w-14 h-14 shadow" src="{{ asset('images/logo-kolabora.png') }}"
-                                        alt="">
-                                    <div class="">
-                                        <h3 class="text-md font-bold mb-2 md:mb-1">Product Designer</h3>
-                                        <div class="grid grid-cols-2 md:grid-cols-4 gap-y-2 gap-x-2 md:gap-x-3 w-full">
-                                            <h5
-                                                class="bg-blue-100 text-primary text-center text-xs px-2 py-[2px] rounded-full">
-                                                tokopedia</h5>
-                                            <p
-                                                class="bg-orange-100 text-orange_normal text-center text-xs px-2 py-[2px] rounded-full">
-                                                Part Time</p>
-                                            <div
-                                                class="flex items-center justify-center gap-1 bg-yellow-100 text-yellow_dark text-xs px-2 py-[2px] rounded-full">
-                                                <i class="fa-solid fa-money-check"></i>
-                                                <p>$200 - $500</p>
-                                            </div>
-                                            <div
-                                                class="flex items-center justify-center gap-1 bg-yellow-100 text-yellow_dark text-center text-xs px-2 py-[2px] rounded-full">
-                                                <i class="fa-solid fa-briefcase"></i>
-                                                <p>2 year</p>
+                <main class="content">
+                    <div class="mb-8 flex flex-col gap-5">
+                        <div class="box shadow w-full border border-slate-200 rounded p-4">
+                            <div class="up flex flex-col lg:flex-row lg:justify-between lg:gap-0 gap-4">
+                                <div class="left">
+                                    <div class="flex gap-2">
+                                        <img class="rounded w-14 h-14 shadow"
+                                            src="{{ asset('images/logo-kolabora.png') }}" alt="">
+                                        <div class="">
+                                            <h3 class="text-md font-bold mb-2 md:mb-1">Product Designer</h3>
+                                            <div class="grid grid-cols-2 md:grid-cols-4 gap-y-2 gap-x-2 md:gap-x-3 w-full">
+                                                <h5
+                                                    class="bg-blue-100 text-primary text-center text-xs px-2 py-[2px] rounded-full">
+                                                    tokopedia</h5>
+                                                <p
+                                                    class="bg-orange-100 text-orange_normal text-center text-xs px-2 py-[2px] rounded-full">
+                                                    Part Time</p>
+                                                <div
+                                                    class="flex items-center justify-center gap-1 bg-yellow-100 text-yellow_dark text-xs px-2 py-[2px] rounded-full">
+                                                    <i class="fa-solid fa-money-check"></i>
+                                                    <p>$200 - $500</p>
+                                                </div>
+                                                <div
+                                                    class="flex items-center justify-center gap-1 bg-yellow-100 text-yellow_dark text-center text-xs px-2 py-[2px] rounded-full">
+                                                    <i class="fa-solid fa-briefcase"></i>
+                                                    <p>2 year</p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                <div class="right">
+                                    <div class="flex items-center gap-2 text-slate-500 text-sm ">
+                                        <i class="fa-regular fa-calendar"></i>
+                                        <p>12 January 2025</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="right">
-                                <div class="flex items-center gap-2 text-slate-500 text-sm ">
-                                    <i class="fa-regular fa-calendar"></i>
-                                    <p>12 January 2025</p>
+                            <div class="down mt-3">
+                                <p class="text-sm text-justify text-slate-600">Lorem ipsum dolor sit, amet consectetur
+                                    adipisicing elit. Deserunt placeat iure, minus suscipit dolorem id exercitationem, dolor
+                                    modi quos iusto quaerat consectetur voluptatem voluptatum accusantium nostrum, ea nihil
+                                    voluptates. Accusamus hic adipisci obcaecati eius est fuga modi necessitatibus harum
+                                    quasi
+                                    voluptates, laborum cum eum soluta doloribus placeat omnis sint dolore ducimus esse
+                                    earum
+                                    vitae consequatur! Non harum maiores tempora perferendis.</p>
+                                <p class="text-sm my-5 md:my-4 lg:my-3 text-slate-500 flex items-center gap-2"><i
+                                        class="fa-solid fa-location-dot"></i>Semarang
+                                </p>
+                                <div class="flex items-center gap-2">
+                                    <p
+                                        class="bg-gradient-to-r from-sky_light to-primary text-white rounded-sm text-xs py-1 px-2">
+                                        Figma</p>
+                                    <p
+                                        class="bg-gradient-to-r from-sky_light to-primary text-white rounded-sm text-xs py-1 px-2">
+                                        Designer
+                                    </p>
+                                    <p
+                                        class="bg-gradient-to-r from-sky_light to-primary text-white rounded-sm text-xs py-1 px-2">
+                                        UI
+                                        Desgin
+                                    </p>
                                 </div>
                             </div>
                         </div>
-                        <div class="down mt-3">
-                            <p class="text-sm text-justify text-slate-600">Lorem ipsum dolor sit, amet consectetur
-                                adipisicing elit. Deserunt placeat iure, minus suscipit dolorem id exercitationem, dolor
-                                modi quos iusto quaerat consectetur voluptatem voluptatum accusantium nostrum, ea nihil
-                                voluptates. Accusamus hic adipisci obcaecati eius est fuga modi necessitatibus harum quasi
-                                voluptates, laborum cum eum soluta doloribus placeat omnis sint dolore ducimus esse earum
-                                vitae consequatur! Non harum maiores tempora perferendis.</p>
-                            <p class="text-sm my-5 md:my-4 lg:my-3 text-slate-500 flex items-center gap-2"><i
-                                    class="fa-solid fa-location-dot"></i>Semarang
-                            </p>
-                            <div class="flex items-center gap-2">
-                                <p
-                                    class="bg-gradient-to-r from-sky_light to-primary text-white rounded-sm text-xs py-1 px-2">
-                                    Figma</p>
-                                <p
-                                    class="bg-gradient-to-r from-sky_light to-primary text-white rounded-sm text-xs py-1 px-2">
-                                    Designer
-                                </p>
-                                <p
-                                    class="bg-gradient-to-r from-sky_light to-primary text-white rounded-sm text-xs py-1 px-2">
-                                    UI
-                                    Desgin
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="box shadow w-full border border-slate-200 rounded p-4">
-                        <div class="up flex flex-col lg:flex-row lg:justify-between lg:gap-0 gap-4">
-                            <div class="left">
-                                <div class="flex gap-2">
-                                    <img class="rounded w-14 h-14 shadow" src="{{ asset('images/logo-kolabora.png') }}"
-                                        alt="">
-                                    <div class="">
-                                        <h3 class="text-md font-bold mb-2 md:mb-1">Product Designer</h3>
-                                        <div class="grid grid-cols-2 md:grid-cols-4 gap-y-2 gap-x-2 md:gap-x-3 w-full">
-                                            <h5
-                                                class="bg-blue-100 text-primary text-center text-xs px-2 py-[2px] rounded-full">
-                                                tokopedia</h5>
-                                            <p
-                                                class="bg-orange-100 text-orange_normal text-center text-xs px-2 py-[2px] rounded-full">
-                                                Part Time</p>
-                                            <div
-                                                class="flex items-center justify-center gap-1 bg-yellow-100 text-yellow_dark text-xs px-2 py-[2px] rounded-full">
-                                                <i class="fa-solid fa-money-check"></i>
-                                                <p>$200 - $500</p>
-                                            </div>
-                                            <div
-                                                class="flex items-center justify-center gap-1 bg-yellow-100 text-yellow_dark text-center text-xs px-2 py-[2px] rounded-full">
-                                                <i class="fa-solid fa-briefcase"></i>
-                                                <p>2 year</p>
+                        <div class="box shadow w-full border border-slate-200 rounded p-4">
+                            <div class="up flex flex-col lg:flex-row lg:justify-between lg:gap-0 gap-4">
+                                <div class="left">
+                                    <div class="flex gap-2">
+                                        <img class="rounded w-14 h-14 shadow"
+                                            src="{{ asset('images/logo-kolabora.png') }}" alt="">
+                                        <div class="">
+                                            <h3 class="text-md font-bold mb-2 md:mb-1">Product Designer</h3>
+                                            <div class="grid grid-cols-2 md:grid-cols-4 gap-y-2 gap-x-2 md:gap-x-3 w-full">
+                                                <h5
+                                                    class="bg-blue-100 text-primary text-center text-xs px-2 py-[2px] rounded-full">
+                                                    tokopedia</h5>
+                                                <p
+                                                    class="bg-orange-100 text-orange_normal text-center text-xs px-2 py-[2px] rounded-full">
+                                                    Part Time</p>
+                                                <div
+                                                    class="flex items-center justify-center gap-1 bg-yellow-100 text-yellow_dark text-xs px-2 py-[2px] rounded-full">
+                                                    <i class="fa-solid fa-money-check"></i>
+                                                    <p>$200 - $500</p>
+                                                </div>
+                                                <div
+                                                    class="flex items-center justify-center gap-1 bg-yellow-100 text-yellow_dark text-center text-xs px-2 py-[2px] rounded-full">
+                                                    <i class="fa-solid fa-briefcase"></i>
+                                                    <p>2 year</p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                <div class="right">
+                                    <div class="flex items-center gap-2 text-slate-500 text-sm ">
+                                        <i class="fa-regular fa-calendar"></i>
+                                        <p>12 January 2025</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="right">
-                                <div class="flex items-center gap-2 text-slate-500 text-sm ">
-                                    <i class="fa-regular fa-calendar"></i>
-                                    <p>12 January 2025</p>
+                            <div class="down mt-3">
+                                <p class="text-sm text-justify text-slate-600">Lorem ipsum dolor sit, amet consectetur
+                                    adipisicing elit. Deserunt placeat iure, minus suscipit dolorem id exercitationem, dolor
+                                    modi quos iusto quaerat consectetur voluptatem voluptatum accusantium nostrum, ea nihil
+                                    voluptates. Accusamus hic adipisci obcaecati eius est fuga modi necessitatibus harum
+                                    quasi
+                                    voluptates, laborum cum eum soluta doloribus placeat omnis sint dolore ducimus esse
+                                    earum
+                                    vitae consequatur! Non harum maiores tempora perferendis.</p>
+                                <p class="text-sm my-5 md:my-4 lg:my-3 text-slate-500 flex items-center gap-2"><i
+                                        class="fa-solid fa-location-dot"></i>Semarang
+                                </p>
+                                <div class="flex items-center gap-2">
+                                    <p
+                                        class="bg-gradient-to-r from-sky_light to-primary text-white rounded-sm text-xs py-1 px-2">
+                                        Figma</p>
+                                    <p
+                                        class="bg-gradient-to-r from-sky_light to-primary text-white rounded-sm text-xs py-1 px-2">
+                                        Designer
+                                    </p>
+                                    <p
+                                        class="bg-gradient-to-r from-sky_light to-primary text-white rounded-sm text-xs py-1 px-2">
+                                        UI
+                                        Desgin
+                                    </p>
                                 </div>
                             </div>
                         </div>
-                        <div class="down mt-3">
-                            <p class="text-sm text-justify text-slate-600">Lorem ipsum dolor sit, amet consectetur
-                                adipisicing elit. Deserunt placeat iure, minus suscipit dolorem id exercitationem, dolor
-                                modi quos iusto quaerat consectetur voluptatem voluptatum accusantium nostrum, ea nihil
-                                voluptates. Accusamus hic adipisci obcaecati eius est fuga modi necessitatibus harum quasi
-                                voluptates, laborum cum eum soluta doloribus placeat omnis sint dolore ducimus esse earum
-                                vitae consequatur! Non harum maiores tempora perferendis.</p>
-                            <p class="text-sm my-5 md:my-4 lg:my-3 text-slate-500 flex items-center gap-2"><i
-                                    class="fa-solid fa-location-dot"></i>Semarang
-                            </p>
-                            <div class="flex items-center gap-2">
-                                <p
-                                    class="bg-gradient-to-r from-sky_light to-primary text-white rounded-sm text-xs py-1 px-2">
-                                    Figma</p>
-                                <p
-                                    class="bg-gradient-to-r from-sky_light to-primary text-white rounded-sm text-xs py-1 px-2">
-                                    Designer
-                                </p>
-                                <p
-                                    class="bg-gradient-to-r from-sky_light to-primary text-white rounded-sm text-xs py-1 px-2">
-                                    UI
-                                    Desgin
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="box shadow w-full border border-slate-200 rounded p-4">
-                        <div class="up flex flex-col lg:flex-row lg:justify-between lg:gap-0 gap-4">
-                            <div class="left">
-                                <div class="flex gap-2">
-                                    <img class="rounded w-14 h-14 shadow" src="{{ asset('images/logo-kolabora.png') }}"
-                                        alt="">
-                                    <div class="">
-                                        <h3 class="text-md font-bold mb-2 md:mb-1">Product Designer</h3>
-                                        <div class="grid grid-cols-2 md:grid-cols-4 gap-y-2 gap-x-2 md:gap-x-3 w-full">
-                                            <h5
-                                                class="bg-blue-100 text-primary text-center text-xs px-2 py-[2px] rounded-full">
-                                                tokopedia</h5>
-                                            <p
-                                                class="bg-orange-100 text-orange_normal text-center text-xs px-2 py-[2px] rounded-full">
-                                                Part Time</p>
-                                            <div
-                                                class="flex items-center justify-center gap-1 bg-yellow-100 text-yellow_dark text-xs px-2 py-[2px] rounded-full">
-                                                <i class="fa-solid fa-money-check"></i>
-                                                <p>$200 - $500</p>
-                                            </div>
-                                            <div
-                                                class="flex items-center justify-center gap-1 bg-yellow-100 text-yellow_dark text-center text-xs px-2 py-[2px] rounded-full">
-                                                <i class="fa-solid fa-briefcase"></i>
-                                                <p>2 year</p>
+                        <div class="box shadow w-full border border-slate-200 rounded p-4">
+                            <div class="up flex flex-col lg:flex-row lg:justify-between lg:gap-0 gap-4">
+                                <div class="left">
+                                    <div class="flex gap-2">
+                                        <img class="rounded w-14 h-14 shadow"
+                                            src="{{ asset('images/logo-kolabora.png') }}" alt="">
+                                        <div class="">
+                                            <h3 class="text-md font-bold mb-2 md:mb-1">Product Designer</h3>
+                                            <div class="grid grid-cols-2 md:grid-cols-4 gap-y-2 gap-x-2 md:gap-x-3 w-full">
+                                                <h5
+                                                    class="bg-blue-100 text-primary text-center text-xs px-2 py-[2px] rounded-full">
+                                                    tokopedia</h5>
+                                                <p
+                                                    class="bg-orange-100 text-orange_normal text-center text-xs px-2 py-[2px] rounded-full">
+                                                    Part Time</p>
+                                                <div
+                                                    class="flex items-center justify-center gap-1 bg-yellow-100 text-yellow_dark text-xs px-2 py-[2px] rounded-full">
+                                                    <i class="fa-solid fa-money-check"></i>
+                                                    <p>$200 - $500</p>
+                                                </div>
+                                                <div
+                                                    class="flex items-center justify-center gap-1 bg-yellow-100 text-yellow_dark text-center text-xs px-2 py-[2px] rounded-full">
+                                                    <i class="fa-solid fa-briefcase"></i>
+                                                    <p>2 year</p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                <div class="right">
+                                    <div class="flex items-center gap-2 text-slate-500 text-sm ">
+                                        <i class="fa-regular fa-calendar"></i>
+                                        <p>12 January 2025</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="right">
-                                <div class="flex items-center gap-2 text-slate-500 text-sm ">
-                                    <i class="fa-regular fa-calendar"></i>
-                                    <p>12 January 2025</p>
+                            <div class="down mt-3">
+                                <p class="text-sm text-justify text-slate-600">Lorem ipsum dolor sit, amet consectetur
+                                    adipisicing elit. Deserunt placeat iure, minus suscipit dolorem id exercitationem, dolor
+                                    modi quos iusto quaerat consectetur voluptatem voluptatum accusantium nostrum, ea nihil
+                                    voluptates. Accusamus hic adipisci obcaecati eius est fuga modi necessitatibus harum
+                                    quasi
+                                    voluptates, laborum cum eum soluta doloribus placeat omnis sint dolore ducimus esse
+                                    earum
+                                    vitae consequatur! Non harum maiores tempora perferendis.</p>
+                                <p class="text-sm my-5 md:my-4 lg:my-3 text-slate-500 flex items-center gap-2"><i
+                                        class="fa-solid fa-location-dot"></i>Semarang
+                                </p>
+                                <div class="flex items-center gap-2">
+                                    <p
+                                        class="bg-gradient-to-r from-sky_light to-primary text-white rounded-sm text-xs py-1 px-2">
+                                        Figma</p>
+                                    <p
+                                        class="bg-gradient-to-r from-sky_light to-primary text-white rounded-sm text-xs py-1 px-2">
+                                        Designer
+                                    </p>
+                                    <p
+                                        class="bg-gradient-to-r from-sky_light to-primary text-white rounded-sm text-xs py-1 px-2">
+                                        UI
+                                        Desgin
+                                    </p>
                                 </div>
                             </div>
                         </div>
-                        <div class="down mt-3">
-                            <p class="text-sm text-justify text-slate-600">Lorem ipsum dolor sit, amet consectetur
-                                adipisicing elit. Deserunt placeat iure, minus suscipit dolorem id exercitationem, dolor
-                                modi quos iusto quaerat consectetur voluptatem voluptatum accusantium nostrum, ea nihil
-                                voluptates. Accusamus hic adipisci obcaecati eius est fuga modi necessitatibus harum quasi
-                                voluptates, laborum cum eum soluta doloribus placeat omnis sint dolore ducimus esse earum
-                                vitae consequatur! Non harum maiores tempora perferendis.</p>
-                            <p class="text-sm my-5 md:my-4 lg:my-3 text-slate-500 flex items-center gap-2"><i
-                                    class="fa-solid fa-location-dot"></i>Semarang
-                            </p>
-                            <div class="flex items-center gap-2">
-                                <p
-                                    class="bg-gradient-to-r from-sky_light to-primary text-white rounded-sm text-xs py-1 px-2">
-                                    Figma</p>
-                                <p
-                                    class="bg-gradient-to-r from-sky_light to-primary text-white rounded-sm text-xs py-1 px-2">
-                                    Designer
-                                </p>
-                                <p
-                                    class="bg-gradient-to-r from-sky_light to-primary text-white rounded-sm text-xs py-1 px-2">
-                                    UI
-                                    Desgin
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="box shadow w-full border border-slate-200 rounded p-4">
-                        <div class="up flex flex-col lg:flex-row lg:justify-between lg:gap-0 gap-4">
-                            <div class="left">
-                                <div class="flex gap-2">
-                                    <img class="rounded w-14 h-14 shadow" src="{{ asset('images/logo-kolabora.png') }}"
-                                        alt="">
-                                    <div class="">
-                                        <h3 class="text-md font-bold mb-2 md:mb-1">Product Designer</h3>
-                                        <div class="grid grid-cols-2 md:grid-cols-4 gap-y-2 gap-x-2 md:gap-x-3 w-full">
-                                            <h5
-                                                class="bg-blue-100 text-primary text-center text-xs px-2 py-[2px] rounded-full">
-                                                tokopedia</h5>
-                                            <p
-                                                class="bg-orange-100 text-orange_normal text-center text-xs px-2 py-[2px] rounded-full">
-                                                Part Time</p>
-                                            <div
-                                                class="flex items-center justify-center gap-1 bg-yellow-100 text-yellow_dark text-xs px-2 py-[2px] rounded-full">
-                                                <i class="fa-solid fa-money-check"></i>
-                                                <p>$200 - $500</p>
-                                            </div>
-                                            <div
-                                                class="flex items-center justify-center gap-1 bg-yellow-100 text-yellow_dark text-center text-xs px-2 py-[2px] rounded-full">
-                                                <i class="fa-solid fa-briefcase"></i>
-                                                <p>2 year</p>
+                        <div class="box shadow w-full border border-slate-200 rounded p-4">
+                            <div class="up flex flex-col lg:flex-row lg:justify-between lg:gap-0 gap-4">
+                                <div class="left">
+                                    <div class="flex gap-2">
+                                        <img class="rounded w-14 h-14 shadow"
+                                            src="{{ asset('images/logo-kolabora.png') }}" alt="">
+                                        <div class="">
+                                            <h3 class="text-md font-bold mb-2 md:mb-1">Product Designer</h3>
+                                            <div class="grid grid-cols-2 md:grid-cols-4 gap-y-2 gap-x-2 md:gap-x-3 w-full">
+                                                <h5
+                                                    class="bg-blue-100 text-primary text-center text-xs px-2 py-[2px] rounded-full">
+                                                    tokopedia</h5>
+                                                <p
+                                                    class="bg-orange-100 text-orange_normal text-center text-xs px-2 py-[2px] rounded-full">
+                                                    Part Time</p>
+                                                <div
+                                                    class="flex items-center justify-center gap-1 bg-yellow-100 text-yellow_dark text-xs px-2 py-[2px] rounded-full">
+                                                    <i class="fa-solid fa-money-check"></i>
+                                                    <p>$200 - $500</p>
+                                                </div>
+                                                <div
+                                                    class="flex items-center justify-center gap-1 bg-yellow-100 text-yellow_dark text-center text-xs px-2 py-[2px] rounded-full">
+                                                    <i class="fa-solid fa-briefcase"></i>
+                                                    <p>2 year</p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                <div class="right">
+                                    <div class="flex items-center gap-2 text-slate-500 text-sm ">
+                                        <i class="fa-regular fa-calendar"></i>
+                                        <p>12 January 2025</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="right">
-                                <div class="flex items-center gap-2 text-slate-500 text-sm ">
-                                    <i class="fa-regular fa-calendar"></i>
-                                    <p>12 January 2025</p>
+                            <div class="down mt-3">
+                                <p class="text-sm text-justify text-slate-600">Lorem ipsum dolor sit, amet consectetur
+                                    adipisicing elit. Deserunt placeat iure, minus suscipit dolorem id exercitationem, dolor
+                                    modi quos iusto quaerat consectetur voluptatem voluptatum accusantium nostrum, ea nihil
+                                    voluptates. Accusamus hic adipisci obcaecati eius est fuga modi necessitatibus harum
+                                    quasi
+                                    voluptates, laborum cum eum soluta doloribus placeat omnis sint dolore ducimus esse
+                                    earum
+                                    vitae consequatur! Non harum maiores tempora perferendis.</p>
+                                <p class="text-sm my-5 md:my-4 lg:my-3 text-slate-500 flex items-center gap-2"><i
+                                        class="fa-solid fa-location-dot"></i>Semarang
+                                </p>
+                                <div class="flex items-center gap-2">
+                                    <p
+                                        class="bg-gradient-to-r from-sky_light to-primary text-white rounded-sm text-xs py-1 px-2">
+                                        Figma</p>
+                                    <p
+                                        class="bg-gradient-to-r from-sky_light to-primary text-white rounded-sm text-xs py-1 px-2">
+                                        Designer
+                                    </p>
+                                    <p
+                                        class="bg-gradient-to-r from-sky_light to-primary text-white rounded-sm text-xs py-1 px-2">
+                                        UI
+                                        Desgin
+                                    </p>
                                 </div>
                             </div>
                         </div>
-                        <div class="down mt-3">
-                            <p class="text-sm text-justify text-slate-600">Lorem ipsum dolor sit, amet consectetur
-                                adipisicing elit. Deserunt placeat iure, minus suscipit dolorem id exercitationem, dolor
-                                modi quos iusto quaerat consectetur voluptatem voluptatum accusantium nostrum, ea nihil
-                                voluptates. Accusamus hic adipisci obcaecati eius est fuga modi necessitatibus harum quasi
-                                voluptates, laborum cum eum soluta doloribus placeat omnis sint dolore ducimus esse earum
-                                vitae consequatur! Non harum maiores tempora perferendis.</p>
-                            <p class="text-sm my-5 md:my-4 lg:my-3 text-slate-500 flex items-center gap-2"><i
-                                    class="fa-solid fa-location-dot"></i>Semarang
-                            </p>
-                            <div class="flex items-center gap-2">
-                                <p
-                                    class="bg-gradient-to-r from-sky_light to-primary text-white rounded-sm text-xs py-1 px-2">
-                                    Figma</p>
-                                <p
-                                    class="bg-gradient-to-r from-sky_light to-primary text-white rounded-sm text-xs py-1 px-2">
-                                    Designer
+                        <div class="box shadow w-full border border-slate-200 rounded p-4">
+                            <div class="up flex flex-col lg:flex-row lg:justify-between lg:gap-0 gap-4">
+                                <div class="left">
+                                    <div class="flex gap-2">
+                                        <img class="rounded w-14 h-14 shadow"
+                                            src="{{ asset('images/logo-kolabora.png') }}" alt="">
+                                        <div class="">
+                                            <h3 class="text-md font-bold mb-2 md:mb-1">Product Designer</h3>
+                                            <div class="grid grid-cols-2 md:grid-cols-4 gap-y-2 gap-x-2 md:gap-x-3 w-full">
+                                                <h5
+                                                    class="bg-blue-100 text-primary text-center text-xs px-2 py-[2px] rounded-full">
+                                                    tokopedia</h5>
+                                                <p
+                                                    class="bg-orange-100 text-orange_normal text-center text-xs px-2 py-[2px] rounded-full">
+                                                    Part Time</p>
+                                                <div
+                                                    class="flex items-center justify-center gap-1 bg-yellow-100 text-yellow_dark text-xs px-2 py-[2px] rounded-full">
+                                                    <i class="fa-solid fa-money-check"></i>
+                                                    <p>$200 - $500</p>
+                                                </div>
+                                                <div
+                                                    class="flex items-center justify-center gap-1 bg-yellow-100 text-yellow_dark text-center text-xs px-2 py-[2px] rounded-full">
+                                                    <i class="fa-solid fa-briefcase"></i>
+                                                    <p>2 year</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <div class="flex items-center gap-2 text-slate-500 text-sm ">
+                                        <i class="fa-regular fa-calendar"></i>
+                                        <p>12 January 2025</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="down mt-3">
+                                <p class="text-sm text-justify text-slate-600">Lorem ipsum dolor sit, amet consectetur
+                                    adipisicing elit. Deserunt placeat iure, minus suscipit dolorem id exercitationem, dolor
+                                    modi quos iusto quaerat consectetur voluptatem voluptatum accusantium nostrum, ea nihil
+                                    voluptates. Accusamus hic adipisci obcaecati eius est fuga modi necessitatibus harum
+                                    quasi
+                                    voluptates, laborum cum eum soluta doloribus placeat omnis sint dolore ducimus esse
+                                    earum
+                                    vitae consequatur! Non harum maiores tempora perferendis.</p>
+                                <p class="text-sm my-5 md:my-4 lg:my-3 text-slate-500 flex items-center gap-2"><i
+                                        class="fa-solid fa-location-dot"></i>Semarang
                                 </p>
-                                <p
-                                    class="bg-gradient-to-r from-sky_light to-primary text-white rounded-sm text-xs py-1 px-2">
-                                    UI
-                                    Desgin
-                                </p>
+                                <div class="flex items-center gap-2">
+                                    <p
+                                        class="bg-gradient-to-r from-sky_light to-primary text-white rounded-sm text-xs py-1 px-2">
+                                        Figma</p>
+                                    <p
+                                        class="bg-gradient-to-r from-sky_light to-primary text-white rounded-sm text-xs py-1 px-2">
+                                        Designer
+                                    </p>
+                                    <p
+                                        class="bg-gradient-to-r from-sky_light to-primary text-white rounded-sm text-xs py-1 px-2">
+                                        UI
+                                        Desgin
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
 
                     {{-- pagination --}}
-                    <div class="flex items-center justify-between border-t border-gray-200 bg-white px-4 py-3 sm:px-6">
+                    <div class="flex items-center justify-between border-t border-gray-200 bg-white pt-8 pb-3">
                         <div class="flex flex-1 justify-between sm:hidden">
                             <a href="#"
                                 class="relative inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50">Previous</a>

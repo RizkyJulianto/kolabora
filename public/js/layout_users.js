@@ -1,25 +1,25 @@
-const hamburger = document.getElementById("hamburger");
+// nav-links active menu
+document.querySelectorAll(".nav-link").forEach((link) => {
+    if (link.href === window.location.href) {
+        link.classList.add("active-menu");
+    }
+});
+
+const hamburgerBtn = document.getElementById("hamburger");
 const navbarNav = document.getElementById("nav_menu");
 const navLinks = document.querySelectorAll(".nav-link");
 
-hamburger.addEventListener("click", () => {
+hamburgerBtn.addEventListener("click", () => {
     navbarNav.classList.toggle("left-[0]");
-    hamburger.classList.toggle("fa-x");
+    hamburgerBtn.classList.toggle("fa-x");
 });
 
 navLinks.forEach((link) => {
     link.addEventListener("click", () => {
         navbarNav.classList.toggle("left-[0]");
-        hamburger.classList.toggle("fa-x");
+        hamburgerBtn.classList.toggle("fa-x");
     });
 });
-
-// nav-links active menu
-// document.querySelectorAll(".nav-link").forEach((link) => {
-//     if (link.href === window.location.href) {
-//         link.classList.add("active-menu");
-//     }
-// });
 
 // dropdown menu
 function dropDownMenu() {

@@ -29,12 +29,12 @@
             </div>
             <div class="absolute py-10 lg:py-0 top-full left-[-100%] w-full min-h-full bg-slate-100/70 gap-5 backdrop-blur-sm lg:backdrop-blur-none flex flex-col lg:flex-row items-center justify-center duration-300 z-50 overflow-hidden lg:static lg:min-h-fit lg:bg-transparent lg:w-auto"
                 id="nav_menu">
-                <a href="{{ url('main-users') }}" class="nav-link active-menu">Find
+                <a href="{{ url('main-users') }}" class="nav-link">Find
                     Jobs</a>
                 <a href="{{ url('company') }}" class="nav-link">Company</a>
-                <a href="{{ url('main-users') }}" class="nav-link">Article</a>
-                <a href="{{ url('main-users') }}" class="nav-link">Notifikasi</a>
-                <a href="{{ url('main-users') }}" class="nav-link">Partner</a>
+                <a href="{{ url('') }}" class="nav-link">Partner</a>
+                <a href="{{ url('') }}" class="nav-link">Notifikasi</a>
+                <a href="{{ url('') }}" class="nav-link">Article</a>
             </div>
             <div class="nav-profie flex items-center gap-7">
                 <div class="flex items-center gap-4">
@@ -105,17 +105,17 @@
                     </div>
                 </div>
                 <div class="flex flex-col gap-1 text-[15px] mt-2">
-                    <a href=""
-                        class="pemalinks-footer hover:opacity-60 active-menu hover:translate-x-1 transition-all">Find
+                    <a href="{{ url('main-users') }}"
+                        class="pemalinks-footer nav-link hover:opacity-60 hover:translate-x-1 transition-all">Find
                         Jobs</a>
-                    <a href=""
-                        class="pemalinks-footer hover:opacity-60 hover:translate-x-1 transition-all">Message</a>
-                    <a href=""
-                        class="pemalinks-footer hover:opacity-60 hover:translate-x-1 transition-all">Hiring</a>
-                    <a href=""
-                        class="pemalinks-footer hover:opacity-60 hover:translate-x-1 transition-all">Community</a>
-                    <a href=""
-                        class="pemalinks-footer hover:opacity-60 hover:translate-x-1 transition-all">FAQ</a>
+                    <a href="{{ url('company') }}"
+                        class="pemalinks-footer nav-link hover:opacity-60 hover:translate-x-1 transition-all">Company</a>
+                    <a href="{{ url('') }}"
+                        class="pemalinks-footer nav-link hover:opacity-60 hover:translate-x-1 transition-all">Partner</a>
+                    <a href="{{ url('') }}"
+                        class="pemalinks-footer nav-link hover:opacity-60 hover:translate-x-1 transition-all">Notification</a>
+                    <a href="{{ url('') }}"
+                        class="pemalinks-footer nav-link hover:opacity-60 hover:translate-x-1 transition-all">Article</a>
                 </div>
             </div>
             <div class="social_media">
