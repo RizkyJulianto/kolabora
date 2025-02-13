@@ -33,7 +33,7 @@
                     Jobs</a>
                 <a href="{{ url('company') }}" class="nav-link">Company</a>
                 <a href="{{ url('') }}" class="nav-link">Partner</a>
-                <a href="{{ url('') }}" class="nav-link">Project</a>
+                <a href="{{ url('project') }}" class="nav-link">Project</a>
                 <a href="{{ url('notification') }}" class="nav-link">Notification</a>
                 <a href="{{ url('') }}" class="nav-link">Rewards</a>
             </div>
@@ -113,7 +113,7 @@
                         class="pemalinks-footer nav-link hover:opacity-60 hover:translate-x-1 transition-all">Company</a>
                     <a href="{{ url('') }}"
                         class="pemalinks-footer nav-link hover:opacity-60 hover:translate-x-1 transition-all">Partner</a>
-                    <a href="{{ url('') }}"
+                    <a href="{{ url('project') }}"
                         class="pemalinks-footer nav-link hover:opacity-60 hover:translate-x-1 transition-all">Project</a>
                     <a href="{{ url('notification') }}"
                         class="pemalinks-footer nav-link hover:opacity-60 hover:translate-x-1 transition-all">Notification</a>

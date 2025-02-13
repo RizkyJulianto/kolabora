@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\NotificationController;
+use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\UsersController;
 use Illuminate\Support\Facades\Route;
 
@@ -24,6 +25,7 @@ Route::middleware(['AuthIsLogin', 'PreventBackLogout'])->group(function() {
     Route::post('/profile/{id}', [UsersController::class, 'updatedData'])->name('updatedData');
     Route::get('/company', [CompanyController::class, 'index']);
     Route::get('/notification', [NotificationController::class, 'index']);
+    Route::get('/project', [ProjectController::class, 'index']);
 });
 
 Route::fallback(function () {
