@@ -33,8 +33,9 @@
                     Jobs</a>
                 <a href="{{ url('company') }}" class="nav-link">Company</a>
                 <a href="{{ url('') }}" class="nav-link">Partner</a>
-                <a href="{{ url('') }}" class="nav-link">Notifikasi</a>
-                <a href="{{ url('') }}" class="nav-link">Article</a>
+                <a href="{{ url('') }}" class="nav-link">Project</a>
+                <a href="{{ url('notification') }}" class="nav-link">Notification</a>
+                <a href="{{ url('') }}" class="nav-link">Rewards</a>
             </div>
             <div class="nav-profie flex items-center gap-7">
                 <div class="flex items-center gap-4">
@@ -113,9 +114,11 @@
                     <a href="{{ url('') }}"
                         class="pemalinks-footer nav-link hover:opacity-60 hover:translate-x-1 transition-all">Partner</a>
                     <a href="{{ url('') }}"
+                        class="pemalinks-footer nav-link hover:opacity-60 hover:translate-x-1 transition-all">Project</a>
+                    <a href="{{ url('notification') }}"
                         class="pemalinks-footer nav-link hover:opacity-60 hover:translate-x-1 transition-all">Notification</a>
                     <a href="{{ url('') }}"
-                        class="pemalinks-footer nav-link hover:opacity-60 hover:translate-x-1 transition-all">Article</a>
+                        class="pemalinks-footer nav-link hover:opacity-60 hover:translate-x-1 transition-all">Rewards</a>
                 </div>
             </div>
             <div class="social_media">
@@ -187,6 +190,24 @@
     <script src="{{ asset('library/sweetalert/sweetalert2.min.js') }}"></script>
     <script src="{{ asset('library/swiper/swiper-bundle.min.js') }}"></script>
     <script src="{{ asset('js/layout_users.js') }}"></script>
+
+    <script>
+        const hamburgerBtn = document.getElementById("hamburger");
+        const navbarNav = document.getElementById("nav_menu");
+        const navLinks = document.querySelectorAll(".nav-link");
+
+        hamburgerBtn.addEventListener("click", () => {
+            navbarNav.classList.toggle("left-[0]");
+            hamburgerBtn.classList.toggle("fa-x");
+        });
+
+        navLinks.forEach((link) => {
+            link.addEventListener("click", () => {
+                navbarNav.classList.toggle("left-[0]");
+                hamburgerBtn.classList.toggle("fa-x");
+            });
+        });
+    </script>
 
     @if (session('success'))
         <script>
