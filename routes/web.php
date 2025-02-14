@@ -7,8 +7,9 @@ use App\Http\Controllers\PartnerController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\RewardsController;
 use App\Http\Controllers\UsersController;
-use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CompanyminController;
+use Illuminate\Support\Facades\Route;
+
 Route::get('/', function () {
     return view('main-page') ;
 });
@@ -31,8 +32,6 @@ Route::middleware(['AuthIsLogin', 'PreventBackLogout'])->group(function() {
     Route::get('/notification', [NotificationController::class, 'index']);
     Route::get('/rewards', [RewardsController::class, 'index']);
 });
-
-
 
 Route::fallback(function () {
     return view('errors.404');
