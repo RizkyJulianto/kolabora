@@ -3,9 +3,12 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\NotificationController;
+
+
+
 use App\Http\Controllers\UsersController;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\CompanyminController;
 Route::get('/', function () {
     return view('main-page') ;
 });
@@ -26,10 +29,15 @@ Route::middleware(['AuthIsLogin', 'PreventBackLogout'])->group(function() {
     Route::get('/notification', [NotificationController::class, 'index']);
 });
 
+
+
 Route::fallback(function () {
     return view('errors.404');
 });
 
-Route::get('/layout_1', function () {
-    return view('template/layout_1') ;
+Route::get('layout_1', function () {
+    return view('template.layout_1') ;
 });
+
+Route::get('/main-company', [CompanyminController::class, 'index']);
+Route::get('company/jobs', [CompanyminController::class, 'jobs']);

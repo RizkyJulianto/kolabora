@@ -9,6 +9,7 @@ export default {
         "./resources/**/*.js",
         "./resources/**/*.vue",
     ],
+    darkMode: "class",
     theme: {
         fontFamily: {
             primary: ["Mona Sans"],
@@ -32,3 +33,4 @@ export default {
     },
     plugins: [],
 };
+
