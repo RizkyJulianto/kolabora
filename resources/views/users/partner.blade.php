@@ -6,9 +6,9 @@
         </div>
         <div class="blob-2 w-1/2 h-64 bg-orange-500 blur-3xl rounded-full opacity-35 -z-10 absolute -bottom-20 left-0">
         </div>
-        <h1 class="font-bold text-2xl mb-1">Peluang baru menantimu</h1>
-        <p class="text-sm">Peluang baru menantimu! Jangan lewatkan kesempatan emas ini untuk meraih pekerjaan impian dan masa
-            depan yang lebih cerah!
+        <h1 class="font-bold text-2xl mb-1">Carilah partners terbaikmu</h1>
+        <p class="text-sm">Pasangan terbaik untuk karier impianmu! Temukan pekerjaan yang cocok dan wujudkan masa depan
+            gemilang bersama!
         </p>
     </div>
     <div class="partner flex flex-col lg:flex-row px-[5%] lg:px-[3%] gap-6 pt-11 pb-20">
@@ -21,46 +21,12 @@
                     <div class="border-b border-slate-200 py-5">
                         <div class="filter flex items-center gap-2">
                             <input class="border shadow text-sm border-slate-200 rounded outline-none w-full py-2 px-3"
-                                type="search" placeholder="Searcing my partner">
+                                type="search" placeholder="Searching my partner">
                             <div class="bg-gradient-to-r text-sm from-sky_light to-primary py-2 px-3 rounded text-white">
                                 <i class="fa-solid fa-magnifying-glass"></i>
                             </div>
                         </div>
-                        <main class="flex flex-col gap-2 py-3">
-                            <div
-                                class="border border-slate-200 gap-2 flex p-2 shadow-sm rounded hover:shadow-primary_light">
-                                <img class="w-10 h-10" src="{{ asset('images/logo-kolabora.png') }}" alt="">
-                                <div class="block">
-                                    <h4 class="text-sm font-semibold">Baru ada</h4>
-                                    <div
-                                        class="bg-blue-100 w-auto inline-block text-primary px-1.5 py-[0.2px] rounded-full text-[10px]">
-
-                                        <h5><i class="fas fa-user"></i> Darren</h5>
-                                    </div>
-                                    <div
-                                        class="bg-orange-100 w-auto inline-block text-orange_dark px-1.5 py-[0.2px] rounded-full text-[10px]">
-
-                                        <h5><i class="fas fa-location-dot"></i> Jakarta</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div
-                                class="border border-slate-200 gap-2 flex p-2 shadow-sm rounded hover:shadow-primary_light">
-                                <img class="w-10 h-10" src="{{ asset('images/logo-kolabora.png') }}" alt="">
-                                <div class="block">
-                                    <h4 class="text-sm font-semibold">Baru ada</h4>
-                                    <div
-                                        class="bg-blue-100 w-auto inline-block text-primary px-1.5 py-[0.2px] rounded-full text-[10px]">
-
-                                        <h5><i class="fas fa-user"></i> Darren</h5>
-                                    </div>
-                                    <div
-                                        class="bg-orange-100 w-auto inline-block text-orange_dark px-1.5 py-[0.2px] rounded-full text-[10px]">
-
-                                        <h5><i class="fas fa-location-dot"></i> Jakarta</h5>
-                                    </div>
-                                </div>
-                            </div>
+                        <main class="flex flex-col gap-2 pt-5">
                             <div
                                 class="border border-slate-200 gap-2 flex p-2 shadow-sm rounded hover:shadow-primary_light">
                                 <img class="w-10 h-10" src="{{ asset('images/logo-kolabora.png') }}" alt="">
@@ -156,12 +122,12 @@
                 <div
                     class="flex gap-3 md:gap-0 flex-col md:flex-row md:justify-between md:items-center mb-6 w-full shadow border border-slate-200 rounded p-4 ">
                     <div class="flex items-center gap-2">
-                        <h1 class="text-xl font-bold">Partners</h1>
+                        <h1 class="text-xl font-bold">New Connect the Partners</h1>
                         <h4 class="bg-gradient-to-r from-sky_light to-primary py-1 px-2 rounded-full text-white">67</h4>
                     </div>
                     <div class="flex items-center gap-2">
                         <input class="border shadow text-sm border-slate-200 rounded outline-none w-full py-2 px-3"
-                            type="search" placeholder="Searcing">
+                            type="search" placeholder="Searching">
                         <div class="bg-gradient-to-r text-sm from-sky_light to-primary py-2 px-3 rounded text-white">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </div>
@@ -173,8 +139,8 @@
                             <div class="up w-full">
                                 <div class="left">
                                     <div class="flex gap-2">
-                                        <img class="rounded w-14 h-14 shadow"
-                                            src="{{ asset('images/logo-kolabora.png') }}" alt="">
+                                        <img class="rounded w-14 h-14 shadow" src="{{ asset('images/logo-kolabora.png') }}"
+                                            alt="">
                                         <div class="">
                                             <h3 class="font-bold mb-2 md:mb-1">Baru Muncul</h3>
                                             <div
