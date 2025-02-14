@@ -49,8 +49,8 @@
                             <div
                                 class="flex items-center md:hidden text-slate-500 gap-2 p-2 hover:bg-gradient-to-r from-sky_light to-primary hover:text-white">
                                 <P class="block decoration-transparent">
-                                    @if ($name = auth()->user()->name)
-                                        <p>{{ $name }}</p>
+                                    @if ($username = auth()->user()->username)
+                                        <p>{{ $username }}</p>
                                     @endif
                                 </P>
                             </div>
@@ -68,8 +68,8 @@
                             @endauth
                         </div>
                     </div>
-                    @if ($name = auth()->user()->name)
-                        <p class="lg:inline-block hidden">{{ $name }}</p>
+                    @if ($username = auth()->user()->username)
+                        <p class="lg:inline-block hidden">{{ $username }}</p>
                     @endif
                 </div>
                 <div class="text-lg inline-block cursor-pointer z-50 lg:hidden">

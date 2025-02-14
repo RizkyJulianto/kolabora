@@ -5,6 +5,7 @@ use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\NotificationController;
 use App\Http\Controllers\PartnerController;
 use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\RewardsController;
 use App\Http\Controllers\UsersController;
 use Illuminate\Support\Facades\Route;
 
@@ -28,6 +29,7 @@ Route::middleware(['AuthIsLogin', 'PreventBackLogout'])->group(function() {
     Route::get('/partner', [PartnerController::class, 'index']);
     Route::get('/project', [ProjectController::class, 'index']);
     Route::get('/notification', [NotificationController::class, 'index']);
+    Route::get('/rewards', [RewardsController::class, 'index']);
 });
 
 Route::fallback(function () {
