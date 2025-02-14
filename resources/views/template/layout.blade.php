@@ -21,6 +21,8 @@
 </head>
 
 <body class="font-primary">
+    <!-- Loading Bar -->
+ <div id="loading-bar" class="fixed top-0 left-0 w-0 h-1 z-20  bg-gradient-to-r from-sky_light to-primary transition-all duration-300"></div>
     <header>
         <nav class="navbar flex items-center justify-between px-[5%] py-4 lg:px-[3%] shadow-sm relative">
             <div class="logo flex items-center">
@@ -190,6 +192,7 @@
     <script src="{{ asset('library/sweetalert/sweetalert2.min.js') }}"></script>
     <script src="{{ asset('library/swiper/swiper-bundle.min.js') }}"></script>
     <script src="{{ asset('js/layout_users.js') }}"></script>
+    <script src="{{ asset('js/main.js') }}"></script>
 
     <script>
         const hamburgerBtn = document.getElementById("hamburger");

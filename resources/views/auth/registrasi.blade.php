@@ -17,6 +17,8 @@
 </head>
 
 <body class="font-primary">
+    <!-- Loading Bar -->
+    <div id="loading-bar" class="fixed top-0 left-0 w-0 z-20 h-1   bg-gradient-to-r from-orange-400 to-orange_normal   transition-all duration-300"></div>
     <section class="login-section flex flex-col lg:flex-row relative w-full h-full lg:overflow-hidden">
         <div
             class="left-col hidden lg:flex-1 bg-gradient-to-r from-sky_normal to-primary_dark w-full h-auto lg:flex items-center px-[6%] relative">
@@ -77,6 +79,49 @@
 
     <script src="{{ asset('library/sweetalert/sweetalert2.min.js') }}"></script>
     <script src="{{ asset('js/auth.js') }}"></script>
+
+    <!-- Loading -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let loadingBar = document.getElementById("loading-bar");
+
+            function startLoading() {
+                loadingBar.style.width = "0%";
+                loadingBar.style.opacity = "1";
+                let progress = 0;
+                let interval = setInterval(() => {
+                    if (progress < 90) {
+                        progress += Math.random() * 10;
+                        loadingBar.style.width = progress + "%";
+                    } else {
+                        clearInterval(interval);
+                    }
+                }, 100);
+            }
+
+            function completeLoading() {
+                loadingBar.style.width = "100%";
+                setTimeout(() => {
+                    loadingBar.style.opacity = "0";
+                    loadingBar.style.width = "0%";
+                }, 300);
+            }
+
+            // Gunakan event beforeunload agar loading muncul saat pindah halaman
+            window.addEventListener("beforeunload", startLoading);
+            window.addEventListener("load", completeLoading);
+
+            // Mulai loading saat klik link
+            document.querySelectorAll("a").forEach((link) => {
+                link.addEventListener("click", function (e) {
+                    if (link.target !== "_blank" && link.href.startsWith(window.location.origin)) {
+                        startLoading();
+                    }
+                });
+            });
+        });
+    </script>
+    <!-- End Loading -->
 
     @if (session('error'))
         <script>

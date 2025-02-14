@@ -44,3 +44,37 @@ navLinks.forEach(anchor => {
 });
 
 
+// Loading Bar
+document.addEventListener("DOMContentLoaded", function () {
+    let loadingBar = document.getElementById("loading-bar");
+
+    function startLoading() {
+        loadingBar.style.width = "0%";
+        loadingBar.style.opacity = "1";
+        let progress = 0;
+        let interval = setInterval(() => {
+            if (progress < 90) {
+                progress += Math.random() * 10;
+                loadingBar.style.width = progress + "%";
+            } else {
+                clearInterval(interval);
+            }
+        }, 100);
+    }
+
+    function completeLoading() {
+        loadingBar.style.width = "100%";
+        setTimeout(() => {
+            loadingBar.style.opacity = "0";
+            loadingBar.style.width = "0%";
+        }, 300);
+    }
+
+    document.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", function (e) {
+            startLoading();
+        });
+    });
+
+    window.addEventListener("load", completeLoading);
+});
