@@ -32,10 +32,10 @@
                 <a href="{{ url('main-users') }}" class="nav-link">Find
                     Jobs</a>
                 <a href="{{ url('company') }}" class="nav-link">Company</a>
-                <a href="{{ url('') }}" class="nav-link">Partner</a>
+                <a href="{{ url('partner') }}" class="nav-link">Partner</a>
                 <a href="{{ url('project') }}" class="nav-link">Project</a>
                 <a href="{{ url('notification') }}" class="nav-link">Notification</a>
-                <a href="{{ url('') }}" class="nav-link">Rewards</a>
+                <a href="{{ url('rewards') }}" class="nav-link">Rewards</a>
             </div>
             <div class="nav-profie flex items-center gap-7">
                 <div class="flex items-center gap-4">
@@ -111,13 +111,13 @@
                         Jobs</a>
                     <a href="{{ url('company') }}"
                         class="pemalinks-footer nav-link hover:opacity-60 hover:translate-x-1 transition-all">Company</a>
-                    <a href="{{ url('') }}"
+                    <a href="{{ url('partner') }}"
                         class="pemalinks-footer nav-link hover:opacity-60 hover:translate-x-1 transition-all">Partner</a>
                     <a href="{{ url('project') }}"
                         class="pemalinks-footer nav-link hover:opacity-60 hover:translate-x-1 transition-all">Project</a>
                     <a href="{{ url('notification') }}"
                         class="pemalinks-footer nav-link hover:opacity-60 hover:translate-x-1 transition-all">Notification</a>
-                    <a href="{{ url('') }}"
+                    <a href="{{ url('rewards') }}"
                         class="pemalinks-footer nav-link hover:opacity-60 hover:translate-x-1 transition-all">Rewards</a>
                 </div>
             </div>
