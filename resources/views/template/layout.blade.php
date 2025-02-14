@@ -32,10 +32,10 @@
                 <a href="{{ url('main-users') }}" class="nav-link">Find
                     Jobs</a>
                 <a href="{{ url('company') }}" class="nav-link">Company</a>
-                <a href="{{ url('') }}" class="nav-link">Partner</a>
-                <a href="{{ url('') }}" class="nav-link">Project</a>
+                <a href="{{ url('partner') }}" class="nav-link">Partner</a>
+                <a href="{{ url('project') }}" class="nav-link">Project</a>
                 <a href="{{ url('notification') }}" class="nav-link">Notification</a>
-                <a href="{{ url('') }}" class="nav-link">Rewards</a>
+                <a href="{{ url('rewards') }}" class="nav-link">Rewards</a>
             </div>
             <div class="nav-profie flex items-center gap-7">
                 <div class="flex items-center gap-4">
@@ -49,8 +49,8 @@
                             <div
                                 class="flex items-center md:hidden text-slate-500 gap-2 p-2 hover:bg-gradient-to-r from-sky_light to-primary hover:text-white">
                                 <P class="block decoration-transparent">
-                                    @if ($name = auth()->user()->name)
-                                        <p>{{ $name }}</p>
+                                    @if ($username = auth()->user()->username)
+                                        <p>{{ $username }}</p>
                                     @endif
                                 </P>
                             </div>
@@ -68,8 +68,8 @@
                             @endauth
                         </div>
                     </div>
-                    @if ($name = auth()->user()->name)
-                        <p class="lg:inline-block hidden">{{ $name }}</p>
+                    @if ($username = auth()->user()->username)
+                        <p class="lg:inline-block hidden">{{ $username }}</p>
                     @endif
                 </div>
                 <div class="text-lg inline-block cursor-pointer z-50 lg:hidden">
@@ -111,13 +111,13 @@
                         Jobs</a>
                     <a href="{{ url('company') }}"
                         class="pemalinks-footer nav-link hover:opacity-60 hover:translate-x-1 transition-all">Company</a>
-                    <a href="{{ url('') }}"
+                    <a href="{{ url('partner') }}"
                         class="pemalinks-footer nav-link hover:opacity-60 hover:translate-x-1 transition-all">Partner</a>
-                    <a href="{{ url('') }}"
+                    <a href="{{ url('project') }}"
                         class="pemalinks-footer nav-link hover:opacity-60 hover:translate-x-1 transition-all">Project</a>
                     <a href="{{ url('notification') }}"
                         class="pemalinks-footer nav-link hover:opacity-60 hover:translate-x-1 transition-all">Notification</a>
-                    <a href="{{ url('') }}"
+                    <a href="{{ url('rewards') }}"
                         class="pemalinks-footer nav-link hover:opacity-60 hover:translate-x-1 transition-all">Rewards</a>
                 </div>
             </div>

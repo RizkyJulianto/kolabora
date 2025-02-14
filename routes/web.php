@@ -3,9 +3,9 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\NotificationController;
-
-
-
+use App\Http\Controllers\PartnerController;
+use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\RewardsController;
 use App\Http\Controllers\UsersController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CompanyminController;
@@ -26,7 +26,10 @@ Route::middleware(['AuthIsLogin', 'PreventBackLogout'])->group(function() {
     Route::get('/profile/{id}', [UsersController::class, 'show'])->name('profile.show');
     Route::post('/profile/{id}', [UsersController::class, 'updatedData'])->name('updatedData');
     Route::get('/company', [CompanyController::class, 'index']);
+    Route::get('/partner', [PartnerController::class, 'index']);
+    Route::get('/project', [ProjectController::class, 'index']);
     Route::get('/notification', [NotificationController::class, 'index']);
+    Route::get('/rewards', [RewardsController::class, 'index']);
 });
 
 
