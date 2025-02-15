@@ -1,13 +1,15 @@
 @extends('template.layout')
 @section('title_web', 'Profile | KolaBora')
 @section('content')
-    <form action="{{ route('updatedData', auth()->user()->id) }}" method="post">
+    <form action="{{ route('updateProfileUsers', auth()->user()->id) }}" method="post" enctype="multipart/form-data">
+        @method('PUT')
+        @csrf
         <main class="profile flex flex-col lg:flex-row px-[5%] lg:px-[3%] gap-6 pt-11 pb-20">
             <div class="left-col flex-[1_1_100%] lg:flex-[1_1_35%] w-full flex flex-col gap-6">
                 <div class="profile-img shadow border border-slate-200 p-[18px] rounded">
                     <div class="flex justify-center items-center flex-col">
                         <div class="relative">
-                            <img class="w-28 h-28 rounded-full"
+                            <img class="w-28 h-28 shadow rounded-full"
                                 src="{{ asset('uploads/profile/' . auth()->user()->profile_img) }}"
                                 alt="{{ auth()->user()->profile_img }}">
                             <label for="profile_img" class="absolute top-0 right-0 cursor-pointer">
@@ -21,16 +23,17 @@
                         <h3 class="mt-4 w-full text-lg font-semibold text-center uppercase">{{ auth()->user()->name }}</h3>
                     </div>
 
-                    <div class="mt-4 text-sm text-slate-600">
-                        <div class="form-readonly w-full mb-3">
-                            <label class="mb-2">Username</label>
-                            <input readonly type="text" name="" value="{{ auth()->user()->username }}"
-                                class="border border-slate-200 rounded outline-none w-full p-2" id="">
+                    <div class="mt-4 ">
+                        <div class="form-group mb-3">
+                            <label class="label-form block mb-1 text-gray-500 text-sm">Bio </label>
+                            <textarea name="bio"
+                                class="inline-block tracking-wide h-32 bg-gray-100 border-[1.8px] border-gray-400 w-full py-2 text-sm px-3 focus:border-primary outline-none rounded-md"
+                                id="" cols="30" rows="10">{{ auth()->user()->bio }}</textarea>
                         </div>
-                        <div class="form-readonly w-full">
-                            <label class="mb-2">Email</label>
-                            <input readonly type="text" name="" value="{{ auth()->user()->email }}"
-                                class="border border-slate-200 rounded outline-none w-full p-2" id="">
+                        <div class="form-group">
+                            <button
+                                class="inline-block text-xs font-medium tracking-wider text-center rounded-md bg-gradient-to-r from-sky_light  to-primary_dark text-white py-1.5 px-2 hover:opacity-[90%]"
+                                type="submit">Save</button>
                         </div>
                     </div>
                 </div>
@@ -58,13 +61,27 @@
                             <label class="label-form block mb-1 text-gray-500 text-sm">Email</label>
                             <input type="text"
                                 class="inline-block tracking-wide bg-gray-100 border-[1.8px] border-gray-400 w-full py-2 text-sm px-3 focus:border-primary outline-none rounded-md"
-                                email="email" id="email" value="{{ auth()->user()->email }}" autocomplete="off">
+                                name="email" id="email" value="{{ auth()->user()->email }}" autocomplete="off">
+                        </div>
+                        <div class="form-group mb-3">
+                            <label class="label-form block mb-1 text-gray-500 text-sm">Born Birth</label>
+                            <input type="text"
+                                class="inline-block tracking-wide bg-gray-100 border-[1.8px] border-gray-400 w-full py-2 text-sm px-3 focus:border-primary outline-none rounded-md"
+                                name="born_birth" id="born_birth" value="{{ auth()->user()->born_birth }}"
+                                autocomplete="off">
+                        </div>
+                        <div class="form-group mb-3">
+                            <label class="label-form block mb-1 text-gray-500 text-sm">Date Birth</label>
+                            <input type="date"
+                                class="inline-block tracking-wide bg-gray-100 border-[1.8px] border-gray-400 w-full py-2 text-sm px-3 focus:border-primary outline-none rounded-md"
+                                name="date_birth" id="date_birth" value="{{ auth()->user()->date_birth }}"
+                                autocomplete="off">
                         </div>
                         <div class="form-group mb-3">
                             <label class="label-form block mb-1 text-gray-500 text-sm">Gender</label>
-                            <select name=""
-                                class="inline-block tracking-wide  text-[13px] bg-gray-100 border-[1.8px] border-gray-400 w-full py-2  px-3 focus:border-primary outline-none rounded-md"
-                                id="">
+                            <select name="gender"
+                                class="inline-block tracking-wide  text-[14px] bg-gray-100 border-[1.8px] border-gray-400 w-full py-2  px-3 focus:border-primary outline-none rounded-md"
+                                id="gender">
                                 <option value="">Choice gender</option>
                                 <option value="male" {{ auth()->user()->gender === 'male' ? 'selected' : '' }}>Male
                                 </option>
@@ -72,17 +89,30 @@
                                     Female</option>
                             </select>
                         </div>
+                        <div class="form-group mb-3">
+                            <label class="label-form block mb-1 text-gray-500 text-sm">No Telephone</label>
+                            <input type="number"
+                                class="inline-block tracking-wide bg-gray-100 border-[1.8px] border-gray-400 w-full py-2 text-sm px-3 focus:border-primary outline-none rounded-md"
+                                name="no_telp" id="no_telp" value="{{ auth()->user()->no_telp }}" autocomplete="off">
+                        </div>
+                        <div class="form-group mb-3">
+                            <label class="label-form block mb-1 text-gray-500 text-sm">Last Education</label>
+                            <input type="text"
+                                class="inline-block tracking-wide bg-gray-100 border-[1.8px] border-gray-400 w-full py-2 text-sm px-3 focus:border-primary outline-none rounded-md"
+                                name="last_education" id="last_education" value="{{ auth()->user()->last_education }}"
+                                autocomplete="off">
+                        </div>
                     </div>
                     <div class="form-group mb-3">
                         <label class="label-form block mb-1 text-gray-500 text-sm">Address</label>
-                        <textarea name="addres"
+                        <textarea name="address"
                             class="inline-block tracking-wide h-20 bg-gray-100 border-[1.8px] border-gray-400 w-full py-2 text-sm px-3 focus:border-primary outline-none rounded-md"
-                            id="" cols="30" rows="10">{{ auth()->user()->address }}</textarea>
+                            id="address" cols="30" rows="10">{{ auth()->user()->address }}</textarea>
                     </div>
                     <div class="form-group">
                         <button
                             class="inline-block text-xs font-medium tracking-wider text-center rounded-md bg-gradient-to-r from-sky_light  to-primary_dark text-white py-1.5 px-2 hover:opacity-[90%]"
-                            type="submit">Change</button>
+                            type="submit">Save</button>
                     </div>
                 </div>
 

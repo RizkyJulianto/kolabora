@@ -22,9 +22,14 @@ class User extends Authenticatable
         'username',
         'email',
         'password',
+        'born_birth',
+        'date_birth',
         'gender',
+        'no_telp',
+        'last_education',
         'address',
         'role',
+        'bio',
         'profile_img'
     ];
 
@@ -51,4 +56,3 @@ class User extends Authenticatable
         ];
     }
 }
-

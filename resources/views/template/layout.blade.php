@@ -22,7 +22,9 @@
 
 <body class="font-primary">
     <!-- Loading Bar -->
- <div id="loading-bar" class="fixed top-0 left-0 w-0 h-1 z-20  bg-gradient-to-r from-sky_light to-primary transition-all duration-300"></div>
+    <div id="loading-bar"
+        class="fixed top-0 left-0 w-0 h-1 z-20  bg-gradient-to-r from-sky_light to-primary transition-all duration-300">
+    </div>
     <header>
         <nav class="navbar flex items-center justify-between px-[5%] py-4 lg:px-[3%] shadow-sm relative">
             <div class="logo flex items-center">
@@ -220,6 +222,16 @@
                 draggable: true,
                 showConfirmButton: false,
                 timer: 1500
+            });
+        </script>
+    @endif
+
+    @if (session('success_second'))
+        <script>
+            Swal.fire({
+                title: "{{ session('success_second') }}",
+                icon: "success",
+                draggable: true,
             });
         </script>
     @endif
