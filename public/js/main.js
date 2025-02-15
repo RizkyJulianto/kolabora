@@ -70,11 +70,16 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 300);
     }
 
+    // Gunakan event beforeunload agar loading muncul saat pindah halaman
+    window.addEventListener("beforeunload", startLoading);
+    window.addEventListener("load", completeLoading);
+
+    // Mulai loading saat klik link
     document.querySelectorAll("a").forEach((link) => {
         link.addEventListener("click", function (e) {
-            startLoading();
+            if (link.target !== "_blank" && link.href.startsWith(window.location.origin)) {
+                startLoading();
+            }
         });
     });
-
-    window.addEventListener("load", completeLoading);
 });

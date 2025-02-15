@@ -24,6 +24,11 @@
         }
     </script>
 </head>
+<body class="relative">
+  
+<!-- Loading Bar -->
+<div id="loading-bar"></div>
+
 <header>
     <nav class="fixed z-30 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
         <div class="px-3 py-3 lg:px-5 lg:pl-3">
@@ -159,7 +164,7 @@
                   <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
                 </button>
                 <!-- Dropdown menu -->
-                <div class="z-20 z-50 hidden max-w-sm my-4 overflow-hidden text-base list-none bg-white divide-y divide-gray-100 rounded shadow-lg dark:bg-gray-700 dark:divide-gray-600" id="apps-dropdown">
+                <div class="z-50 hidden max-w-sm my-4 overflow-hidden text-base list-none bg-white divide-y divide-gray-100 rounded shadow-lg dark:bg-gray-700 dark:divide-gray-600" id="apps-dropdown">
                   <div class="block px-4 py-2 text-base font-medium text-center text-gray-700 bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                       Apps
                   </div>
@@ -248,7 +253,7 @@
 </header>
 <div class="flex pt-16 overflow-hidden bg-gray-50 dark:bg-gray-900">
 {{-- sidebar --}}
-    <aside id="sidebar" class="fixed top-0 left-0 z-20 flex flex-col flex-shrink-0 hidden w-64 h-full pt-16 font-normal duration-75 lg:flex transition-width" aria-label="Sidebar">
+    <aside id="sidebar" class="fixed top-0 left-0 z-20  flex-shrink-0 hidden w-64 h-full pt-16 font-normal duration-75 lg:flex flex-col transition-width" aria-label="Sidebar">
         <div class="relative flex flex-col flex-1 min-h-0 pt-0 bg-white border-r border-gray-200 dark:bg-gray-800 dark:border-gray-700">
           <div class="flex flex-col flex-1 pt-5 pb-4 overflow-y-auto">
             <div class="flex-1 px-3 space-y-1 bg-white divide-y divide-gray-200 dark:bg-gray-800 dark:divide-gray-700">
@@ -333,4 +338,46 @@
 
 </div>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    let loadingBar = document.getElementById("loading-bar");
+
+    function startLoading() {
+        loadingBar.style.width = "0%";
+        loadingBar.style.opacity = "1";
+        let progress = 0;
+        let interval = setInterval(() => {
+            if (progress < 90) {
+                progress += Math.random() * 10;
+                loadingBar.style.width = progress + "%";
+            } else {
+                clearInterval(interval);
+            }
+        }, 100);
+    }
+
+    function completeLoading() {
+        loadingBar.style.width = "100%";
+        setTimeout(() => {
+            loadingBar.style.opacity = "0";
+            loadingBar.style.width = "0%";
+        }, 300);
+    }
+
+    // Gunakan event beforeunload agar loading muncul saat pindah halaman
+    window.addEventListener("beforeunload", startLoading);
+    window.addEventListener("load", completeLoading);
+
+    // Mulai loading saat klik link
+    document.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", function (e) {
+            if (link.target !== "_blank" && link.href.startsWith(window.location.origin)) {
+                startLoading();
+            }
+        });
+    });
+});
+</script>
+
+</body>
 </html>
