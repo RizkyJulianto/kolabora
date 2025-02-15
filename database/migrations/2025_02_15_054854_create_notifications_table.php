@@ -11,14 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('rewards', function (Blueprint $table) {
+        Schema::create('notifications', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('total_point')->nullable();
-            $table->double('point_redeemed')->nullable();
-            $table->double('total_amount')->nullable();
-            $table->enum('wallet_provider', ['gopay', 'dana', 'ovo'])->nullable();
-            $table->string('wallet_number')->nullable();
-            $table->enum('status', ['pending', 'approved'])->nullable();
+            $table->string('name_notif')->nullable();
+            $table->text('message_notif')->nullable();
+            $table->boolean('status')->nullable();
             $table->unsignedBigInteger('id_users')->nullable();
             $table->timestamps();
 
@@ -31,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('rewards');
+        Schema::dropIfExists('notifications');
     }
 };

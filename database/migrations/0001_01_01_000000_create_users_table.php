@@ -27,8 +27,10 @@ return new class extends Migration
             $table->text('bio')->nullable();
             $table->enum('role', ['users', 'company'])->nullable();
             $table->string('profile_img')->nullable();
+            $table->unsignedBigInteger('id_team')->nullable();
             $table->rememberToken();
             $table->timestamps();
+
         });
 
         Schema::create('password_reset_tokens', function (Blueprint $table) {

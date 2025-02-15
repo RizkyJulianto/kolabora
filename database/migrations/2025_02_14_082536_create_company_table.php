@@ -15,6 +15,11 @@ return new class extends Migration
             $table->id();
             $table->string('name_company')->nullable();
             $table->text('address_company')->nullable();
+            $table->string('contact')->nullable();
+            $table->string('instagram')->nullable();
+            $table->string('linkedin')->nullable();
+            $table->string('website')->nullable();
+            $table->string('profile_company')->nullable();
             $table->timestamps();
         });
     }
