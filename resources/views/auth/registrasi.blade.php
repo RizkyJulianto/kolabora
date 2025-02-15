@@ -18,7 +18,7 @@
 
 <body class="font-primary">
     <!-- Loading Bar -->
-    <div id="loading-bar" class="fixed top-0 left-0 w-0 z-20 h-1   bg-gradient-to-r from-orange-400 to-orange_normal   transition-all duration-300"></div>
+    <div id="loading-bar" class="fixed top-0 left-0  z-20 h-1   bg-gradient-to-r from-orange-400 to-orange_normal   transition-all duration-300"></div>
     <section class="login-section flex flex-col lg:flex-row relative w-full h-full lg:overflow-hidden">
         <div
             class="left-col hidden lg:flex-1 bg-gradient-to-r from-sky_normal to-primary_dark w-full h-auto lg:flex items-center px-[6%] relative">

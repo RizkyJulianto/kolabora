@@ -16,7 +16,7 @@
 <body class="font-primary overflow-x-hidden">
 
  <!-- Loading Bar -->
- <div id="loading-bar" class="fixed top-0 left-0 w-full h-1 z-20  bg-gradient-to-r from-sky_light to-primary   transition-all duration-300"></div>
+ <div id="loading-bar" class="fixed top-0 left-0  h-1 z-20  bg-gradient-to-r from-sky_light to-primary   transition-all duration-300"></div>
 
     @include('mainpage.header')
     @include('mainpage.about')

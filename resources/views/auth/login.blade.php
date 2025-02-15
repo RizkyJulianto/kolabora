@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,7 +21,7 @@
 
 <body class="font-primary">
     <!-- Loading Bar -->
-    <div id="loading-bar" class="fixed top-0 left-0 w-0 h-1 z-20  bg-gradient-to-r from-orange-400 to-orange_normal   transition-all duration-300"></div>
+    <div id="loading-bar" class="fixed top-0 left-0  h-1 z-20  bg-gradient-to-r from-orange-400 to-orange_normal   transition-all duration-300"></div>
 
     <section class="login-section flex flex-col lg:flex-row relative w-full h-dvh items-center overflow-hidden">
         <div
