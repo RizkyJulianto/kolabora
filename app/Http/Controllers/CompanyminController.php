@@ -14,5 +14,17 @@ class CompanyminController extends Controller
     {
         return view('companymin/jobs');
     }
+    public function verify(){
+        return view('companymin/verify');
+    }
+    public function result(){
+        return view('companymin/results');
+    }
+    public function notif(){
+        return view('companymin/notification');
+    }
+    public function settings(){
+        return view('companymin/settings');
+    }
 
 }

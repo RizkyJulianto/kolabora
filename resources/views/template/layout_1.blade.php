@@ -143,7 +143,7 @@
                         </div>
                       </a>
                     </div>
-                    <a href="#" class="block py-2 text-sm font-medium text-center text-gray-900 rounded-b-lg bg-gray-50 hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-white">
+                    <a href="{{  url('company/settings') }}" class="block py-2 text-sm font-medium text-center text-gray-900 rounded-b-lg bg-gray-50 hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-white">
                       <div class="inline-flex items-center ">
                         <svg class="w-4 h-4 me-2 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 14">
                           <path d="M10 0C4.612 0 0 5.336 0 7c0 1.742 3.546 7 10 7 6.454 0 10-5.258 10-7 0-1.664-4.612-7-10-7Zm0 10a3 3 0 1 1 0-6 3 3 0 0 1 0 6Z"/>
@@ -227,10 +227,10 @@
                     </div>
                     <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownUserAvatarButton">
                       <li>
-                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+                        <a href="{{ url('/main-company') }}" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
                       </li>
                       <li>
-                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+                        <a href="{{ url('company/settings')}}" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
                       </li>
                       {{-- <li>
                         <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
@@ -265,7 +265,7 @@
                   </form>
                 </li>
                 <li>
-                  <a href="{{ "#" }}" class="flex items-center p-2 text-base text-gray-900 rounded-lg hover:bg-gray-100 group dark:text-gray-200 dark:hover:bg-gray-700">
+                  <a href="{{ '/main-company' }}" class="flex items-center p-2 text-base {{ request()->is('main-company') ? ' bg-gray-100 dark:bg-gray-700' : ' text-gray-900  hover:bg-gray-100 group dark:text-gray-200 dark:hover:bg-gray-700'}} rounded-lg">
                       <svg class="w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path><path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path></svg>
                       <span class="ml-3" sidebar-toggle-item>Dashboard</span>
                   </a>
@@ -278,12 +278,12 @@
                         <span class="flex-1 ml-3 text-left whitespace-nowrap" sidebar-toggle-item>CRUD</span>
                         <svg sidebar-toggle-item class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
                     </button>
-                    <ul id="dropdown-crud" class="hidden space-y-2 py-2 sidebar-item ">
+                    <ul id="dropdown-crud" class="space-y-2 py-2  ">
                         <li>
-                            <a href="{{ url('jobs') }}" class="flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700 sidebar-link">Jobs</a>
+                            <a href="{{ url('company/jobs') }}" class="flex items-center p-2 text-base {{ request()->is('company/jobs') ? ' bg-gray-100 dark:bg-gray-700' : ' text-gray-900  hover:bg-gray-100 group dark:text-gray-200 dark:hover:bg-gray-700'}} rounded-lg pl-11">Jobs</a>
                         </li>
                           <li>
-                            <a href="{{ url('company/verify') }}" class="flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700">Verify</a>
+                            <a href="{{ url('company/verify') }}" class="flex items-center p-2 text-base {{ request()->is('company/verify') ? ' bg-gray-100 dark:bg-gray-700' : ' text-gray-900  hover:bg-gray-100 group dark:text-gray-200 dark:hover:bg-gray-700'}} rounded-lg pl-11">Verify</a>
                         </li>
                     </ul>
                   </li>
@@ -293,18 +293,18 @@
                       <span class="flex-1 ml-3 text-left whitespace-nowrap" sidebar-toggle-item>Inbox</span>
                       <svg sidebar-toggle-item class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
                   </button>
-                  <ul id="dropdown-auth" class="hidden py-2 space-y-2">
+                  <ul id="dropdown-auth" class="py-2 space-y-2 ">
                     <li>
-                      <a href="{{ "authentication/sign-in/" }}" class="flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700">Jobs results</a>
+                      <a href="{{ url('company/results') }}" class="flex items-center p-2 text-base {{ request()->is('company/results') ? ' bg-gray-100 dark:bg-gray-700' : ' text-gray-900  hover:bg-gray-100 group dark:text-gray-200 dark:hover:bg-gray-700'}} rounded-lg pl-11">Jobs results</a>
                     </li>
                     <li>
-                      <a href="{{ "authentication/sign-up/" }}" class="flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700">Notification</a>
+                      <a href="{{ url('company/notification') }}" class="flex items-center p-2 text-base {{ request()->is('company/notification') ? ' bg-gray-100 dark:bg-gray-700' : ' text-gray-900  hover:bg-gray-100 group dark:text-gray-200 dark:hover:bg-gray-700'}} rounded-lg pl-11">Notification</a>
                     </li>
                   </ul>
                 </li>
               </ul>
               <div class="pt-2 space-y-2">
-                    <a href="{{ "settings/"}}" class="flex items-center p-2 text-base text-gray-900 rounded-lg hover:bg-gray-100 group dark:text-gray-200 dark:hover:bg-gray-700">
+                    <a href="{{ url('company/settings')}}" class="flex items-center p-2 text-base {{ request()->is('company/settings') ? ' bg-gray-100 dark:bg-gray-700' : ' text-gray-900  hover:bg-gray-100 group dark:text-gray-200 dark:hover:bg-gray-700'}} rounded-lg">
                         <svg class="w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                           <path clip-rule="evenodd" fill-rule="evenodd" d="M8.34 1.804A1 1 0 019.32 1h1.36a1 1 0 01.98.804l.295 1.473c.497.144.971.342 1.416.587l1.25-.834a1 1 0 011.262.125l.962.962a1 1 0 01.125 1.262l-.834 1.25c.245.445.443.919.587 1.416l1.473.294a1 1 0 01.804.98v1.361a1 1 0 01-.804.98l-1.473.295a6.95 6.95 0 01-.587 1.416l.834 1.25a1 1 0 01-.125 1.262l-.962.962a1 1 0 01-1.262.125l-1.25-.834a6.953 6.953 0 01-1.416.587l-.294 1.473a1 1 0 01-.98.804H9.32a1 1 0 01-.98-.804l-.295-1.473a6.957 6.957 0 01-1.416-.587l-1.25.834a1 1 0 01-1.262-.125l-.962-.962a1 1 0 01-.125-1.262l.834-1.25a6.957 6.957 0 01-.587-1.416l-1.473-.294A1 1 0 011 10.68V9.32a1 1 0 01.804-.98l1.473-.295c.144-.497.342-.971.587-1.416l-.834-1.25a1 1 0 01.125-1.262l.962-.962A1 1 0 015.38 3.03l1.25.834a6.957 6.957 0 011.416-.587l.294-1.473zM13 10a3 3 0 11-6 0 3 3 0 016 0z"></path>
                         </svg>

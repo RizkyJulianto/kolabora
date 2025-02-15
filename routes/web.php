@@ -43,3 +43,9 @@ Route::get('layout_1', function () {
 
 Route::get('/main-company', [CompanyminController::class, 'index']);
 Route::get('company/jobs', [CompanyminController::class, 'jobs']);
+
+
+Route::get('company/verify', [CompanyminController::class, 'verify']);
+Route::get('company/results', [CompanyminController::class, 'result']);
+Route::get('company/notification', [CompanyminController::class, 'notif']);
+Route::get('company/settings', [CompanyminController::class, 'settings']);
