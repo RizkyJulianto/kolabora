@@ -19,4 +19,9 @@ class CompanyUsers extends Model
         'profile_company'
     ];
     protected $primaryKey = 'id';
+
+    public function projects()
+    {
+        return $this->hasMany(ProjectModel::class, 'id_company', 'id');
+    }
 }
