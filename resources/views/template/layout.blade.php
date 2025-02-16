@@ -194,7 +194,6 @@
     <script src="{{ asset('library/sweetalert/sweetalert2.min.js') }}"></script>
     <script src="{{ asset('library/swiper/swiper-bundle.min.js') }}"></script>
     <script src="{{ asset('js/layout_users.js') }}"></script>
-    <script src="{{ asset('js/main.js') }}"></script>
 
     <script>
         const hamburgerBtn = document.getElementById("hamburger");
