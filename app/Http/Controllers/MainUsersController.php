@@ -28,6 +28,7 @@ class MainUsersController extends Controller
 
     public function show($id)
     {
-        return view('users/detail/detail_project');
+        $data = ProjectModel::with('company')->findOrFail($id);
+        return view('users/detail/detail_project', compact('data'));
     }
 }

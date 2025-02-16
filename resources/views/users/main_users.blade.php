@@ -121,9 +121,10 @@
                     @if ($data->isNotEmpty())
                         <div class="mb-8 flex flex-col gap-5">
                             @foreach ($data as $jobs)
-                                <a href="{{ url('main-users/' . $jobs->id) }}" class="box shadow w-full border border-slate-200 rounded p-4">
-                                    <div class="up flex flex-col lg:flex-row lg:justify-between lg:gap-0 gap-4">
-                                        <div class="left">
+                                <a href="{{ url('main-users/' . $jobs->id) }}"
+                                    class="box shadow w-full border border-slate-200 rounded p-4">
+                                    <div class="up flex flex-col lg:flex-row lg:gap-2 gap-4">
+                                        <div class="left flex-[1_1_100%] lg:flex-[1_1_80%]">
                                             <div class="flex gap-2">
                                                 <img class="rounded w-14 h-14 shadow"
                                                     src="{{ asset('images/logo-kolabora.png') }}" alt="">
@@ -167,7 +168,8 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="right">
+                                        <div
+                                            class="right flex-[1_1_100%] lg:flex-[1_1_20%] flex lg:justify-end lg:items-start">
                                             <div class="flex items-center gap-2 text-slate-500 text-sm">
                                                 <i class="fa-regular fa-calendar"></i>
                                                 <p>{{ date('j F Y', strtotime($jobs->date_project)) }}</p>
@@ -187,7 +189,6 @@
                                             <p
                                                 class="bg-gradient-to-r from-sky_light to-primary text-white rounded-sm text-xs py-1 px-2">
                                                 {{ $jobs->company->scope_company }}</p>
-
                                         </div>
                                     </div>
                                 </a>

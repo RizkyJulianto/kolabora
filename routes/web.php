@@ -25,13 +25,13 @@ Route::prefix('auth')->group(function () {
 
 Route::middleware(['AuthIsLogin', 'PreventBackLogout'])->group(function () {
     Route::get('/main-users', [MainUsersController::class, 'index'])->name('mainUsersSearch');
+    Route::get('/main-users/{id}', [MainUsersController::class, 'show'])->name('showProject');
     Route::get('/profile/{id}', [UsersController::class, 'show'])->name('profile.show');
     Route::put('profile/{id}', [UsersController::class, 'update'])->name('updateProfileUsers');
     Route::get('/company', [CompanyController::class, 'index'])->name('companySearch');
     Route::get('/company/{id}', [CompanyController::class, 'show']);
     Route::get('/partner', [PartnerController::class, 'index']);
     Route::get('/project', [ProjectController::class, 'index']);
-    Route::get('/project/{id}', [ProjectController::class, 'show'])->name('showProject');
     Route::get('/notification', [NotificationController::class, 'index']);
     Route::get('/rewards', [RewardsController::class, 'index']);
 });
