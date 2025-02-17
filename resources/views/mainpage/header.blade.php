@@ -8,7 +8,6 @@
                 <a href="" class="text-xl md:text-2xl font-bold text-orange-300 cursor-pointer">Kola<span class="text-blue-600">Bora</span></a>
             </div>
         </div>
-        
 
             <ul class="nav-container-links gap-x-3 items-start lg:items-center flex flex-col lg:flex-row absolute lg:relative md:mt-[13%] mt-[20%] lg:mt-0 gap-y-2 bg-white lg:bg-transparent rounded-md border lg:border-none
              border-gray-300 shadow-md lg:shadow-none w-full lg:w-auto  py-4 px-4 lg:py-0 lg:px-0 left-0 opacity-0 lg:opacity-100   transition-all duration-700" id="navigation">
@@ -42,38 +41,38 @@
             </div>
         </nav>
     </div>
-    <div class="illustration-img absolute z-10 lg:top-[25%] md:top-[27%]  md:right-[5%] top-[21%] right-[5%]   rotate-[10deg] bg-white rounded-xl shadow-xl">
-            <img src="{{ asset ('/images/work.png')}}" alt="" class="lg:w-40 lg:h-32 md:w-24 md:h-24 w-20 h-20 object-contain " >
+    <div class="illustration-img absolute z-10 lg:top-[25%] md:top-[16%]  md:right-[5%] top-[18%] max-[380px]:top-[20%]  right-[5%]   rotate-[10deg] bg-white rounded-xl shadow-xl">
+            <img src="{{ asset ('/images/work.png')}}" alt="" class="lg:w-40 lg:h-32 md:w-32 md:h-32 w-20 h-20 object-contain " >
     </div>
-    <div class="illustration-img absolute z-10 lg:top-[60%] top-[70%] md:top-[68%] lg:right-[5%] md:right-[8%] right-[5%] bg-white rounded-xl shadow-xl rotate-[10deg]">
-            <img src="{{ asset ('/images/goals.png')}}" alt="" class="lg:w-36 lg:h-32 md:w-24 md:h-24 w-20 h-20 object-contain " >
+    <div class="illustration-img absolute z-10 lg:top-[60%] top-[60%] max-[380px]:top-[65%] md:top-[53%] lg:right-[5%] md:right-[8%] right-[5%] bg-white rounded-xl shadow-xl rotate-[10deg]">
+            <img src="{{ asset ('/images/goals.png')}}" alt="" class="lg:w-36 lg:h-32 md:w-32 md:h-32 w-20 h-20 object-contain " >
     </div>
-    <div class="illustration-img absolute z-10 md:top-[60%] top-[70%] left-[4%] bg-white rounded-xl shadow-xl -rotate-[10deg]">
-            <img src="{{ asset ('/images/Portfolio.png')}}" alt="" class="lg:w-40 lg:h-32 md:w-24 md:h-24 w-20 h-20 object-contain " >
+    <div class="illustration-img absolute z-10 lg:top-[60%] md:top-[53%] top-[60%] max-[380px]:top-[65%] left-[4%] bg-white rounded-xl shadow-xl -rotate-[10deg]">
+            <img src="{{ asset ('/images/Portfolio.png')}}" alt="" class="lg:w-40 lg:h-32 md:w-32 md:h-32 w-20 h-20 object-contain " >
     </div>
-    <div class="illustration-img absolute z-10 md:top-[27%] top-[22%] left-[4%] bg-white rounded-xl shadow-xl -rotate-[10deg]">
-            <img src="{{ asset ('/images/chart.png')}}" alt="" class="lg:w-40 lg:h-32 md:w-24 md:h-24 w-20 h-20 object-contain " >
+    <div class="illustration-img absolute z-10 md:top-[16%] top-[18%] max-[380px]:top-[20%] left-[4%] bg-white rounded-xl shadow-xl -rotate-[10deg]">
+            <img src="{{ asset ('/images/chart.png')}}" alt="" class="lg:w-40 lg:h-32 md:w-32 md:h-32 w-20 h-20 object-contain " >
     </div>
-    <div class="relative textbox-container flex w-full h-full justify-center z-10 py-16 lg:top-[20%] md:top-[24%] top-[21%]">
+    <div class="relative textbox-container flex w-full h-full justify-center z-10 py-16 lg:top-[20%] md:top-[24%] top-[21%] max-[380px]:top-[22%]">
         <div class="textbox-content">
             <div class="textbox-label w-full flex justify-center py-2">
                 <span class="rounded-full py-3 px-10 text-sm font-semibold bg-gray-100 shadow-md">Peluang Lokal</span>
             </div>
             <div class="text-title">
-                <h1 class="font-bold text-[28px] md:text-[42px] lg:text-6xl text-center leading-none">Kolaborasi Tanpa Batas <br> Peluang Tak Terbatas!</h1>
+                <h1 class="font-bold text-[28px] md:text-[50px] lg:text-6xl text-center leading-none">Kolaborasi Tanpa Batas <br> Peluang Tak Terbatas!</h1>
             </div>
             <div class="textbox-subtitle">
                 <h2 class="text-center  text-[15px] md:text-base lg:text-lg py-3 font-light">Temukan pekerjaan berbasis tim, dapatkan reward <br class="lg:hidden"> dari kontribusi, dan dukung ekonomi lokal.</h2>
             </div>
             <div class="textbox-cta py-5 w-full flex justify-center">
-                <a href="" class="text-sm py-3 inline-block bg-gradient-to-r from-sky_light to-primary px-3 text-white font-semibold rounded-md hover:bg-blue-800 duration-300">Gabung Sekarang</a>
+                <a href="{{ url('/auth/login') }}" class="text-sm lg:text-base py-3 inline-block bg-gradient-to-r from-sky_light to-primary px-3 lg:px-6 text-white font-semibold rounded-md hover:bg-blue-800 duration-300">Gabung Sekarang</a>
             </div>
         </div>
     </div>
 
     <!-- Layer Gradient White -->
      <div class="bg-gradient-to-t from-white to-transparent w-full h-[20%] absolute lg:-bottom-[85px] -bottom-[0]"></div>
-    
+
 </header>
 
 

@@ -17,7 +17,7 @@
                         <h3 class="font-bold text-xl">Daftar & Buat Profil</h3>
                     </div>
                     <div class="how-works-card-description">
-                        <p class="text-justify text-lg hyphens-manual">Buat akun dengan mudah dan lengkapi profil Anda. Tambahkan keahlian, portofolio, dan pengalaman agar lebih dipercaya oleh tim dan pemberi proyek.</p>
+                        <p class="text-lg text-justify text-balance whitespace-normal hyphens-auto [word-spacing:-0.05em]">Buat akun dengan mudah dan lengkapi profil Anda. Tambahkan keahlian, portofolio, dan pengalaman agar lebih dipercaya oleh pemberi proyek.</p>
                     </div>
                 </div>
                 <div class="relative how-works-card-text flex flex-col h-64 gap-y-3 basis-[25%] bg-gradient-to-r from-sky_light to-primary text-white p-4 rounded-md shadow-xl">
@@ -25,7 +25,7 @@
                         <span class="absolute -top-10 font-bold text-3xl bg-gradient-to-r from-sky_light to-primary rounded-full w-16 h-16 flex justify-center items-center border-4 border-white">2</span>
                     </div>
                     <div class="how-works-card-title">
-                        <h3 class="font-bold text-xl">Temukan atau Buat Proyek</h3>
+                        <h3 class="font-bold text-xl">Temukan Proyek</h3>
                     </div>
                     <div class="how-works-card-description">
                         <p class="text-justify text-lg ">Jelajahi berbagai proyek yang tersedia sesuai keahlian Anda atau buat proyek sendiri dan cari tim yang tepat untuk menyelesaikannya bersama.</p>
@@ -42,7 +42,7 @@
                         <p class="text-justify text-lg"> Bergabunglah dengan tim, kerjakan tugas sesuai peran Anda, dan manfaatkan fitur komunitas serta forum untuk berdiskusi dan berbagi ide.</p>
                     </div>
                 </div>
-                <div class="relative how-works-card-text flex flex-col h-64 gap-y-3 basis-[25%] bg-gradient-to-r from-sky_light to-primary text-white p-4 rounded-md shadow-xl">
+                <div class="relative how-works-card-text flex flex-col h-64 gap-y-3 basis-[25%] bg-gradient-to-r from-sky_light to-primary text-white py-4 px-3 rounded-md shadow-xl">
                 <div class="how-works-number">
                         <span class="absolute -top-10 font-bold text-3xl bg-gradient-to-r from-sky_light to-primary rounded-full w-16 h-16 flex justify-center items-center border-4 border-white">4</span>
                     </div>
@@ -50,7 +50,7 @@
                         <h3 class="font-bold text-xl">Dapatkan Poin & Reward</h3>
                     </div>
                     <div class="how-works-card-description">
-                        <p class="text-justify text-lg">Setelah proyek selesai, dapatkan poin dari kontribusi Anda yang bisa dikonversi menjadi berbagai reward menarik atau dana melalui sistem multi-wallet.</p>
+                        <p class="text-lg text-justify text-balance whitespace-normal hyphens-auto [word-spacing:-0.05em]">Setelah proyek selesai, dapatkan poin dari kontribusi Anda yang bisa dikonversi menjadi berbagai reward menarik atau dana melalui sistem multi-wallet.</p>
                     </div>
                 </div>
             </div>
