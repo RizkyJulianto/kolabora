@@ -21,6 +21,8 @@ Route::delete('/delete-notification/{id}', function($id) {
     return redirect()->back();
 });
 
+
+
 Route::prefix('auth')->group(function () {
     Route::get("/login", [AuthController::class, 'login']);
     Route::post('processLogin', [AuthController::class, 'processLogin'])->name('processLogin');
