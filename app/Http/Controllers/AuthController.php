@@ -36,13 +36,25 @@ class AuthController extends Controller
             'password' => $request->input('password'),
         ];
 
-        if (Auth::attempt($data)) {
-            Session::flash('success', 'Login success');
-            return redirect('/main-users');
-        } else {
-            Session::flash('error', 'Username or password incorrect');
-            return redirect('auth/login');
+        if(auth()->user()->role == 'users') {
+
+            if (Auth::attempt($data)) {
+                Session::flash('success', 'Login success');
+                return redirect('/main-users');
+            } else {
+                Session::flash('error', 'Username or password incorrect');
+                return redirect('auth/login');
+            }
+        } else if(auth()->user()->role == 'company') {
+            if (Auth::attempt($data)) {
+                Session::flash('success', 'Login success');
+                return redirect('/main-company');
+            } else {
+                Session::flash('error', 'Username or password incorrect');
+                return redirect('auth/login');
+            }
         }
+
     }
 
     public function registrasi()
@@ -56,7 +68,8 @@ class AuthController extends Controller
             'name' => 'required|string|max:255',
             'username' => 'required|string|max:255|unique:users,username',
             'email' => 'required|max:255|email|unique:users,email',
-            'password' => 'required|min:8'
+            'password' => 'required|min:8',
+            'role' => 'required'
         ],[
             'name.required' => 'Name is required',
             'username.required' => 'Username is required',
@@ -65,6 +78,7 @@ class AuthController extends Controller
             'email.unique' => 'This email is already taken',
             'password.required' => 'Password is required',
             'password.min' => 'Password min 8 characters',
+            'role.required' => 'Role is required',
         ]);
 
         if ($validator->fails())
@@ -77,7 +91,7 @@ class AuthController extends Controller
             'username' => $request->input('username'),
             'email' => $request->input('email'),
             'password' => Hash::make($request->input('password')),
-            'role' => 'users',
+            'role' => $request->input('role'),
             'profile_img' => 'default-profile.jpg'
         ]);
 
