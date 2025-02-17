@@ -4,9 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class ProjectModel extends Model
+class TeamModel extends Model
 {
-    protected $table = 'project';
+    protected $table = 'team';
     protected $fillable = [
         'name_project',
         'description_project',
@@ -20,14 +20,7 @@ class ProjectModel extends Model
         'experience_year',
         'date_project',
         'status',
-        'id_company',
-        'id_team',
-        'id_users',
+        'id_company'
     ];
     protected $primaryKey = 'id';
-
-    public function company()
-    {
-        return $this->belongsTo(CompanyUsers::class, 'id_company', 'id');
-    }
 }

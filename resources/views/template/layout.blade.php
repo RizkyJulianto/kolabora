@@ -211,6 +211,51 @@
                 hamburgerBtn.classList.toggle("fa-x");
             });
         });
+
+
+
+        // Loading Bar
+        document.addEventListener("DOMContentLoaded", function() {
+            let loadingBar = document.getElementById("loading-bar");
+
+            function startLoading() {
+                loadingBar.style.width = "0%";
+                loadingBar.style.opacity = "1";
+                let progress = 0;
+                let interval = setInterval(() => {
+                    if (progress < 90) {
+                        progress += Math.random() * 10;
+                        loadingBar.style.width = progress + "%";
+                    } else {
+                        clearInterval(interval);
+                    }
+                }, 100);
+            }
+
+            function completeLoading() {
+                loadingBar.style.width = "100%";
+                setTimeout(() => {
+                    loadingBar.style.opacity = "0";
+                    loadingBar.style.width = "0%";
+                }, 300);
+            }
+
+            // Gunakan event beforeunload agar loading muncul saat pindah halaman
+            window.addEventListener("beforeunload", startLoading);
+            window.addEventListener("load", completeLoading);
+
+            // Mulai loading saat klik link
+            document.querySelectorAll("a").forEach((link) => {
+                link.addEventListener("click", function(e) {
+                    if (
+                        link.target !== "_blank" &&
+                        link.href.startsWith(window.location.origin)
+                    ) {
+                        startLoading();
+                    }
+                });
+            });
+        });
     </script>
 
     @if (session('success'))
@@ -259,6 +304,27 @@
             });
         </script>
     @endif
+
+
+    <script>
+        $('#confirmSweet').on('click', function(e) {
+            e.preventDefault();
+            let form = $(this).closest('form');
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "You won't be able to revert this!",
+                type: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, delete it!'
+            }).then((result) => {
+                if (result.value) {
+                    form.submit();
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

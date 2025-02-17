@@ -24,11 +24,15 @@ return new class extends Migration
             $table->text('experience')->nullable();
             $table->unsignedBigInteger('experience_year')->nullable();
             $table->date('date_project')->nullable();
-            $table->enum('status', ['Pending', 'Accepted', 'Rejected'])->nullable();
+            $table->enum('status', ['Found', 'Pending', 'Accepted', 'Rejected'])->nullable();
+            $table->unsignedBigInteger('id_team')->nullable();
             $table->unsignedBigInteger('id_company')->nullable();
+            $table->unsignedBigInteger('id_users')->nullable();
             $table->timestamps();
 
+            // $table->foreign('id_team')->references('id')->on('team')->onUpdate('cascade')->onDelete('cascade');
             $table->foreign('id_company')->references('id')->on('company')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('id_users')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
         });
     }
 

@@ -121,77 +121,81 @@
                     @if ($data->isNotEmpty())
                         <div class="mb-8 flex flex-col gap-5">
                             @foreach ($data as $jobs)
-                                <a href="{{ url('main-users/' . $jobs->id) }}"
-                                    class="box shadow w-full border border-slate-200 rounded p-4">
-                                    <div class="up flex flex-col lg:flex-row lg:gap-2 gap-4">
-                                        <div class="left flex-[1_1_100%] lg:flex-[1_1_80%]">
-                                            <div class="flex gap-2">
-                                                <img class="rounded w-14 h-14 shadow"
-                                                    src="{{ asset('images/logo-kolabora.png') }}" alt="">
-                                                <div class="">
-                                                    <h3 class="text-md font-bold mb-2 md:mb-1">{{ $jobs->name_project }}
-                                                    </h3>
-                                                    <div
-                                                        class="block md:flex md:flex-row gap-y-2 gap-x-2 md:gap-x-3 w-full">
+                                @if ($jobs->status == 'Found')
+                                    <a href="{{ url('main-users/' . $jobs->id) }}"
+                                        class="box shadow w-full border border-slate-200 rounded p-4">
+                                        <div class="up flex flex-col lg:flex-row lg:gap-2 gap-4">
+                                            <div class="left flex-[1_1_100%] lg:flex-[1_1_80%]">
+                                                <div class="flex gap-2">
+                                                    <img class="rounded w-14 h-14 shadow"
+                                                        src="{{ asset('images/logo-kolabora.png') }}" alt="">
+                                                    <div class="">
+                                                        <h3 class="text-md font-bold mb-2 md:mb-1">
+                                                            {{ $jobs->name_project }}
+                                                        </h3>
                                                         <div
-                                                            class="bg-blue-100 w-auto inline-block text-center text-primary px-2 py-[2px] rounded-full text-xs">
-                                                            <p><i class="fas fa-city"></i>
-                                                                {{ $jobs->company->name_company ?? 'No Company' }}</p>
-                                                        </div>
-                                                        <div
-                                                            class="bg-orange-100 w-auto inline-block text-center text-orange_normal px-2 py-[2px] rounded-full text-xs">
-                                                            <p><i class="fas fa-clock"></i>
-                                                                {{ $jobs->project_type }}</h>
-                                                        </div>
-                                                        <div
-                                                            class="bg-green-100 w-auto inline-block text-center text-green-700 px-2 py-[2px] rounded-full text-xs">
-                                                            <p><i class="fa-solid fa-dollar"></i> {{ $jobs->salary }}
-                                                            </p>
-                                                        </div>
-                                                        <div
-                                                            class="bg-yellow-100 w-auto inline-block text-center text-yellow-700 px-2 py-[2px] rounded-full text-xs">
-                                                            <p><i class="fa-solid fa-briefcase"></i>
-                                                                {{ $jobs->experience_year }} year</p>
-                                                        </div>
-                                                        <div
-                                                            class="bg-teal-100 w-auto inline-block text-center text-teal-700 px-2 py-[2px] rounded-full text-xs">
-                                                            @if ($jobs->collaboration_type == 'Team')
-                                                                <p><i class="fa-solid fa-users"></i>
-                                                                    {{ $jobs->collaboration_type }}</p>
-                                                            @elseif($jobs->collaboration_type == 'Personal')
-                                                                <p><i class="fa-solid fa-user"></i>
-                                                                    {{ $jobs->collaboration_type }}</p>
-                                                            @endif
+                                                            class="block md:flex md:flex-row gap-y-2 gap-x-2 md:gap-x-3 w-full">
+                                                            <div
+                                                                class="bg-blue-100 w-auto inline-block text-center text-primary px-2 py-[2px] rounded-full text-xs">
+                                                                <p><i class="fas fa-city"></i>
+                                                                    {{ $jobs->company->name_company ?? 'No Company' }}</p>
+                                                            </div>
+                                                            <div
+                                                                class="bg-orange-100 w-auto inline-block text-center text-orange_normal px-2 py-[2px] rounded-full text-xs">
+                                                                <p><i class="fas fa-clock"></i>
+                                                                    {{ $jobs->project_type }}</h>
+                                                            </div>
+                                                            <div
+                                                                class="bg-green-100 w-auto inline-block text-center text-green-700 px-2 py-[2px] rounded-full text-xs">
+                                                                <p><i class="fa-solid fa-dollar"></i> {{ $jobs->salary }}
+                                                                </p>
+                                                            </div>
+                                                            <div
+                                                                class="bg-yellow-100 w-auto inline-block text-center text-yellow-700 px-2 py-[2px] rounded-full text-xs">
+                                                                <p><i class="fa-solid fa-briefcase"></i>
+                                                                    {{ $jobs->experience_year }} year</p>
+                                                            </div>
+                                                            <div
+                                                                class="bg-teal-100 w-auto inline-block text-center text-teal-700 px-2 py-[2px] rounded-full text-xs">
+                                                                @if ($jobs->collaboration_type == 'Team')
+                                                                    <p><i class="fa-solid fa-users"></i>
+                                                                        {{ $jobs->collaboration_type }}</p>
+                                                                @elseif($jobs->collaboration_type == 'Personal')
+                                                                    <p><i class="fa-solid fa-user"></i>
+                                                                        {{ $jobs->collaboration_type }}</p>
+                                                                @endif
 
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div
-                                            class="right flex-[1_1_100%] lg:flex-[1_1_20%] flex lg:justify-end lg:items-start">
-                                            <div class="flex items-center gap-2 text-slate-500 text-sm">
-                                                <i class="fa-regular fa-calendar"></i>
-                                                <p>{{ date('j F Y', strtotime($jobs->date_project)) }}</p>
+                                            <div
+                                                class="right flex-[1_1_100%] lg:flex-[1_1_20%] flex lg:justify-end lg:items-start">
+                                                <div class="flex items-center gap-2 text-slate-500 text-sm">
+                                                    <i class="fa-regular fa-calendar"></i>
+                                                    <p>{{ date('j F Y', strtotime($jobs->date_project)) }}</p>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="down mt-3">
-                                        <div class="w-full text-sm text-justify text-slate-600">
-                                            <p class="text-pretty break-all">
-                                                {{ substr($jobs->description_project, 0, 400) }}...
+                                        <div class="down mt-3">
+                                            <div class="w-full text-sm text-justify text-slate-600">
+                                                <p class="text-pretty break-all">
+                                                    {{ substr($jobs->description_project, 0, 400) }}...
+                                                </p>
+                                            </div>
+                                            <p class="text-sm my-5 md:my-4 lg:my-3 text-slate-500 flex items-center gap-2">
+                                                <i
+                                                    class="fa-solid fa-location-dot"></i>{{ $jobs->company->address_company }}
                                             </p>
+                                            <div class="flex items-center gap-2">
+                                                <p
+                                                    class="bg-gradient-to-r from-sky_light to-primary text-white rounded-sm text-xs py-1 px-2">
+                                                    {{ $jobs->company->scope_company }}</p>
+                                            </div>
                                         </div>
-                                        <p class="text-sm my-5 md:my-4 lg:my-3 text-slate-500 flex items-center gap-2"><i
-                                                class="fa-solid fa-location-dot"></i>{{ $jobs->company->address_company }}
-                                        </p>
-                                        <div class="flex items-center gap-2">
-                                            <p
-                                                class="bg-gradient-to-r from-sky_light to-primary text-white rounded-sm text-xs py-1 px-2">
-                                                {{ $jobs->company->scope_company }}</p>
-                                        </div>
-                                    </div>
-                                </a>
+                                    </a>
+                                @endif
                             @endforeach
 
                         </div>

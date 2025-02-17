@@ -9,15 +9,17 @@ use App\Http\Controllers\RewardsController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\CompanyminController;
 use App\Http\Controllers\MainUsersController;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Session;
 
 Route::get('/', function () {
     return view('main-page');
 });
 
-Route::delete('/delete-notification/{id}', function($id) {
-    DB::table('notifications')->where('id',$id)->delete();
-    Session::flash('success_second','Berhasil Hapus data');
+Route::delete('/delete-notification/{id}', function ($id) {
+    DB::table('notifications')->where('id', $id)->delete();
+    Session::flash('success_second', 'Berhasil Hapus data');
     return redirect()->back();
 });
 
@@ -34,12 +36,13 @@ Route::prefix('auth')->group(function () {
 Route::middleware(['AuthIsLogin', 'PreventBackLogout'])->group(function () {
     Route::get('/main-users', [MainUsersController::class, 'index'])->name('mainUsersSearch');
     Route::get('/main-users/{id}', [MainUsersController::class, 'show'])->name('showProject');
+    Route::put('/main-users/{id}', [MainUsersController::class, 'join'])->name('joinProject');
     Route::get('/profile/{id}', [UsersController::class, 'show'])->name('profile.show');
     Route::put('profile/{id}', [UsersController::class, 'update'])->name('updateProfileUsers');
     Route::get('/company', [CompanyController::class, 'index'])->name('companySearch');
     Route::get('/company/{id}', [CompanyController::class, 'show']);
     Route::get('/partner', [PartnerController::class, 'index']);
-    Route::get('/project', [ProjectController::class, 'index']);
+    Route::get('/project', [ProjectController::class, 'index'])->name('projectSearch');
     Route::get('/notification', [NotificationController::class, 'index']);
     Route::get('/rewards', [RewardsController::class, 'index']);
 });

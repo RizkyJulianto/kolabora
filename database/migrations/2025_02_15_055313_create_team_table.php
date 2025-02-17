@@ -18,10 +18,7 @@ return new class extends Migration
             $table->unsignedBigInteger('total_member')->nullable();
             $table->text('description_team')->nullable();
             $table->boolean('status')->nullable();
-            $table->unsignedBigInteger('id_project')->nullable();
             $table->timestamps();
-
-            $table->foreign('id_project')->references('id')->on('project')->onUpdate('cascade')->onDelete('cascade');
         });
     }
 
