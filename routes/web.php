@@ -23,12 +23,10 @@ Route::delete('/delete-notification/{id}', function ($id) {
     return redirect()->back();
 });
 
-
-
 Route::prefix('auth')->group(function () {
-    Route::get("/login", [AuthController::class, 'login']);
+    Route::get('/login', [AuthController::class, 'login']);
     Route::post('processLogin', [AuthController::class, 'processLogin'])->name('processLogin');
-    Route::get("/registrasi", [AuthController::class, 'registrasi']);
+    Route::get('/registrasi', [AuthController::class, 'registrasi']);
     Route::post('processRegistrasi', [AuthController::class, 'processRegistrasi'])->name('processRegistrasi');
     Route::get('logout', [AuthController::class, 'logout'])->name('logout');
 });
@@ -45,21 +43,14 @@ Route::middleware(['AuthIsLogin', 'PreventBackLogout'])->group(function () {
     Route::get('/project', [ProjectController::class, 'index'])->name('projectSearch');
     Route::get('/notification', [NotificationController::class, 'index']);
     Route::get('/rewards', [RewardsController::class, 'index']);
+    Route::get('/main-company', [CompanyminController::class, 'index']);
+    Route::get('company/jobs', [CompanyminController::class, 'jobs']);
+    Route::get('company/verify', [CompanyminController::class, 'verify']);
+    Route::get('company/results', [CompanyminController::class, 'result']);
+    Route::get('company/notification', [CompanyminController::class, 'notif']);
+    Route::get('company/settings', [CompanyminController::class, 'settings']);
 });
 
 Route::fallback(function () {
     return view('errors.404');
 });
-
-Route::get('layout_1', function () {
-    return view('template.layout_1');
-});
-
-Route::get('/main-company', [CompanyminController::class, 'index']);
-Route::get('company/jobs', [CompanyminController::class, 'jobs']);
-
-
-Route::get('company/verify', [CompanyminController::class, 'verify']);
-Route::get('company/results', [CompanyminController::class, 'result']);
-Route::get('company/notification', [CompanyminController::class, 'notif']);
-Route::get('company/settings', [CompanyminController::class, 'settings']);
