@@ -21,13 +21,12 @@ class AuthController extends Controller
         $validator = Validator::make($request->all(), [
             'username' => 'required',
             'password' => 'required'
-        ],[
+        ], [
             'username.required' => 'Username is required',
             'password.required' => 'Password is required'
         ]);
 
-        if ($validator->fails())
-        {
+        if ($validator->fails()) {
             return redirect('auth/login')->withErrors($validator)->withInput();
         }
 
@@ -36,7 +35,7 @@ class AuthController extends Controller
             'password' => $request->input('password'),
         ];
 
-        if(auth()->user()->role == 'users') {
+        if (User::query()->where('role', 'users')->first()) {
 
             if (Auth::attempt($data)) {
                 Session::flash('success', 'Login success');
@@ -45,7 +44,7 @@ class AuthController extends Controller
                 Session::flash('error', 'Username or password incorrect');
                 return redirect('auth/login');
             }
-        } else if(auth()->user()->role == 'company') {
+        } else if (User::query()->where('role', 'company')->first()) {
             if (Auth::attempt($data)) {
                 Session::flash('success', 'Login success');
                 return redirect('/main-company');
@@ -54,7 +53,6 @@ class AuthController extends Controller
                 return redirect('auth/login');
             }
         }
-
     }
 
     public function registrasi()
@@ -64,13 +62,13 @@ class AuthController extends Controller
 
     public function processRegistrasi(Request $request)
     {
-          $validator = Validator::make($request->all(),[
+        $validator = Validator::make($request->all(), [
             'name' => 'required|string|max:255',
             'username' => 'required|string|max:255|unique:users,username',
             'email' => 'required|max:255|email|unique:users,email',
             'password' => 'required|min:8',
             'role' => 'required'
-        ],[
+        ], [
             'name.required' => 'Name is required',
             'username.required' => 'Username is required',
             'username.unique' => 'This username is already taken',
@@ -81,8 +79,7 @@ class AuthController extends Controller
             'role.required' => 'Role is required',
         ]);
 
-        if ($validator->fails())
-        {
+        if ($validator->fails()) {
             return redirect('auth/registrasi')->withErrors($validator)->withInput();
         }
 
@@ -95,7 +92,7 @@ class AuthController extends Controller
             'profile_img' => 'default-profile.jpg'
         ]);
 
-        if($users) {
+        if ($users) {
             Auth::login($users);
             Session::flash('success', 'Create an account successfully');
             return redirect('auth/login');

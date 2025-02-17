@@ -9,7 +9,7 @@ class CompanyController extends Controller
 {
     public function index(request $request)
     {
-        $query = CompanyUsers::query();
+        $query = CompanyUsers::with('projects');
         if ($request->has('search')) {
             $search = $request->input('search');
             $query->where('name_company', 'like', "%$search%")

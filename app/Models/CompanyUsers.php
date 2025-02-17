@@ -20,8 +20,13 @@ class CompanyUsers extends Model
     ];
     protected $primaryKey = 'id';
 
-    public function projects()
+    public function project()
     {
         return $this->hasMany(ProjectModel::class, 'id_company', 'id');
+    }
+
+    public function projects()
+    {
+        return $this->belongsTo(ProjectModel::class, 'id_project', 'id');
     }
 }
