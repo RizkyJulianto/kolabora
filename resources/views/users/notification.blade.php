@@ -30,13 +30,15 @@
                 </div>
             </div>
         </div>
+
         <div class="right-col flex-[1_1_100%] lg:flex-[1_1_75%] w-full">
             <div class="content-notification">
                 <div
                     class="flex gap-3 md:gap-0 flex-col md:flex-row md:justify-between md:items-center mb-6 w-full shadow border border-slate-200 rounded p-4 ">
                     <div class="flex items-center gap-2">
                         <h1 class="text-xl font-bold">Notifications</h1>
-                        <h4 class="bg-gradient-to-r from-sky_light to-primary py-1 px-2 rounded-full text-white">67</h4>
+                        <h4 class="bg-gradient-to-r from-sky_light to-primary py-1 px-2 rounded-full text-white">
+                            {{$count}}</h4>
                     </div>
                     <div class="flex items-center gap-2">
                         <input class="border shadow text-sm border-slate-200 rounded outline-none w-full py-2 px-3"
@@ -47,13 +49,20 @@
                     </div>
                 </div>
                 <main class="content">
+                    @if($data->isNotEmpty())
                     <div class="mb-8 flex flex-col gap-5">
+                        @foreach ($data as $notif )
+                        @if($notif->id_users == auth()->user()->id)
+
                         <div class="box shadow w-full border border-slate-200 rounded p-4">
                             <div class="flex gap-6">
-                                <div
-                                    class="w-9 h-9 lg:w-7 lg:h-7 rounded text-xs bg-red-500 text-white hover:bg-red-400 cursor-pointer flex items-center justify-center">
-                                    <i class="fas fa-trash"></i>
-                                </div>
+                                <form action="{{url('/delete-notification/'.$notif->id) }}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="w-9 h-9 lg:w-7 lg:h-7 rounded text-xs bg-red-500 text-white hover:bg-red-400 cursor-pointer flex items-center justify-center">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </form>
                                 <div class="w-full">
                                     <div class="up">
                                         <div class="flex w-full flex-col lg:flex-row lg:justify-between lg:gap-0 gap-4">
@@ -62,7 +71,7 @@
                                                     <img class="rounded w-14 h-14 shadow"
                                                         src="{{ asset('images/logo-kolabora.png') }}" alt="">
                                                     <div class="">
-                                                        <h3 class="font-bold mb-2 md:mb-1">Product Designer</h3>
+                                                        <h3 class="font-bold mb-2 md:mb-1">{{$notif ->name_notif}}</h3>
                                                         <div
                                                             class="bg-blue-100 w-auto inline-block text-primary px-2 py-[2px] rounded-full text-xs">
 
@@ -85,190 +94,24 @@
                                         </div>
                                     </div>
                                     <div class="down mt-3">
-                                        <p class="text-sm text-justify text-slate-600">Lorem ipsum dolor sit, amet
-                                            consectetur adipisicing elit. Quis ratione quidem saepe cum adipisci commodi
-                                            doloremque tenetur qui ut nobis?</p>
+                                        <p class="text-sm text-justify text-slate-600">{{$notif->message_notif}}</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="box shadow w-full border border-slate-200 rounded p-4">
-                            <div class="flex gap-6">
-                                <div
-                                    class="w-9 h-9 lg:w-7 lg:h-7 rounded text-xs bg-red-500 text-white hover:bg-red-400 cursor-pointer flex items-center justify-center">
-                                    <i class="fas fa-trash"></i>
-                                </div>
-                                <div class="w-full">
-                                    <div class="up">
-                                        <div class="flex w-full flex-col lg:flex-row lg:justify-between lg:gap-0 gap-4">
-                                            <div class="left">
-                                                <div class="flex gap-2">
-                                                    <img class="rounded w-14 h-14 shadow"
-                                                        src="{{ asset('images/logo-kolabora.png') }}" alt="">
-                                                    <div class="">
-                                                        <h3 class="font-bold mb-2 md:mb-1">Product Designer</h3>
-                                                        <div
-                                                            class="bg-blue-100 w-auto inline-block text-primary px-2 py-[2px] rounded-full text-xs">
-
-                                                            <h5><i class="fas fa-user"></i> Edward</h5>
-                                                        </div>
-                                                        <div
-                                                            class="bg-orange-100 w-auto inline-block text-orange_dark px-2 py-[2px] rounded-full text-xs">
-
-                                                            <h5><i class="fas fa-envelope"></i> Message</h5>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="right">
-                                                <div class="flex items-center gap-2 text-slate-500 text-sm ">
-                                                    <i class="fa-regular fa-clock"></i>
-                                                    <p>12 January 2025 at 9:20 AM</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="down mt-3">
-                                        <p class="text-sm text-justify text-slate-600">Lorem ipsum dolor sit, amet
-                                            consectetur adipisicing elit. Quis ratione quidem saepe cum adipisci commodi
-                                            doloremque tenetur qui ut nobis?</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="box shadow w-full border border-slate-200 rounded p-4">
-                            <div class="flex gap-6">
-                                <div
-                                    class="w-9 h-9 lg:w-7 lg:h-7 rounded text-xs bg-red-500 text-white hover:bg-red-400 cursor-pointer flex items-center justify-center">
-                                    <i class="fas fa-trash"></i>
-                                </div>
-                                <div class="w-full">
-                                    <div class="up">
-                                        <div class="flex w-full flex-col lg:flex-row lg:justify-between lg:gap-0 gap-4">
-                                            <div class="left">
-                                                <div class="flex gap-2">
-                                                    <img class="rounded w-14 h-14 shadow"
-                                                        src="{{ asset('images/logo-kolabora.png') }}" alt="">
-                                                    <div class="">
-                                                        <h3 class="font-bold mb-2 md:mb-1">Product Designer</h3>
-                                                        <div
-                                                            class="bg-blue-100 w-auto inline-block text-primary px-2 py-[2px] rounded-full text-xs">
-
-                                                            <h5><i class="fas fa-user"></i> Edward</h5>
-                                                        </div>
-                                                        <div
-                                                            class="bg-orange-100 w-auto inline-block text-orange_dark px-2 py-[2px] rounded-full text-xs">
-
-                                                            <h5><i class="fas fa-envelope"></i> Message</h5>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="right">
-                                                <div class="flex items-center gap-2 text-slate-500 text-sm ">
-                                                    <i class="fa-regular fa-clock"></i>
-                                                    <p>12 January 2025 at 9:20 AM</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="down mt-3">
-                                        <p class="text-sm text-justify text-slate-600">Lorem ipsum dolor sit, amet
-                                            consectetur adipisicing elit. Quis ratione quidem saepe cum adipisci commodi
-                                            doloremque tenetur qui ut nobis?</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="box shadow w-full border border-slate-200 rounded p-4">
-                            <div class="flex gap-6">
-                                <div
-                                    class="w-9 h-9 lg:w-7 lg:h-7 rounded text-xs bg-red-500 text-white hover:bg-red-400 cursor-pointer flex items-center justify-center">
-                                    <i class="fas fa-trash"></i>
-                                </div>
-                                <div class="w-full">
-                                    <div class="up">
-                                        <div class="flex w-full flex-col lg:flex-row lg:justify-between lg:gap-0 gap-4">
-                                            <div class="left">
-                                                <div class="flex gap-2">
-                                                    <img class="rounded w-14 h-14 shadow"
-                                                        src="{{ asset('images/logo-kolabora.png') }}" alt="">
-                                                    <div class="">
-                                                        <h3 class="font-bold mb-2 md:mb-1">Product Designer</h3>
-                                                        <div
-                                                            class="bg-blue-100 w-auto inline-block text-primary px-2 py-[2px] rounded-full text-xs">
-
-                                                            <h5><i class="fas fa-user"></i> Edward</h5>
-                                                        </div>
-                                                        <div
-                                                            class="bg-orange-100 w-auto inline-block text-orange_dark px-2 py-[2px] rounded-full text-xs">
-
-                                                            <h5><i class="fas fa-envelope"></i> Message</h5>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="right">
-                                                <div class="flex items-center gap-2 text-slate-500 text-sm ">
-                                                    <i class="fa-regular fa-clock"></i>
-                                                    <p>12 January 2025 at 9:20 AM</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="down mt-3">
-                                        <p class="text-sm text-justify text-slate-600">Lorem ipsum dolor sit, amet
-                                            consectetur adipisicing elit. Quis ratione quidem saepe cum adipisci commodi
-                                            doloremque tenetur qui ut nobis?</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="box shadow w-full border border-slate-200 rounded p-4">
-                            <div class="flex gap-6">
-                                <div
-                                    class="w-9 h-9 lg:w-7 lg:h-7 rounded text-xs bg-red-500 text-white hover:bg-red-400 cursor-pointer flex items-center justify-center">
-                                    <i class="fas fa-trash"></i>
-                                </div>
-                                <div class="w-full">
-                                    <div class="up">
-                                        <div class="flex w-full flex-col lg:flex-row lg:justify-between lg:gap-0 gap-4">
-                                            <div class="left">
-                                                <div class="flex gap-2">
-                                                    <img class="rounded w-14 h-14 shadow"
-                                                        src="{{ asset('images/logo-kolabora.png') }}" alt="">
-                                                    <div class="">
-                                                        <h3 class="font-bold mb-2 md:mb-1">Product Designer</h3>
-                                                        <div
-                                                            class="bg-blue-100 w-auto inline-block text-primary px-2 py-[2px] rounded-full text-xs">
-
-                                                            <h5><i class="fas fa-user"></i> Edward</h5>
-                                                        </div>
-                                                        <div
-                                                            class="bg-orange-100 w-auto inline-block text-orange_dark px-2 py-[2px] rounded-full text-xs">
-
-                                                            <h5><i class="fas fa-envelope"></i> Message</h5>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="right">
-                                                <div class="flex items-center gap-2 text-slate-500 text-sm ">
-                                                    <i class="fa-regular fa-clock"></i>
-                                                    <p>12 January 2025 at 9:20 AM</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="down mt-3">
-                                        <p class="text-sm text-justify text-slate-600">Lorem ipsum dolor sit, amet
-                                            consectetur adipisicing elit. Quis ratione quidem saepe cum adipisci commodi
-                                            doloremque tenetur qui ut nobis?</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        @endif
+                        @endforeach
                     </div>
+
+                    @else
+                    <div class="flex justify-center mb-5">
+                        <h4
+                            class="tracking-wide font-medium bg-clip-text bg-gradient-to-r from-sky_light to-primary text-transparent p-2 text-center">
+                            No company results found</h4>
+                    </div>
+
+                    @endif
+
 
                     {{-- pagination --}}
                     <div class="flex items-center justify-between border-t border-gray-200 bg-white pt-8 pb-3">

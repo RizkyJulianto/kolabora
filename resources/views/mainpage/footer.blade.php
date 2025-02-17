@@ -1,6 +1,6 @@
 <footer class="shadow">
         <div
-            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 py-9 w-full px-[5%] lg:px-[3%] border-t border-slate-200 relative">
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 py-9 w-full px-[5%] lg:px-[3%] border-t border-slate-200 relative w-full">
             <div class="logo-footer">
                 <div class="logo flex items-center">
                     <img class="w-12" src="{{ asset('images/logo/kolabora-transparent.png') }}" alt="">

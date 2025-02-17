@@ -15,6 +15,12 @@ Route::get('/', function () {
     return view('main-page');
 });
 
+Route::delete('/delete-notification/{id}', function($id) {
+    DB::table('notifications')->where('id',$id)->delete();
+    Session::flash('success_second','Berhasil Hapus data');
+    return redirect()->back();
+});
+
 Route::prefix('auth')->group(function () {
     Route::get("/login", [AuthController::class, 'login']);
     Route::post('processLogin', [AuthController::class, 'processLogin'])->name('processLogin');

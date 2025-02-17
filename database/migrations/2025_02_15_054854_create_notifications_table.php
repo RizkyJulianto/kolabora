@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name_notif')->nullable();
             $table->text('message_notif')->nullable();
-            $table->boolean('status')->nullable();
+            $table->dateTime('date_notif')->nullable();
             $table->unsignedBigInteger('id_users')->nullable();
             $table->timestamps();
 
