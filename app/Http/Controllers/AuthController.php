@@ -35,23 +35,19 @@ class AuthController extends Controller
             'password' => $request->input('password'),
         ];
 
-        if (User::query()->where('role', 'users')->first()) {
+        if (Auth::attempt($data)) {
+            $user = Auth::user(); 
 
-            if (Auth::attempt($data)) {
+            if ($user->role === 'users') {
                 Session::flash('success', 'Login success');
                 return redirect('/main-users');
-            } else {
-                Session::flash('error', 'Username or password incorrect');
-                return redirect('auth/login');
-            }
-        } else if (User::query()->where('role', 'company')->first()) {
-            if (Auth::attempt($data)) {
+            } elseif ($user->role === 'company') {
                 Session::flash('success', 'Login success');
                 return redirect('/main-company');
-            } else {
-                Session::flash('error', 'Username or password incorrect');
-                return redirect('auth/login');
             }
+        } else {
+            Session::flash('error', 'Username or password incorrect');
+            return redirect('auth/login');
         }
     }
 
