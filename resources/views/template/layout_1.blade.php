@@ -25,7 +25,6 @@
     </script>
 </head>
 <body class="relative">
-  
 <!-- Loading Bar -->
 <div id="loading-bar"></div>
 

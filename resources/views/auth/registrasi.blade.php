@@ -55,8 +55,8 @@
                 </div>
                 <div class="form-group mb-5 ">
                     <label class="label-form block mb-1 text-gray-500 text-md">Menggunakan Kolabora Untuk ?</label>
-                    <select name="role" id="role" class="inline-block bg-gray-100 border-[1.8px] border-gray-400 w-full py-2.5 px-3 focus:border-primary outline-none rounded-md" >
-                        <option value="">-- Pilih Kebutuhan --</option>
+                    <select name="role" id="role" class="inline-block bg-gray-100 border-[1.8px] border-gray-400 w-full py-2.5 px-3 focus:border-primary outline-none rounded-md cursor-pointer appearance-none" >
+                        <option value="" >-- Pilih Kebutuhan --</option>
                         <option value="company">Penyedia Kerja</option>
                         <option value="users">Mencari Kerja</option>
                     </select>
