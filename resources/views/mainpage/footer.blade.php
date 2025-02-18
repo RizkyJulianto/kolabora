@@ -37,7 +37,7 @@
                     <h5 class="font-semibold pb-1">Social Media</h5>
                     <div class="w-full h-[1.5px] bg-slate-400 relative">
                         <div class="absolute -top-1 right-0 w-10 h-2 bg-gradient-to-r from-sky_light to-primary"></div>
-                    </div>
+                    </div> 
                 </div>
                 <div class="flex flex-col gap-1 text-[15px] mt-2">
                     <div class="flex items-center gap-2">

@@ -9,6 +9,7 @@ use App\Http\Controllers\RewardsController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\CompanyminController;
 use App\Http\Controllers\MainUsersController;
+use App\Http\Controllers\JobController;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Session;
@@ -44,15 +45,11 @@ Route::middleware(['AuthIsLogin', 'PreventBackLogout'])->group(function () {
     Route::get('/notification', [NotificationController::class, 'index']);
     Route::get('/rewards', [RewardsController::class, 'index']);
     Route::get('/main-company', [CompanyminController::class, 'index']);
-    Route::get('company/jobs', [CompanyminController::class, 'jobs']);
+    Route::get('/company-jobs', [JobController::class, 'index']);
     Route::get('company/verify', [CompanyminController::class, 'verify']);
     Route::get('company/results', [CompanyminController::class, 'result']);
     Route::get('company/notification', [CompanyminController::class, 'notif']);
     Route::get('company/settings', [CompanyminController::class, 'settings']);
-});
-
-Route::fallback(function () {
-    return view('errors.404');
 });
 
 Route::fallback(function () {

@@ -25,11 +25,10 @@
     </script>
 </head>
 <body class="relative">
-  
+
 <!-- Loading Bar -->
 <div id="loading-bar"></div>
 
-<header>
     <nav class="fixed z-30 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
         <div class="px-3 py-3 lg:px-5 lg:pl-3">
           <div class="flex items-center justify-between">
@@ -250,7 +249,6 @@
           </div>
         </div>
     </nav>
-</header>
 <div class="flex pt-16 overflow-hidden bg-gray-50 dark:bg-gray-900">
 {{-- sidebar --}}
     <aside id="sidebar" class="fixed top-0 left-0 z-20  flex-shrink-0 hidden w-64 h-full pt-16 font-normal duration-75 lg:flex flex-col transition-width" aria-label="Sidebar">
@@ -285,7 +283,7 @@
                     </button>
                     <ul id="dropdown-crud" class="space-y-2 py-2  ">
                         <li>
-                            <a href="{{ url('company/jobs') }}" class="flex items-center p-2 text-base {{ request()->is('company/jobs') ? ' bg-gray-100 dark:bg-gray-700' : ' text-gray-900  hover:bg-gray-100 group dark:text-gray-200 dark:hover:bg-gray-700'}} rounded-lg pl-11">Jobs</a>
+                            <a href="{{ url('/company-jobs') }}" class="flex items-center p-2 text-base {{ request()->is('company/jobs') ? ' bg-gray-100 dark:bg-gray-700' : ' text-gray-900  hover:bg-gray-100 group dark:text-gray-200 dark:hover:bg-gray-700'}} rounded-lg pl-11">Jobs</a>
                         </li>
                           <li>
                             <a href="{{ url('company/verify') }}" class="flex items-center p-2 text-base {{ request()->is('company/verify') ? ' bg-gray-100 dark:bg-gray-700' : ' text-gray-900  hover:bg-gray-100 group dark:text-gray-200 dark:hover:bg-gray-700'}} rounded-lg pl-11">Verify</a>
