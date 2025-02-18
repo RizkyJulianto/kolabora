@@ -54,3 +54,7 @@ Route::middleware(['AuthIsLogin', 'PreventBackLogout'])->group(function () {
 Route::fallback(function () {
     return view('errors.404');
 });
+
+Route::fallback(function () {
+    return view('errors.404');
+});
