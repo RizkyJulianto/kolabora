@@ -18,11 +18,16 @@ return new class extends Migration
             $table->double('total_amount')->nullable();
             $table->enum('wallet_provider', ['gopay', 'dana', 'ovo'])->nullable();
             $table->string('wallet_number')->nullable();
+            $table->text('message')->nullable();
             $table->enum('status', ['pending', 'approved'])->nullable();
             $table->unsignedBigInteger('id_users')->nullable();
+            $table->unsignedBigInteger('id_project')->nullable();
+            $table->unsignedBigInteger('id_company')->nullable();
             $table->timestamps();
 
             $table->foreign('id_users')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('id_project')->references('id')->on('project')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('id_company')->references('id')->on('company')->onUpdate('cascade')->onDelete('cascade');
         });
     }
 

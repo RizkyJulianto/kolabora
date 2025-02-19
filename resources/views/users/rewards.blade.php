@@ -21,7 +21,7 @@
                                 class="w-20 h-2w-20 mb-3 rounde-full" alt="">
                             <h3 class="mb-3 font-semibold uppercase">{{ auth()->user()->name }}</h3>
                             <h4 class="bg-gradient-to-r from-sky_light to-primary py-1 px-2 rounded-full text-white"><i
-                                    class="fas fa-coins"></i> 1267</h4>
+                                    class="fas fa-coins"></i> {{$total_point}}</h4>
                         </div>
                     </div>
                 </div>
@@ -40,113 +40,64 @@
                             Point</a>
                     </div>
                 </div>
-                <main class="content">
-                    <div class="mb-8 flex flex-col gap-5 text-sm">
-                        <div class="box shadow w-full border border-slate-200 rounded p-4">
-                            <div class="flex justify-between w-full gap-3">
-                                <div class="flex gap-2">
-                                    <div class="bg-blue-100 w-auto inline-block text-primary px-2 py-[2px] rounded-full">
-                                        <h5><i class="fa-solid fa-square-check"></i> Good Jobs</h5>
-                                    </div>
-                                    <p class="text-slate-500">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                        Dolore, corporis.</p>
-                                </div>
-                                <p class="bg-blue-100 w-auto inline-block text-primary px-2 py-[2px] rounded-full"><i
-                                        class="fas fa-plus"> 100</i></p>
+
+
+                {{-- Modal Popup Change Point
+                <div class="modal-container absolute bg-white shadow-md rounded-md py-3 px-4 w-[400px]">
+                    <div class="modal-content">
+                        <form action="" class="flex flex-col gap-y-4">
+                            <div class="form-group">
+                                <label class="label-form block mb-1 text-gray-500 text-md" for="point_redeemed">Jumlah Penukaran</label>
+                                <input type="number"
+                                    class="inline-block bg-gray-100 border-[1.8px] border-gray-400 w-full py-2 px-3 focus:border-primary outline-none rounded-md"
+                                    name="point_redeemed" value="{{ old('point_redeemed') }}" id="point_redeemed" autocomplete="off">
                             </div>
-                        </div>
-                        <div class="box shadow w-full border border-slate-200 rounded p-4">
-                            <div class="flex justify-between w-full gap-3">
-                                <div class="flex gap-2">
-                                    <div class="bg-blue-100 w-auto inline-block text-primary px-2 py-[2px] rounded-full">
-                                        <h5><i class="fa-solid fa-square-check"></i> Good Jobs</h5>
-                                    </div>
-                                    <p class="text-slate-500">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                        Dolore, corporis.</p>
-                                </div>
-                                <p class="bg-blue-100 w-auto inline-block text-primary px-2 py-[2px] rounded-full"><i
-                                        class="fas fa-plus"> 100</i></p>
+                            <div class="form-group">
+                                <label class="label-form block mb-1 text-gray-500 text-md" for="total_amount">Total Rupiah</label>
+                                <input type="number"
+                                    class="inline-block bg-gray-100 border-[1.8px] border-gray-400 w-full py-2 px-3 focus:border-primary outline-none rounded-md"
+                                    name="total_amount" value="{{ old('total_amount') }}" id="total_amount" autocomplete="off" readonly>
                             </div>
-                        </div>
-                        <div class="box shadow w-full border border-slate-200 rounded p-4">
-                            <div class="flex justify-between w-full gap-3">
-                                <div class="flex gap-2">
-                                    <div class="bg-blue-100 w-auto inline-block text-primary px-2 py-[2px] rounded-full">
-                                        <h5><i class="fa-solid fa-square-check"></i> Good Jobs</h5>
-                                    </div>
-                                    <p class="text-slate-500">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                        Dolore, corporis.</p>
-                                </div>
-                                <p class="bg-blue-100 w-auto inline-block text-primary px-2 py-[2px] rounded-full"><i
-                                        class="fas fa-plus"> 100</i></p>
+                            <div class="form-group">
+                                <label class="label-form block mb-1 text-gray-500 text-md">Jumlah Penukaran</label>
+                                <input type="number"
+                                    class="inline-block bg-gray-100 border-[1.8px] border-gray-400 w-full py-2 px-3 focus:border-primary outline-none rounded-md"
+                                    name="point_redeemed" value="{{ old('point_redeemed') }}" id="point_redeemed" autocomplete="off">
                             </div>
-                        </div>
-                        <div class="box shadow w-full border border-slate-200 rounded p-4">
-                            <div class="flex justify-between w-full gap-3">
-                                <div class="flex gap-2">
-                                    <div class="bg-blue-100 w-auto inline-block text-primary px-2 py-[2px] rounded-full">
-                                        <h5><i class="fa-solid fa-square-check"></i> Good Jobs</h5>
-                                    </div>
-                                    <p class="text-slate-500">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                        Dolore, corporis.</p>
-                                </div>
-                                <p class="bg-blue-100 w-auto inline-block text-primary px-2 py-[2px] rounded-full"><i
-                                        class="fas fa-plus"> 100</i></p>
-                            </div>
-                        </div>
-                        <div class="box shadow w-full border border-slate-200 rounded p-4">
-                            <div class="flex justify-between w-full gap-3">
-                                <div class="flex gap-2">
-                                    <div class="bg-blue-100 w-auto inline-block text-primary px-2 py-[2px] rounded-full">
-                                        <h5><i class="fa-solid fa-square-check"></i> Good Jobs</h5>
-                                    </div>
-                                    <p class="text-slate-500">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                        Dolore, corporis.</p>
-                                </div>
-                                <p class="bg-blue-100 w-auto inline-block text-primary px-2 py-[2px] rounded-full"><i
-                                        class="fas fa-plus"> 100</i></p>
-                            </div>
-                        </div>
-                        <div class="box shadow w-full border border-slate-200 rounded p-4">
-                            <div class="flex justify-between w-full gap-3">
-                                <div class="flex gap-2">
-                                    <div class="bg-blue-100 w-auto inline-block text-primary px-2 py-[2px] rounded-full">
-                                        <h5><i class="fa-solid fa-square-check"></i> Good Jobs</h5>
-                                    </div>
-                                    <p class="text-slate-500">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                        Dolore, corporis.</p>
-                                </div>
-                                <p class="bg-blue-100 w-auto inline-block text-primary px-2 py-[2px] rounded-full"><i
-                                        class="fas fa-plus"> 100</i></p>
-                            </div>
-                        </div>
-                        <div class="box shadow w-full border border-slate-200 rounded p-4">
-                            <div class="flex justify-between w-full gap-3">
-                                <div class="flex gap-2">
-                                    <div class="bg-blue-100 w-auto inline-block text-primary px-2 py-[2px] rounded-full">
-                                        <h5><i class="fa-solid fa-square-check"></i> Good Jobs</h5>
-                                    </div>
-                                    <p class="text-slate-500">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                        Dolore, corporis.</p>
-                                </div>
-                                <p class="bg-blue-100 w-auto inline-block text-primary px-2 py-[2px] rounded-full"><i
-                                        class="fas fa-plus"> 100</i></p>
-                            </div>
-                        </div>
-                        <div class="box shadow w-full border border-slate-200 rounded p-4">
-                            <div class="flex justify-between w-full gap-3">
-                                <div class="flex gap-2">
-                                    <div class="bg-blue-100 w-auto inline-block text-primary px-2 py-[2px] rounded-full">
-                                        <h5><i class="fa-solid fa-square-check"></i> Good Jobs</h5>
-                                    </div>
-                                    <p class="text-slate-500">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                        Dolore, corporis.</p>
-                                </div>
-                                <p class="bg-blue-100 w-auto inline-block text-primary px-2 py-[2px] rounded-full"><i
-                                        class="fas fa-plus"> 100</i></p>
-                            </div>
-                        </div>
+                        </form>
                     </div>
+                </div> --}}
+
+                <main class="content">
+                    @if($data->isNotEmpty())
+                    <div class="mb-8 flex flex-col gap-5 text-sm">
+                        @foreach ($data as $rewards)
+                        @if($rewards->id_users == auth()->user()->id)
+
+                        <div class="box shadow w-full border border-slate-200 rounded p-4">
+                            <div class="flex justify-between w-full gap-3">
+                                <div class="flex gap-2">
+                                    <div class="bg-blue-100 w-auto inline-block text-primary px-2 py-[2px] rounded-full">
+                                        <h5><i class="fa-solid fa-square-check"></i> Kerja Bagus</h5>
+                                    </div>
+                                    <p class="text-slate-500">{{ substr($rewards->message, 0, 100) }}...</p>
+                                </div>
+                                <p class="bg-blue-100 w-auto inline-block text-primary px-2 py-[2px] rounded-full"><i
+                                        class="fas fa-plus"> {{$rewards->total_point}}</i></p>
+                            </div>
+                        </div>
+                        @endif
+                        @endforeach
+                    </div>
+
+                    @else
+                    <div class="flex justify-center mb-5">
+                        <h4
+                            class="tracking-wide font-medium bg-clip-text bg-gradient-to-r from-sky_light to-primary text-transparent p-2 text-center">
+                            No Reward results found</h4>
+                    </div>
+
+                    @endif
 
                     {{-- pagination --}}
                     <div class="flex items-center justify-between border-t border-gray-200 bg-white pt-8 pb-3">
