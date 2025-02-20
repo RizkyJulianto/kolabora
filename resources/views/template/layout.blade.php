@@ -218,7 +218,6 @@
             Swal.fire({
                 title: "{{ session('success') }}",
                 icon: "success",
-                draggable: true,
                 showConfirmButton: false,
                 timer: 1500
             });
@@ -230,7 +229,6 @@
             Swal.fire({
                 title: "{{ session('success_second') }}",
                 icon: "success",
-                draggable: true,
             });
         </script>
     @endif
@@ -240,7 +238,6 @@
             Swal.fire({
                 title: "{{ session('error') }}",
                 icon: "error",
-                draggable: true,
             });
         </script>
     @endif
@@ -262,19 +259,41 @@
 
 
     <script>
-        $('#confirmSweet').on('click', function(e) {
+        document.getElementById('confirmSweet').addEventListener('click', function(e) {
             e.preventDefault();
-            let form = $(this).closest('form');
+            let form = this.closest('form');
+
             Swal.fire({
                 title: 'Are you sure?',
-                text: "You won't be able to revert this!",
-                type: 'warning',
+                text: "You to work on this project!",
+                icon: 'warning',
                 showCancelButton: true,
                 confirmButtonColor: '#3085d6',
                 cancelButtonColor: '#d33',
-                confirmButtonText: 'Yes, delete it!'
+                confirmButtonText: `Yes, I'am join the project!`
             }).then((result) => {
-                if (result.value) {
+                if (result.isConfirmed) {
+                    form.submit();
+                }
+            });
+        });
+    </script>
+
+    <script>
+        document.getElementById('deleteSweet').addEventListener('click', function(e) {
+            e.preventDefault();
+            let form = this.closest('form');
+
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "You to work on this project!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: `Yes, delete it!`
+            }).then((result) => {
+                if (result.isConfirmed) {
                     form.submit();
                 }
             });
