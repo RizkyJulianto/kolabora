@@ -279,6 +279,29 @@
         });
     </script>
 
+
+    <script>
+        document.getElementById('saveSweet').addEventListener('click', function(e) {
+            e.preventDefault();
+            let form = this.closest('form');
+
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "You to work on this project!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: `Yes, I'am join the project!`
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    form.submit();
+                }
+            });
+        });
+    </script>
+
+
     <script>
         document.getElementById('deleteSweet').addEventListener('click', function(e) {
             e.preventDefault();

@@ -201,10 +201,10 @@
 
                         </div>
                     @else
-                        <div class="flex justify-center mb-5">
+                        <div class="flex justify-center py-4 box shadow w-full border border-slate-200 rounded">
                             <h4
                                 class="tracking-wide font-medium bg-clip-text bg-gradient-to-r from-sky_light to-primary text-transparent p-2 text-center">
-                                No company results found</h4>
+                                No jobs results found</h4>
                         </div>
                     @endif
 

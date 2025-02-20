@@ -151,23 +151,23 @@
                 @endif
             </div>
             <div class="p-3 grid grid-cols-1 md:grid-cols-2 gap-3">
-                <form action="{{ route('joinProject', $data->id) }}" method="post">
+                <form action="{{ route('projectResult', $data->id) }}" method="post">
                     @csrf
                     @method('PUT')
                     <div class="form-group mb-3">
                         <label class="label-form block mb-1 text-gray-500 text-sm">Upload Result</label>
                         <input type="file"
                             class="inline-block border w-full shadow text-sm border-slate-200 py-2 px-3 focus:border-primary outline-none rounded-md"
-                            name="" id="">
+                            name="result_project" id="result_project">
                     </div>
                     <div class="form-group mb-3">
                         <label class="label-form block mb-1 text-gray-500 text-sm">Description Result</label>
-                        <textarea name="address"
+                        <textarea name="description_result"
                             class="tracking-wide h-32 w-full inline-block border shadow text-sm border-slate-200 py-2 px-3 focus:border-primary outline-none rounded-md"
-                            id="address" cols="30" rows="10"></textarea>
+                            id="description_result" cols="30" rows="10"></textarea>
                     </div>
                     <div class="form-group">
-                        <button id="confirmSweet"
+                        <button id="saveSweet"
                             class="flex-1 inline-block font-medium w-full tracking-wider text-center rounded-md bg-gradient-to-r from-sky_light  to-primary_dark text-white py-2.5 px-3 hover:opacity-[90%]"
                             type="submit">Submit Result</button>
                     </div>
@@ -178,6 +178,28 @@
                             <h3
                                 class="tracking-wide font-medium bg-clip-text bg-gradient-to-r from-sky_light to-primary text-transparent p-2 text-center">
                                 Haven't sent project results!</h3>
+                        </div>
+                    @else
+                        <div class="form-group mb-3">
+                            <label class="label-form block mb-1 text-gray-500 text-sm">Date Result</label>
+                            <div
+                                class="tracking-wide h-auto w-full inline-block border shadow text-sm border-slate-200 py-2 px-3 rounded-md">
+                                <p><i class="fa-regular fa-calendar"></i> {{ $data->date_result }}</p>
+                            </div>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label class="label-form block mb-1 text-gray-500 text-sm">Description Result</label>
+                            <div
+                                class="tracking-wide h-auto w-full inline-block border shadow text-sm border-slate-200 py-2 px-3 rounded-md">
+                                <p>{{ $data->description_result }}</p>
+                            </div>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label class="label-form block mb-1 text-gray-500 text-sm">Upload Result</label>
+                            <div
+                                class="tracking-wide h-auto w-full inline-block border shadow text-sm border-slate-200 py-2 px-3 rounded-md">
+                                <p>{{ $data->result_project }}</p>
+                            </div>
                         </div>
                     @endif
                 </div>

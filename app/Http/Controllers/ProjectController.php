@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\ProjectModel;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Validator;
 
 class ProjectController extends Controller
 {
@@ -30,5 +32,32 @@ class ProjectController extends Controller
     {
         $data = ProjectModel::with(['company'])->findOrFail($id);
         return view('users/detail/detail_project_result', compact('data'));
+    }
+
+    public function result(Request $request, $id)
+    {
+        $data = ProjectModel::findOrFail($id);
+
+        $validator = Validator::make($request->all(), [
+            'result_project' => 'required',
+            'description_result' => 'required'
+        ], [
+            'result_project.required' => 'Result project is required',
+            'description_result.required' => 'Description result is required'
+        ]);
+
+        if ($validator->fails()) {
+            return redirect('project/' . $id)->withErrors($validator)->withInput();
+        }
+
+        $data->update([
+            'result_project' => $request->result_project,
+            'description_result' => $request->description_result,
+            'status_result' => 1,
+            'date_result' => now(),
+        ]);
+
+        Session::flash('success_second', 'Hasil project telah dikirimkan');
+        return redirect()->to('project');
     }
 }

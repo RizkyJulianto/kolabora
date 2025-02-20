@@ -52,7 +52,7 @@
                     </div>
                     <form method="get" action="{{ route('projectSearch') }}" class="flex items-center gap-2">
                         <input class="border shadow text-sm border-slate-200 rounded outline-none w-full py-2 px-3"
-                            type="search" name="search" id="search" placeholder="Searcing jobs">
+                            type="search" autocomplete="off" name="search" id="search" placeholder="Searcing jobs">
                         <button type="submit"
                             class="bg-gradient-to-r text-sm from-sky_light to-primary py-2 px-3 rounded text-white">
                             <i class="fa-solid fa-magnifying-glass"></i>
@@ -130,10 +130,10 @@
                             @endforeach
                         </div>
                     @else
-                        <div class="flex justify-center mb-5">
+                        <div class="flex justify-center py-4 box shadow w-full border border-slate-200 rounded">
                             <h4
                                 class="tracking-wide font-medium bg-clip-text bg-gradient-to-r from-sky_light to-primary text-transparent p-2 text-center">
-                                No company results found</h4>
+                                No jobs results found</h4>
                         </div>
                     @endif
 
