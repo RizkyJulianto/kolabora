@@ -21,8 +21,8 @@ class ProjectController extends Controller
             return redirect()->to('project');
         }
 
-        $data = $query->paginate(9);
-        $count = ProjectModel::count();
+        $data = $query->whereIn('status', ['Pending', 'Accepted', 'Rejected'])->paginate(9);
+        $count = ProjectModel::whereIn('status', ['Pending', 'Accepted', 'Rejected'])->count();
         return view('users/project', compact(['data', 'count']));
     }
 }

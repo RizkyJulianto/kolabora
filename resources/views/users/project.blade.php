@@ -61,10 +61,9 @@
                 </div>
                 <main class="content">
                     @if ($data->isNotEmpty())
-
                         <div class="mb-8 flex flex-col gap-5">
                             @foreach ($data as $project)
-                                @if ($project->status != 'Found')
+                                @if ($project->status != 'Found' && $project->status != null)
                                     <div class="box shadow w-full border border-slate-200 rounded p-4">
                                         <div class="up flex flex-col lg:flex-row lg:gap-2 gap-4">
                                             <div class="left flex-[1_1_100%] lg:flex-[1_1_75%]">
@@ -131,71 +130,74 @@
                     @endif
 
                     {{-- pagination --}}
-                    <div class="flex items-center justify-between border-t border-gray-200 bg-white pt-4 pb-3">
-                        <div class="flex-1 flex justify-between sm:hidden">
-                            @if ($data->onFirstPage())
-                                <span class="px-4 py-2 text-sm text-gray-400">Previous</span>
-                            @else
-                                <a href="{{ $data->previousPageUrl() }}"
-                                    class="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gradient-to-r from-sky_light to-primary hover:text-white">Previous</a>
-                            @endif
-                            @if ($data->hasMorePages())
-                                <a href="{{ $data->nextPageUrl() }}"
-                                    class="ml-3 px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gradient-to-r from-sky_light to-primary hover:text-white">Next</a>
-                            @else
-                                <span class="ml-3 px-4 py-2 text-sm text-gray-400">Next</span>
-                            @endif
-                        </div>
-                        <div class="hidden sm:flex sm:items-center sm:justify-between w-full">
-                            <div>
-                                <p class="text-sm text-gray-700">
-                                    Showing
-                                    <span class="font-medium">{{ $data->firstItem() }}</span>
-                                    to
-                                    <span class="font-medium">{{ $data->lastItem() }}</span>
-                                    of
-                                    <span class="font-medium">{{ $data->total() }}</span>
-                                    results
-                                </p>
+                    @if ($count > 0)
+                        <div class="flex items-center justify-between border-t border-gray-200 bg-white pt-4 pb-3">
+                            <div class="flex-1 flex justify-between sm:hidden">
+                                @if ($data->onFirstPage())
+                                    <span class="px-4 py-2 text-sm text-gray-400">Previous</span>
+                                @else
+                                    <a href="{{ $data->previousPageUrl() }}"
+                                        class="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gradient-to-r from-sky_light to-primary hover:text-white">Previous</a>
+                                @endif
+                                @if ($data->hasMorePages())
+                                    <a href="{{ $data->nextPageUrl() }}"
+                                        class="ml-3 px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gradient-to-r from-sky_light to-primary hover:text-white">Next</a>
+                                @else
+                                    <span class="ml-3 px-4 py-2 text-sm text-gray-400">Next</span>
+                                @endif
                             </div>
-                            <div>
-                                <nav class="isolate inline-flex -space-x-px rounded-md shadow-sm" aria-label="Pagination">
-                                    @php
-                                        $totalPages = $data->lastPage();
-                                        $currentPage = $data->currentPage();
-                                        $start = max(1, $currentPage - 1);
-                                        $end = min($totalPages, $currentPage + 1);
-                                    @endphp
+                            <div class="hidden sm:flex sm:items-center sm:justify-between w-full">
+                                <div>
+                                    <p class="text-sm text-gray-700">
+                                        Showing
+                                        <span class="font-medium">{{ $data->firstItem() }}</span>
+                                        to
+                                        <span class="font-medium">{{ $data->lastItem() }}</span>
+                                        of
+                                        <span class="font-medium">{{ $data->total() }}</span>
+                                        results
+                                    </p>
+                                </div>
+                                <div>
+                                    <nav class="isolate inline-flex -space-x-px rounded-md shadow-sm"
+                                        aria-label="Pagination">
+                                        @php
+                                            $totalPages = $data->lastPage();
+                                            $currentPage = $data->currentPage();
+                                            $start = max(1, $currentPage - 1);
+                                            $end = min($totalPages, $currentPage + 1);
+                                        @endphp
 
-                                    @if ($start > 1)
-                                        <a href="{{ $data->url(1) }}"
-                                            class="px-4 py-2 text-sm font-semibold text-gray-900 bg-white border border-gray-300 rounded-md hover:bg-gray-50">1</a>
-                                        @if ($start > 2)
-                                            <span class="px-4 py-2 text-sm font-semibold text-gray-700">...</span>
+                                        @if ($start > 1)
+                                            <a href="{{ $data->url(1) }}"
+                                                class="px-4 py-2 text-sm font-semibold text-gray-900 bg-white border border-gray-300 rounded-md hover:bg-gray-50">1</a>
+                                            @if ($start > 2)
+                                                <span class="px-4 py-2 text-sm font-semibold text-gray-700">...</span>
+                                            @endif
                                         @endif
-                                    @endif
 
-                                    @for ($i = $start; $i <= $end; $i++)
-                                        @if ($i == $currentPage)
-                                            <span
-                                                class="px-4 py-2 text-sm font-semibold text-white bg-gradient-to-r from-sky_light to-primary rounded-md">{{ $i }}</span>
-                                        @else
-                                            <a href="{{ $data->url($i) }}"
-                                                class="px-4 py-2 text-sm font-semibold text-gray-900 bg-white border border-gray-300 rounded-md hover:bg-gray-50">{{ $i }}</a>
-                                        @endif
-                                    @endfor
+                                        @for ($i = $start; $i <= $end; $i++)
+                                            @if ($i == $currentPage)
+                                                <span
+                                                    class="px-4 py-2 text-sm font-semibold text-white bg-gradient-to-r from-sky_light to-primary rounded-md">{{ $i }}</span>
+                                            @else
+                                                <a href="{{ $data->url($i) }}"
+                                                    class="px-4 py-2 text-sm font-semibold text-gray-900 bg-white border border-gray-300 rounded-md hover:bg-gray-50">{{ $i }}</a>
+                                            @endif
+                                        @endfor
 
-                                    @if ($end < $totalPages)
-                                        @if ($end < $totalPages - 1)
-                                            <span class="px-4 py-2 text-sm font-semibold text-gray-700">...</span>
+                                        @if ($end < $totalPages)
+                                            @if ($end < $totalPages - 1)
+                                                <span class="px-4 py-2 text-sm font-semibold text-gray-700">...</span>
+                                            @endif
+                                            <a href="{{ $data->url($totalPages) }}"
+                                                class="px-4 py-2 text-sm font-semibold text-gray-900 bg-white border border-gray-300 rounded-md hover:bg-gray-50">{{ $totalPages }}</a>
                                         @endif
-                                        <a href="{{ $data->url($totalPages) }}"
-                                            class="px-4 py-2 text-sm font-semibold text-gray-900 bg-white border border-gray-300 rounded-md hover:bg-gray-50">{{ $totalPages }}</a>
-                                    @endif
-                                </nav>
+                                    </nav>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    @endif
                 </main>
             </div>
         </div>
