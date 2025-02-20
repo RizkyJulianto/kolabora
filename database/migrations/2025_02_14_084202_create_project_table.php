@@ -25,6 +25,10 @@ return new class extends Migration
             $table->unsignedBigInteger('experience_year')->nullable();
             $table->date('date_project')->nullable();
             $table->enum('status', ['Found', 'Pending', 'Accepted', 'Rejected'])->nullable();
+            $table->string('result_project')->nullable();
+            $table->text('description_resultt')->nullable();
+            $table->dateTime('date_result')->nullable();
+            $table->boolean('status_result')->nullable();
             $table->unsignedBigInteger('id_team')->nullable();
             $table->unsignedBigInteger('id_company')->nullable();
             $table->unsignedBigInteger('id_users')->nullable();

@@ -25,4 +25,10 @@ class ProjectController extends Controller
         $count = ProjectModel::whereIn('status', ['Pending', 'Accepted', 'Rejected'])->count();
         return view('users/project', compact(['data', 'count']));
     }
+
+    public function show($id)
+    {
+        $data = ProjectModel::with(['company'])->findOrFail($id);
+        return view('users/detail/detail_project_result', compact('data'));
+    }
 }

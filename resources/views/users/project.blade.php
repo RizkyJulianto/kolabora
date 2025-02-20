@@ -63,8 +63,9 @@
                     @if ($data->isNotEmpty())
                         <div class="mb-8 flex flex-col gap-5">
                             @foreach ($data as $project)
-                                @if ($project->status != 'Found' && $project->status != null)
-                                    <div class="box shadow w-full border border-slate-200 rounded p-4">
+                                @if ($project->status != 'Found' || $project->status != null)
+                                    <a href="{{ url('project/' . $project->id) }}"
+                                        class="box shadow w-full border border-slate-200 rounded p-4 hover:shadow-primary_light cursor-pointer">
                                         <div class="up flex flex-col lg:flex-row lg:gap-2 gap-4">
                                             <div class="left flex-[1_1_100%] lg:flex-[1_1_75%]">
                                                 <div class="flex gap-2">
@@ -88,11 +89,18 @@
                                                             <h5><i class="fas fa-users"></i>
                                                                 {{ $project->collaboration_type }}</h5>
                                                         </div>
-                                                        <div
-                                                            class="bg-red-100 w-auto inline-block text-red-700 px-2 py-[2px] rounded-full text-xs">
-                                                            <h5><i class="fas fa-x"></i> Unfinished</h5>
-                                                        </div>
-                                                        <select name="" id=""></select>
+                                                        @if ($project->status_result == 0)
+                                                            <div
+                                                                class="bg-red-100 w-auto inline-block text-red-700 px-2 py-[2px] rounded-full text-xs">
+                                                                <h5><i class="fas fa-x"></i> Unfinished</h5>
+                                                            </div>
+                                                        @elseif($project->status_result == 1)
+                                                            <div
+                                                                class="bg-green-100 w-auto inline-block text-green-700 px-2 py-[2px] rounded-full text-xs">
+                                                                <h5><i class="fas fa-check"></i> Finished</h5>
+                                                            </div>
+                                                        @endif
+
                                                     </div>
                                                 </div>
                                             </div>
@@ -117,7 +125,7 @@
                                                 commodi
                                                 doloremque tenetur qui ut nobis?</p>
                                         </div>
-                                    </div>
+                                    </a>
                                 @endif
                             @endforeach
                         </div>

@@ -42,6 +42,8 @@ Route::middleware(['AuthIsLogin', 'PreventBackLogout'])->group(function () {
     Route::get('/company/{id}', [CompanyController::class, 'show']);
     Route::get('/partner', [PartnerController::class, 'index']);
     Route::get('/project', [ProjectController::class, 'index'])->name('projectSearch');
+    Route::get('/project/{id}', [ProjectController::class, 'show'])->name('showProjectResult');
+    Route::put('/project/{id}', [ProjectController::class, 'result'])->name('projectResult');
     Route::get('/notification', [NotificationController::class, 'index']);
     Route::get('/rewards', [RewardsController::class, 'index']);
     Route::get('/main-company', [CompanyminController::class, 'index']);
