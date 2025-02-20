@@ -22,7 +22,7 @@ class MainUsersController extends Controller
             return redirect()->to('main-users');
         }
 
-        $data = $query->paginate(9);
+        $data = $query->whereIn('status', ['Found'])->orWhereNull('status')->paginate(9);
         $count = ProjectModel::whereIn('status', ['Found'])->orWhereNull('status')->count();
         return view('users/main_users', compact(['data', 'count']));
     }

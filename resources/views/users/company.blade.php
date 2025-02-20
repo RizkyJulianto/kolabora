@@ -52,7 +52,8 @@
                                 <div class="down mt-3">
                                     <div class="flex mb-1 items-center text-sm gap-2 text-slate-400">
                                         <i class="fas fa-city"></i>
-                                        <p class="text-justify text-slate-600">{{ $company->scope_company }}</p>
+                                        <p class="text-justify text-slate-600 line-clamp-1">{{ $company->scope_company }}
+                                        </p>
                                     </div>
                                     <div class="flex mb-1 items-center text-sm gap-2 text-slate-400">
                                         <i class="fa-solid fa-briefcase"></i>
