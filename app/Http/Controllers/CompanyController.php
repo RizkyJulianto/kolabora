@@ -9,7 +9,7 @@ class CompanyController extends Controller
 {
     public function index(request $request)
     {
-        $query = CompanyUsers::with('projects');
+        $query = CompanyUsers::with('project');
         if ($request->has('search')) {
             $search = $request->input('search');
             $query->where('name_company', 'like', "%$search%")
@@ -30,7 +30,7 @@ class CompanyController extends Controller
 
     public function show($id)
     {
-        $data = CompanyUsers::findOrFail($id);
+        $data = CompanyUsers::with('project')->findOrFail($id);
         return view('users/detail/detail_company', compact('data'));
     }
 }

@@ -121,7 +121,7 @@
                     @if ($data->isNotEmpty())
                         <div class="mb-8 flex flex-col gap-5">
                             @foreach ($data as $jobs)
-                                @if ($jobs->status == 'Found')
+                                @if ($jobs->status == 'Found' || $jobs->status == null)
                                     <a href="{{ url('main-users/' . $jobs->id) }}"
                                         class="box shadow w-full border border-slate-200 rounded p-4">
                                         <div class="up flex flex-col lg:flex-row lg:gap-2 gap-4">

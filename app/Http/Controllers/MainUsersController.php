@@ -23,7 +23,7 @@ class MainUsersController extends Controller
         }
 
         $data = $query->paginate(9);
-        $count = ProjectModel::where('status', 'Found')->get()->count();
+        $count = ProjectModel::whereIn('status', ['Found'])->orWhereNull('status')->count();
         return view('users/main_users', compact(['data', 'count']));
     }
 

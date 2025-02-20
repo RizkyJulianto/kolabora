@@ -56,7 +56,7 @@
                                     </div>
                                     <div class="flex mb-1 items-center text-sm gap-2 text-slate-400">
                                         <i class="fa-solid fa-briefcase"></i>
-                                        <p class="text-justify text-slate-600">{{ $company->projects->id_company }} Lowongan
+                                        <p class="text-justify text-slate-600">{{ $company->project->count() }} Lowongan
                                         </p>
                                     </div>
                                     <div class="text-sm text-justify mt-2 text-slate-500">
