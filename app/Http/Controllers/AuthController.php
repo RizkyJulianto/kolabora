@@ -37,13 +37,17 @@ class AuthController extends Controller
 
         if (Auth::attempt($data)) {
             $user = Auth::user();
-
-            if ($user->role === 'users') {
-                Session::flash('success', 'Login success');
-                return redirect('/main-users');
-            } elseif ($user->role === 'company') {
-                Session::flash('success', 'Login success');
-                return redirect('/main-company');
+            if ($user && $user->status == 1) {
+                if ($user->role === 'users') {
+                    Session::flash('success', 'Login success');
+                    return redirect('/main-users');
+                } elseif ($user->role === 'company') {
+                    Session::flash('success', 'Login success');
+                    return redirect('/main-company');
+                }
+            } else {
+                Session::flash('error', 'Your account is not active');
+                return redirect('auth/login');
             }
         } else {
             Session::flash('error', 'Username or password incorrect');
@@ -86,7 +90,8 @@ class AuthController extends Controller
             'email' => $request->input('email'),
             'password' => Hash::make($request->input('password')),
             'role' => $request->input('role'),
-            'profile_img' => 'default-profile.jpg'
+            'profile_img' => 'default-profile.jpg',
+            'status' => 1
         ]);
 
         if ($users) {

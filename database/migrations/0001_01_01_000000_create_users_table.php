@@ -27,6 +27,7 @@ return new class extends Migration
             $table->text('bio')->nullable();
             $table->enum('role', ['users', 'company'])->nullable();
             $table->string('profile_img')->nullable();
+            $table->boolean('status')->nullable();
             $table->unsignedBigInteger('id_team')->nullable();
             $table->rememberToken();
             $table->timestamps();

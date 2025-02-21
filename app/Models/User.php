@@ -30,7 +30,9 @@ class User extends Authenticatable
         'address',
         'role',
         'bio',
-        'profile_img'
+        'profile_img',
+        'status',
+        'id_team'
     ];
 
     protected $primaryKey = 'id';
