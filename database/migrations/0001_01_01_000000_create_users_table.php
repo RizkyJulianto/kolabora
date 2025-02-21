@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->string('born_birth')->nullable();
             $table->date('date_birth')->nullable();
-            $table->unsignedBigInteger('no_telp')->nullable();
+            $table->char('no_telp')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->enum('gender', ['male', 'female'])->nullable();
             $table->text('address')->nullable();
@@ -30,7 +30,6 @@ return new class extends Migration
             $table->unsignedBigInteger('id_team')->nullable();
             $table->rememberToken();
             $table->timestamps();
-
         });
 
         Schema::create('password_reset_tokens', function (Blueprint $table) {

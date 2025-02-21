@@ -287,12 +287,12 @@
 
             Swal.fire({
                 title: 'Are you sure?',
-                text: "You to work on this project!",
+                text: "You this save it!",
                 icon: 'warning',
                 showCancelButton: true,
                 confirmButtonColor: '#3085d6',
                 cancelButtonColor: '#d33',
-                confirmButtonText: `Yes, I'am join the project!`
+                confirmButtonText: `Yes, save it!`
             }).then((result) => {
                 if (result.isConfirmed) {
                     form.submit();
@@ -309,7 +309,7 @@
 
             Swal.fire({
                 title: 'Are you sure?',
-                text: "You to work on this project!",
+                text: "You this delete it!",
                 icon: 'warning',
                 showCancelButton: true,
                 confirmButtonColor: '#3085d6',
@@ -322,6 +322,9 @@
             });
         });
     </script>
+
+
+
 </body>
 
 </html>
