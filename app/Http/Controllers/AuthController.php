@@ -36,7 +36,7 @@ class AuthController extends Controller
         ];
 
         if (Auth::attempt($data)) {
-            $user = Auth::user(); 
+            $user = Auth::user();
 
             if ($user->role === 'users') {
                 Session::flash('success', 'Login success');
@@ -62,7 +62,8 @@ class AuthController extends Controller
             'name' => 'required|string|max:255',
             'username' => 'required|string|max:255|unique:users,username',
             'email' => 'required|max:255|email|unique:users,email',
-            'password' => 'required|min:8',
+            'password' => 'nullable|min:8|confirmed',
+            'password_confirmation' => 'nullable|min:8|same:password',
             'role' => 'required'
         ], [
             'name.required' => 'Name is required',

@@ -18,7 +18,9 @@
 
 <body class="font-primary">
     <!-- Loading Bar -->
-    <div id="loading-bar" class="fixed top-0 left-0  z-20 h-1   bg-gradient-to-r from-orange-400 to-orange_normal   transition-all duration-300"></div>
+    <div id="loading-bar"
+        class="fixed top-0 left-0  z-20 h-1   bg-gradient-to-r from-orange-400 to-orange_normal   transition-all duration-300">
+    </div>
     <section class="login-section flex flex-col lg:flex-row relative w-full h-full lg:overflow-hidden">
         <div
             class="left-col hidden lg:flex-1 bg-gradient-to-r from-sky_normal to-primary_dark w-full h-auto lg:flex items-center px-[6%] relative">
@@ -55,8 +57,9 @@
                 </div>
                 <div class="form-group mb-5 ">
                     <label class="label-form block mb-1 text-gray-500 text-md">Menggunakan Kolabora Untuk ?</label>
-                    <select name="role" id="role" class="inline-block bg-gray-100 border-[1.8px] border-gray-400 w-full py-2.5 px-3 focus:border-primary outline-none rounded-md cursor-pointer appearance-none" >
-                        <option value="" >-- Pilih Kebutuhan --</option>
+                    <select name="role" id="role"
+                        class="inline-block bg-gray-100 border-[1.8px] border-gray-400 w-full py-2.5 px-3 focus:border-primary outline-none rounded-md cursor-pointer appearance-none">
+                        <option value="">-- Pilih Kebutuhan --</option>
                         <option value="company">Penyedia Kerja</option>
                         <option value="users">Mencari Kerja</option>
                     </select>
@@ -67,12 +70,20 @@
                         class="inline-block bg-gray-100 border-[1.8px] border-gray-400 w-full py-2.5 px-3 focus:border-primary outline-none rounded-md"
                         name="username" value="{{ old('username') }}" id="username" autocomplete="off">
                 </div>
-                <div class="form-group mb-8">
+                <div class="form-group mb-5">
                     <label class="label-form block mb-1 text-gray-500 text-md">Password</label>
                     <input type="password"
                         class="inline-block bg-gray-100 border-[1.8px] border-gray-400 w-full py-2.5 px-3 focus:border-primary outline-none rounded-md"
                         name="password" value="{{ old('password') }}" id="password" autocomplete="off">
-                    <span class="password-icon"><i class="fas fa-eye"></i></span>
+                    <span class="password-icon"><i class="fas fa-eye-slash"></i></span>
+                </div>
+                <div class="form-group mb-8">
+                    <label class="label-form block mb-1 text-gray-500 text-md">Confirmation Password</label>
+                    <input type="password"
+                        class="inline-block bg-gray-100 border-[1.8px] border-gray-400 w-full py-2.5 px-3 focus:border-primary outline-none rounded-md"
+                        name="password_confirmation" value="{{ old('password_confirmation') }}"
+                        id="password_confirmation" autocomplete="off">
+                    <span class="password-icon-c"><i class="fas fa-eye-slash"></i></span>
                 </div>
                 <div class="form-group">
                     <button
@@ -90,7 +101,7 @@
 
     <!-- Loading -->
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
+        document.addEventListener("DOMContentLoaded", function() {
             let loadingBar = document.getElementById("loading-bar");
 
             function startLoading() {
@@ -121,7 +132,7 @@
 
             // Mulai loading saat klik link
             document.querySelectorAll("a").forEach((link) => {
-                link.addEventListener("click", function (e) {
+                link.addEventListener("click", function(e) {
                     if (link.target !== "_blank" && link.href.startsWith(window.location.origin)) {
                         startLoading();
                     }
@@ -136,7 +147,6 @@
             Swal.fire({
                 title: "{{ session('error') }}",
                 icon: "error",
-                draggable: true,
             });
         </script>
     @endif

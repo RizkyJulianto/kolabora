@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,7 +22,9 @@
 
 <body class="font-primary">
     <!-- Loading Bar -->
-    <div id="loading-bar" class="fixed top-0 left-0  h-1 z-20  bg-gradient-to-r from-orange-400 to-orange_normal   transition-all duration-300"></div>
+    <div id="loading-bar"
+        class="fixed top-0 left-0  h-1 z-20  bg-gradient-to-r from-orange-400 to-orange_normal   transition-all duration-300">
+    </div>
 
     <section class="login-section flex flex-col lg:flex-row relative w-full h-dvh items-center overflow-hidden">
         <div
@@ -57,7 +60,7 @@
                         <input type="password"
                             class="inline-block tracking-wide bg-gray-100 border-[1.8px] border-gray-400 w-full py-2.5 px-3 focus:border-primary outline-none rounded-md"
                             name="password" value="{{ Request::old('password') }}" id="password" autocomplete="off">
-                        <span class="password-icon"><i class="fas fa-eye"></i></span>
+                        <span class="password-icon"><i class="fas fa-eye-slash"></i></span>
                     </div>
                     <div class="form-group">
                         <button
@@ -74,10 +77,10 @@
     <script src="{{ asset('library/sweetalert/sweetalert2.min.js') }}"></script>
     <script src="{{ asset('library/swiper/swiper-bundle.min.js') }}"></script>
     <script src="{{ asset('js/auth.js') }}"></script>
-    
+
     <!-- Loading -->
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
+        document.addEventListener("DOMContentLoaded", function() {
             let loadingBar = document.getElementById("loading-bar");
 
             function startLoading() {
@@ -108,7 +111,7 @@
 
             // Mulai loading saat klik link
             document.querySelectorAll("a").forEach((link) => {
-                link.addEventListener("click", function (e) {
+                link.addEventListener("click", function(e) {
                     if (link.target !== "_blank" && link.href.startsWith(window.location.origin)) {
                         startLoading();
                     }
@@ -125,7 +128,6 @@
             Swal.fire({
                 title: "{{ session('success') }}",
                 icon: "success",
-                draggable: true,
             });
         </script>
     @endif
@@ -135,7 +137,6 @@
             Swal.fire({
                 title: "{{ session('error') }}",
                 icon: "error",
-                draggable: true,
             });
         </script>
     @endif
@@ -145,7 +146,6 @@
             Swal.fire({
                 title: "{{ session('notLogin') }}",
                 icon: "error",
-                draggable: true,
             });
         </script>
     @endif
