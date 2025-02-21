@@ -40,7 +40,7 @@ Route::middleware(['AuthIsLogin', 'PreventBackLogout'])->group(function () {
     Route::put('/profile/{id}', [UsersController::class, 'update'])->name('updateProfileUsers');
     Route::get('/company', [CompanyController::class, 'index'])->name('companySearch');
     Route::get('/company/{id}', [CompanyController::class, 'show']);
-    Route::get('/partner', [PartnerController::class, 'index']);
+    Route::get('/partner', [PartnerController::class, 'index'])->name('partnerSearch');
     Route::get('/project', [ProjectController::class, 'index'])->name('projectSearch');
     Route::get('/project/{id}', [ProjectController::class, 'show'])->name('showProjectResult');
     Route::put('/project/{id}', [ProjectController::class, 'result'])->name('projectResult');

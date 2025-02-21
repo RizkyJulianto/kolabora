@@ -14,9 +14,12 @@ return new class extends Migration
         Schema::create('team', function (Blueprint $table) {
             $table->id();
             $table->string('name_team')->nullable();
+            $table->string('logo_team')->nullable();
             $table->string('location_team')->nullable();
             $table->unsignedBigInteger('total_member')->nullable();
+            $table->unsignedBigInteger('member')->nullable();
             $table->text('description_team')->nullable();
+            $table->string('scope_team')->nullable();
             $table->boolean('status')->nullable();
             $table->timestamps();
         });
