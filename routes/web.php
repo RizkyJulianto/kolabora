@@ -8,6 +8,8 @@ use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\RewardsController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\CompanyminController;
+use App\Http\Controllers\DataCompanyController;
+use App\Http\Controllers\DataUsersController;
 use App\Http\Controllers\MainUsersController;
 use App\Http\Controllers\JobController;
 use App\Http\Controllers\MainAdminController;
@@ -54,6 +56,8 @@ Route::middleware(['AuthIsLogin', 'PreventBackLogout'])->group(function () {
     Route::get('company/notification', [CompanyminController::class, 'notif']);
     Route::get('company/settings', [CompanyminController::class, 'settings']);
     Route::get('/main-admin', [MainAdminController::class, 'index']);
+    Route::get('/data-users', [DataUsersController::class, 'index']);
+    Route::get('/data-company', [DataCompanyController::class, 'index']);
 });
 
 Route::fallback(function () {

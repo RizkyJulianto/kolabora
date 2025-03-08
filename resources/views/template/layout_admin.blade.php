@@ -410,7 +410,7 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index-2.html">
+                        <a class="nav-link" href="{{ url('main-admin') }}">
                             <i class="fa fa-home menu-icon"></i>
                             <span class="menu-title">Dashboard</span>
                         </a>
@@ -424,9 +424,10 @@
                         </a>
                         <div class="collapse" id="data_master">
                             <ul class="nav flex-column sub-menu">
-                                <li class="nav-item"> <a class="nav-link" href="{{ url('') }}">Data Users</a>
+                                <li class="nav-item"> <a class="nav-link" href="{{ url('data-users') }}">Data
+                                        Users</a>
                                 </li>
-                                <li class="nav-item"> <a class="nav-link" href="{{ url('') }}">Data
+                                <li class="nav-item"> <a class="nav-link" href="{{ url('data-company') }}">Data
                                         Company</a></li>
                             </ul>
                         </div>
@@ -454,10 +455,10 @@
                 <!-- partial:partials/_footer.html -->
                 <footer class="footer">
                     <div class="d-sm-flex justify-content-center justify-content-sm-between">
-                        <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2018 .
+                        <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2025 .
                             All rights reserved.</span>
-                        <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made
-                            with <i class="far fa-heart text-danger"></i></span>
+                        <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">KolaBora is a
+                            trademark of Baru Terbit</span>
                     </div>
                 </footer>
                 <!-- partial -->
@@ -480,6 +481,7 @@
     <script src="{{ asset('admin/js/calendar.js') }}"></script>
     <script src="{{ asset('admin/js/chart.js') }}"></script>
     <script src="{{ asset('admin/js/chartist.js') }}"></script>
+    <script src="{{ asset('admin/js/data-table.js') }}"></script>
     <!-- Custom js for this page-->
     <script src="{{ asset('admin/js/dashboard.js') }}"></script>
 </body>

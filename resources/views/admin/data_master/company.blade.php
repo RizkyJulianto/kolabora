@@ -1,20 +1,20 @@
 @extends('template/layout_admin')
-@section('title_web', 'Data Users | KolaBora')
+@section('title_web', 'Data Company | KolaBora')
 @section('content')
     <div class="page-header">
         <h3 class="page-title">
-            Data Users
+            Data Company
         </h3>
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item">Data Master</li>
-                <li class="breadcrumb-item active" aria-current="page">Data Users</li>
+                <li class="breadcrumb-item active" aria-current="page">Data Company</li>
             </ol>
         </nav>
     </div>
     <div class="card">
         <div class="card-body">
-            <h4 class="card-title">Data Users</h4>
+            <h4 class="card-title">Data Company</h4>
             <div class="row">
                 <div class="col-12">
                     <div class="table-responsive">
@@ -22,23 +22,21 @@
                             <thead>
                                 <tr>
                                     <th>No</th>
-                                    <th>Name</th>
+                                    <th>Name Company</th>
                                     <th>Username</th>
                                     <th>Email</th>
-                                    <th>Gender</th>
                                     <th>Status</th>
                                     <th>Actions</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($data as $users)
+                                @foreach ($data as $company)
                                     <tr>
                                         <td>{{ $increment++ }}</td>
-                                        <td>{{ $users->name }}</td>
-                                        <td>{{ $users->username }}</td>
-                                        <td>{{ $users->email }}</td>
-                                        <td>{{ $users->gender ?? '-' }}</td>
-                                        @if ($users->status == 1)
+                                        <td>{{ $company->name }}</td>
+                                        <td>{{ $company->username }}</td>
+                                        <td>{{ $company->email }}</td>
+                                        @if ($company->status == 1)
                                             <td>
                                                 <label class="badge badge-success">Active</label>
                                             </td>
