@@ -57,6 +57,12 @@ Route::middleware(['AuthIsLogin', 'PreventBackLogout'])->group(function () {
     Route::get('company/settings', [CompanyminController::class, 'settings']);
     Route::get('/main-admin', [MainAdminController::class, 'index']);
     Route::get('/data-users', [DataUsersController::class, 'index']);
+    Route::get('/show-users/{id}', [DataUsersController::class, 'show']);
+    Route::get('/add-users', [DataUsersController::class, 'create']);
+    Route::post('/add-users', [DataUsersController::class, 'store'])->name('addUsers');
+    Route::get('/edit-users/{id}', [DataUsersController::class, 'edit']);
+    Route::put('/edit-users/{id}', [DataUsersController::class, 'update'])->name('updateUsers');
+    Route::delete('/delete-users/{id}', [DataUsersController::class, 'destroy'])->name('deleteUsers');
     Route::get('/data-company', [DataCompanyController::class, 'index']);
 });
 

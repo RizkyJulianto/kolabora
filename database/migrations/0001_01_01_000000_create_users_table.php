@@ -23,7 +23,7 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->enum('gender', ['male', 'female'])->nullable();
             $table->text('address')->nullable();
-            $table->string('last_education')->nullable();
+            $table->enum('last_education', ['not', 'sd', 'smp', 'sma_smk', 'd1_d3', 's1_d4', 's2', 's3'])->nullable();
             $table->text('bio')->nullable();
             $table->enum('role', ['users', 'company', 'admin'])->nullable();
             $table->string('profile_img')->nullable();

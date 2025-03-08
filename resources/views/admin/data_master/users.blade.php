@@ -14,7 +14,11 @@
     </div>
     <div class="card">
         <div class="card-body">
-            <h4 class="card-title">Data Users</h4>
+            <div class="d-grid mb-4 gap-2">
+                <a href="{{ url('add-users') }}" class="btn btn-sm btn-primary">Add Users</a>
+                <a href="" class="btn btn-sm btn-primary">Export</a>
+                <a href="" class="btn btn-sm btn-primary">Print</a>
+            </div>
             <div class="row">
                 <div class="col-12">
                     <div class="table-responsive">
@@ -47,12 +51,22 @@
                                                 <label class="badge badge-danger">Not Active</label>
                                             </td>
                                         @endif
-                                        <td>
-                                            <a href="" class="badge badge-info"><i class="fas fa-eye"> Detail</i></a>
-                                            <a href="" class="badge badge-warning"><i class="fas fa-edit">
-                                                    Edit</i></a>
-                                            <a href="" class="badge badge-danger"><i class="fas fa-trash">
-                                                    Delete</i></a>
+                                        <td class="d-flex">
+                                            <a href="{{ url('/show-users/' . $users->id) }}"
+                                                class="btn btn-sm py-2 btn-info"><i class="fas fa-eye">
+                                                </i></a>
+                                            <a href="{{ url('/edit-users/' . $users->id) }}"
+                                                class="btn btn-sm py-2 btn-warning mx-1"><i class="fas fa-edit">
+                                                </i></a>
+                                            <form id="deleteSweet" action="{{ route('deleteUsers', $users->id) }}"
+                                                method="post">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button type="submit" class="btn btn-sm py-2 btn-danger"><i
+                                                        class="fas fa-trash">
+                                                    </i>
+                                                </button>
+                                            </form>
                                         </td>
                                     </tr>
                                 @endforeach

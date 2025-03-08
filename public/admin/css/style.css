@@ -28243,7 +28243,6 @@ body.avgrund-active {
 }
 
 .swal2-modal {
-  min-height: 315px;
   -webkit-align-items: center;
   align-items: center;
   -webkit-justify-content: center;
@@ -28251,59 +28250,7 @@ body.avgrund-active {
   -webkit-flex-direction: column;
   flex-direction: column;
   border-radius: 10px;
-}
-
-.swal2-modal .swal2-title {
-  font-size: 25px;
-  line-height: 1;
-  font-weight: 600;
-  color: #000000;
-  font-weight: initial;
-  margin-bottom: 0;
-}
-
-.swal2-modal .swal2-icon,
-.swal2-modal .swal2-success-ring {
-  margin-top: 0;
-  margin-bottom: 42px;
-}
-
-.swal2-modal .swal2-buttonswrapper {
-  margin-top: 0;
-  padding: 0;
-}
-
-.swal2-modal .swal2-buttonswrapper .swal2-styled {
-  margin-top: 0;
-  font-weight: initial;
-}
-
-.swal2-modal .swal2-buttonswrapper .swal2-styled.swal2-confirm {
-  font-weight: initial;
-  margin-top: 32px;
-}
-
-.swal2-modal .swal2-buttonswrapper .swal2-styled.swal2-cancel {
-  margin-top: 32px;
-  border: 1px solid #e0e0ef;
-  color: #ffffff;
-  font-weight: initial;
-}
-
-.swal2-modal .swal2-content {
-  font-size: 0.8125rem;
-  font-weight: 600;
-  color: #000000;
-  font-weight: initial;
-  margin-top: 11px;
-}
-
-.swal2-modal .swal2-close {
-  font-size: 20px;
-}
-
-.swal2-modal .swal2-success-ring {
-  left: -30px;
+  padding: 2.5rem 5rem;
 }
 
 /* Switchery */
