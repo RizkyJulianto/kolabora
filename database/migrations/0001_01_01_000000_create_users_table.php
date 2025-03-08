@@ -25,7 +25,7 @@ return new class extends Migration
             $table->text('address')->nullable();
             $table->string('last_education')->nullable();
             $table->text('bio')->nullable();
-            $table->enum('role', ['users', 'company'])->nullable();
+            $table->enum('role', ['users', 'company', 'admin'])->nullable();
             $table->string('profile_img')->nullable();
             $table->boolean('status')->nullable();
             $table->unsignedBigInteger('id_team')->nullable();

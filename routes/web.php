@@ -10,6 +10,7 @@ use App\Http\Controllers\UsersController;
 use App\Http\Controllers\CompanyminController;
 use App\Http\Controllers\MainUsersController;
 use App\Http\Controllers\JobController;
+use App\Http\Controllers\MainAdminController;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Session;
@@ -52,6 +53,7 @@ Route::middleware(['AuthIsLogin', 'PreventBackLogout'])->group(function () {
     Route::get('company/results', [CompanyminController::class, 'result']);
     Route::get('company/notification', [CompanyminController::class, 'notif']);
     Route::get('company/settings', [CompanyminController::class, 'settings']);
+    Route::get('/main-admin', [MainAdminController::class, 'index']);
 });
 
 Route::fallback(function () {

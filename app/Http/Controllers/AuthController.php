@@ -44,6 +44,9 @@ class AuthController extends Controller
                 } elseif ($user->role === 'company') {
                     Session::flash('success', 'Login success');
                     return redirect('/main-company');
+                } elseif ($user->role === 'admin') {
+                    Session::flash('success', 'Login success');
+                    return redirect('/main-admin');
                 }
             } else {
                 Session::flash('error', 'Your account is not active');
