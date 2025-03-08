@@ -41,19 +41,21 @@
                         <p class="form-control mb-0">Male</p>
                     @elseif ($users->gender == 'female')
                         <p class="form-control mb-0">Female</p>
+                    @else
+                        <p class="form-control mb-0">-</p>
                     @endif
                 </div>
                 <div class="form-group col-md-6 col-sm-12">
                     <label for="born_birth">Born Birth</label>
-                    <p class="form-control mb-0">{{ $users->born_birth }}</p>
+                    <p class="form-control mb-0">{{ $users->born_birth ?? '-' }}</p>
                 </div>
                 <div class="form-group col-md-6 col-sm-12">
                     <label for="date_birth">Date Birth</label>
-                    <p class="form-control mb-0">{{ date('j F Y', strtotime($users->date_birth)) }}</p>
+                    <p class="form-control mb-0">{{ date('j F Y', strtotime($users->date_birth)) ?? '-' }}</p>
                 </div>
                 <div class="form-group col-md-6 col-sm-12">
                     <label for="no_telp">No Telp</label>
-                    <p class="form-control mb-0">{{ $users->born_birth }}</p>
+                    <p class="form-control mb-0">{{ $users->born_birth ?? '-' }}</p>
                 </div>
                 <div class="form-group col-md-6 col-sm-12">
                     <label for="last_education">Last Education</label>
@@ -73,17 +75,18 @@
                         <p class="form-control mb-0">S2/Sederajat</p>
                     @elseif ($users->last_education == 's3')
                         <p class="form-control mb-0">S3/Sederajat</p>
+                    @else
+                        <p class="form-control mb-0">-</p>
                     @endif
                 </div>
                 <div class="form-group col-12">
                     <label for="bio">Bio</label>
-                    <textarea autocomplete="off" name="bio" class="form-control" id="bio" rows="4">{{ $users->bio }}</textarea>
+                    <p class="form-control mb-0">{{ $users->bio ?? '-' }}t</p>
                 </div>
                 <div class="form-group col-12">
                     <label for="address">Address</label>
-                    <textarea autocomplete="off" name="address" class="form-control" id="address" rows="4">{{ $users->address }}</textarea>
+                    <p class="form-control mb-0">{{ $users->address ?? '-' }}t</p>
                 </div>
-
             </div>
         </div>
     </div>
