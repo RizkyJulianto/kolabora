@@ -14,7 +14,11 @@
     </div>
     <div class="card">
         <div class="card-body">
-            <h4 class="card-title">Data Company</h4>
+            <div class="d-grid mb-4 gap-2">
+                <a href="{{ url('add-company') }}" class="btn btn-sm btn-primary">Add Company</a>
+                <a href="" class="btn btn-sm btn-primary">Export</a>
+                <a href="" class="btn btn-sm btn-primary">Print</a>
+            </div>
             <div class="row">
                 <div class="col-12">
                     <div class="table-responsive">
@@ -23,9 +27,10 @@
                                 <tr>
                                     <th>No</th>
                                     <th>Name Company</th>
-                                    <th>Username</th>
-                                    <th>Email</th>
-                                    <th>Status</th>
+                                    <th>Slogan</th>
+                                    <th>Email Users</th>
+                                    <th>Name Users</th>
+                                    <th>Status Account</th>
                                     <th>Actions</th>
                                 </tr>
                             </thead>
@@ -33,10 +38,12 @@
                                 @foreach ($data as $company)
                                     <tr>
                                         <td>{{ $increment++ }}</td>
-                                        <td>{{ $company->name }}</td>
-                                        <td>{{ $company->username }}</td>
-                                        <td>{{ $company->email }}</td>
-                                        @if ($company->status == 1)
+                                        <td>{{ $company->name_company ?? 'Tidak ada perusahaan' }}
+                                        </td>
+                                        <td>{{ $company->slogan ?? '-' }}</td>
+                                        <td>{{ $company->users->email }}</td>
+                                        <td>{{ $company->users->name }}</td>
+                                        @if ($company->users->status == 1)
                                             <td>
                                                 <label class="badge badge-success">Active</label>
                                             </td>
@@ -45,12 +52,22 @@
                                                 <label class="badge badge-danger">Not Active</label>
                                             </td>
                                         @endif
-                                        <td>
-                                            <a href="" class="badge badge-info"><i class="fas fa-eye"> Detail</i></a>
-                                            <a href="" class="badge badge-warning"><i class="fas fa-edit">
-                                                    Edit</i></a>
-                                            <a href="" class="badge badge-danger"><i class="fas fa-trash">
-                                                    Delete</i></a>
+                                        <td class="d-flex">
+                                            <a href="{{ url('/show-company/' . $company->id) }}"
+                                                class="btn btn-sm py-2 btn-info"><i class="fas fa-eye">
+                                                </i></a>
+                                            <a href="{{ url('/edit-company/' . $company->id) }}"
+                                                class="btn btn-sm py-2 btn-warning mx-1"><i class="fas fa-edit">
+                                                </i></a>
+                                            <form id="deleteSweet" action="{{ route('deleteCompany', $company->id) }}"
+                                                method="post">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button id="deleteSweet" type="submit"
+                                                    class="btn btn-sm py-2 btn-danger"><i class="fas fa-trash">
+                                                    </i>
+                                                </button>
+                                            </form>
                                         </td>
                                     </tr>
                                 @endforeach

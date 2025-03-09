@@ -64,6 +64,12 @@ Route::middleware(['AuthIsLogin', 'PreventBackLogout'])->group(function () {
     Route::put('/edit-users/{id}', [DataUsersController::class, 'update'])->name('updateUsers');
     Route::delete('/delete-users/{id}', [DataUsersController::class, 'destroy'])->name('deleteUsers');
     Route::get('/data-company', [DataCompanyController::class, 'index']);
+    Route::get('/show-company/{id}', [DataCompanyController::class, 'show']);
+    Route::get('/add-company', [DataCompanyController::class, 'create']);
+    Route::post('/add-company', [DataCompanyController::class, 'store'])->name('addCompany');
+    Route::get('/edit-company/{id}', [DataCompanyController::class, 'edit']);
+    Route::put('/edit-company/{id}', [DataCompanyController::class, 'update'])->name('updateCompany');
+    Route::delete('/delete-company/{id}', [DataCompanyController::class, 'destroy'])->name('deleteCompany');
 });
 
 Route::fallback(function () {

@@ -36,8 +36,12 @@ class User extends Authenticatable
     ];
 
     protected $primaryKey = 'id';
+    protected $guarded = ['id'];
 
-
+    public function company()
+    {
+        return $this->hasMany(CompanyUsers::class, 'id_users', 'id');
+    }
 
     /**
      * The attributes that should be hidden for serialization.

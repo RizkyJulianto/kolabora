@@ -19,10 +19,10 @@
     <div class="container-scroller">
         <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row default-layout-navbar">
             <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-                <a class="navbar-brand brand-logo" href="index-2.html"><img
+                <a class="navbar-brand brand-logo" href="{{ url('main-admin') }}"><img
                         src="{{ asset('images/logo/kolabora-transparent.png') }}" alt="Kolabora" />
                     Kola<span>Bora</span></a>
-                <a class="navbar-brand brand-logo-mini" href="index-2.html"><img
+                <a class="navbar-brand brand-logo-mini" href="{{ url('main-admin') }}"><img
                         src="{{ asset('images/logo/kolabora-transparent.png') }}" alt="Kolabora" /></a>
             </div>
             <div class="navbar-menu-wrapper d-flex align-items-stretch">

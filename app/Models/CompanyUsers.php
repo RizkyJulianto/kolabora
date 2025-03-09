@@ -13,10 +13,12 @@ class CompanyUsers extends Model
         'slogan',
         'scope_company',
         'contact',
+        'email',
         'instagram',
         'linkedin',
         'website',
-        'profile_company'
+        'profile_company',
+        'id_users'
     ];
     protected $primaryKey = 'id';
     protected $guarded = ['id'];
@@ -24,5 +26,10 @@ class CompanyUsers extends Model
     public function project()
     {
         return $this->hasMany(ProjectModel::class, 'id_company', 'id');
+    }
+
+    public function users()
+    {
+        return $this->belongsTo(User::class, 'id_users', 'id');
     }
 }
