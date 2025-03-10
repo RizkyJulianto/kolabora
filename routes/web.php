@@ -57,7 +57,7 @@ Route::middleware(['AuthIsLogin', 'PreventBackLogout'])->group(function () {
     Route::get('company/settings', [CompanyminController::class, 'settings']);
     Route::get('/main-admin', [MainAdminController::class, 'index']);
     Route::get('/profile/{id}', [MainAdminController::class, 'profile']);
-    Route::put('/profile/{id}', [MainAdminController::class, 'update'])->name('updateProfileAdmin');
+    Route::put('/profile-admin/{id}', [MainAdminController::class, 'update'])->name('updateProfileAdmin');
     Route::get('/data-users', [DataUsersController::class, 'index']);
     Route::get('/show-users/{id}', [DataUsersController::class, 'show']);
     Route::get('/add-users', [DataUsersController::class, 'create']);

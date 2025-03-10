@@ -130,8 +130,8 @@ class DataCompanyController extends Controller
         ]);
 
         if ($validator->fails()) {
-            Session::flash('error', 'Invalid created company');
-            return redirect('add-company')->withErrors($validator)->withInput();
+            Session::flash('error', 'Invalid updated company');
+            return redirect('edit-company')->withErrors($validator)->withInput();
         }
 
         if ($request->hasFile('profile_company')) {

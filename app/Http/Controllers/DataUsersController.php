@@ -147,8 +147,8 @@ class DataUsersController extends Controller
         ]);
 
         if ($validator->fails()) {
-            Session::flash('error', 'Invalid created account');
-            return redirect('add-users')->withErrors($validator)->withInput();
+            Session::flash('error', 'Invalid updated account');
+            return redirect('edit-users')->withErrors($validator)->withInput();
         }
 
         if ($request->hasFile('profile_img')) {

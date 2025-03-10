@@ -12,7 +12,8 @@ class MainAdminController extends Controller
 {
     public function index()
     {
-        return view('admin/main');
+        $users = User::all()->count();
+        return view('admin/main', compact(['users']));
     }
 
     public function profile(string $id)
@@ -44,7 +45,7 @@ class MainAdminController extends Controller
 
         if ($validator->fails()) {
             Session::flash('error', 'Invalid updated account');
-            return redirect('add-users')->withErrors($validator)->withInput();
+            return redirect('profile/' . $id)->withErrors($validator)->withInput();
         }
 
         if ($request->hasFile('profile_img')) {
@@ -77,6 +78,6 @@ class MainAdminController extends Controller
         }
 
         Session::flash('success_second', 'Data admin updated succcessfully');
-        return redirect()->to('profile');
+        return redirect()->to('profile/' . $id);
     }
 }
