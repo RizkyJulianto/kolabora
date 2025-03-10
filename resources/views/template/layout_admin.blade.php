@@ -47,10 +47,10 @@
                     <li class="nav-item dropdown d-none d-lg-flex">
                         <div class="nav-link">
                             <span class="dropdown-toggle btn btn-outline-dark" id="languageDropdown"
-                                data-toggle="dropdown">Bahasa</span>
+                                data-toggle="dropdown">English</span>
                             <div class="dropdown-menu navbar-dropdown" aria-labelledby="languageDropdown">
                                 <a class="dropdown-item font-weight-medium" href="#">
-                                    English
+                                    Bahasa
                                 </a>
                             </div>
                         </div>
@@ -59,7 +59,7 @@
                         <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#"
                             data-toggle="dropdown">
                             <i class="fas fa-bell mx-0"></i>
-                            <span class="count">16</span>
+                            <span class="count">5</span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
                             aria-labelledby="notificationDropdown">
@@ -116,7 +116,7 @@
                         <a class="nav-link count-indicator dropdown-toggle" id="messageDropdown" href="#"
                             data-toggle="dropdown" aria-expanded="false">
                             <i class="fas fa-envelope mx-0"></i>
-                            <span class="count">25</span>
+                            <span class="count">2</span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
                             aria-labelledby="messageDropdown">
@@ -178,7 +178,7 @@
                         @endif
                         <div class="dropdown-menu dropdown-menu-right navbar-dropdown"
                             aria-labelledby="profileDropdown">
-                            <a class="dropdown-item">
+                            <a href="{{ url('/profile/' . auth()->user()->id) }}" class="dropdown-item">
                                 <i class="fas fa-cog text-primary"></i>
                                 Settings
                             </a>
@@ -244,12 +244,6 @@
                         <a class="nav-link" href="pages/ui-features/notifications.html">
                             <i class="fas fa-bell menu-icon"></i>
                             <span class="menu-title">Notifications</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="pages/documentation.html">
-                            <i class="far fa-file-alt menu-icon"></i>
-                            <span class="menu-title">Documentation</span>
                         </a>
                     </li>
                 </ul>

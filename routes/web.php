@@ -56,6 +56,8 @@ Route::middleware(['AuthIsLogin', 'PreventBackLogout'])->group(function () {
     Route::get('company/notification', [CompanyminController::class, 'notif']);
     Route::get('company/settings', [CompanyminController::class, 'settings']);
     Route::get('/main-admin', [MainAdminController::class, 'index']);
+    Route::get('/profile/{id}', [MainAdminController::class, 'profile']);
+    Route::put('/profile/{id}', [MainAdminController::class, 'update'])->name('updateProfileAdmin');
     Route::get('/data-users', [DataUsersController::class, 'index']);
     Route::get('/show-users/{id}', [DataUsersController::class, 'show']);
     Route::get('/add-users', [DataUsersController::class, 'create']);
