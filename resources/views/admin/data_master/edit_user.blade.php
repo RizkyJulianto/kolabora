@@ -40,6 +40,14 @@
                         placeholder="Password">
                 </div>
                 <div class="form-group col-md-4 col-sm-12">
+                    <label for="role">Role</label>
+                    <select autocomplete="off" name="role" class="form-control form-control-lg" id="role">
+                        <option>Choice role</option>
+                        <option {{ $users->role == 'users' ? 'selected' : '' }} value="users">Users</option>
+                        <option {{ $users->role == 'company' ? 'selected' : '' }} value="company">Company</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-4 col-sm-12">
                     <label for="gender">Gender</label>
                     <select autocomplete="off" name="gender" class="form-control form-control-lg" id="gender">
                         <option>Choice gender</option>

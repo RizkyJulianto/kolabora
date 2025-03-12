@@ -18,7 +18,7 @@ class DataUsersController extends Controller
     {
         $increment = 1;
         $query = User::all();
-        $data = $query->whereIn('role', ['users']);
+        $data = $query->whereIn('role', ['users', 'company']);
         return view('admin.data_master.users', compact(['data', 'increment']));
     }
 
@@ -77,7 +77,7 @@ class DataUsersController extends Controller
                 'address' => $request->address,
                 'last_education' => $request->last_education,
                 'bio' => $request->bio,
-                'role' => 'users',
+                'role' => $request->role,
                 'profile_img' => $nama_file ?? 'default-profile.jpg',
                 'status' => 1,
             ]);
@@ -94,7 +94,7 @@ class DataUsersController extends Controller
                 'address' => $request->address,
                 'last_education' => $request->last_education,
                 'bio' => $request->bio,
-                'role' => 'users',
+                'role' => $request->role,
                 'profile_img' => $nama_file ?? 'default-profile.jpg',
                 'status' => 1,
             ]);
@@ -170,6 +170,7 @@ class DataUsersController extends Controller
                 'address' => $request->address,
                 'last_education' => $request->last_education,
                 'bio' => $request->bio,
+                'role' => $request->role,
                 'profile_img' => $nama_file,
                 'status' => $request->status,
             ]);
@@ -186,6 +187,7 @@ class DataUsersController extends Controller
                 'address' => $request->address,
                 'last_education' => $request->last_education,
                 'bio' => $request->bio,
+                'role' => $request->role,
                 'status' => $request->status,
             ]);
         }

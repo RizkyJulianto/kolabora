@@ -30,6 +30,7 @@
                                     <th>Username</th>
                                     <th>Email</th>
                                     <th>Gender</th>
+                                    <th>Role</th>
                                     <th>Status</th>
                                     <th>Actions</th>
                                 </tr>
@@ -41,7 +42,16 @@
                                         <td>{{ $users->name }}</td>
                                         <td>{{ $users->username }}</td>
                                         <td>{{ $users->email }}</td>
-                                        <td>{{ $users->gender ?? '-' }}</td>
+                                        @if ($users->gender == 'male')
+                                            <td>Male</td>
+                                        @elseif($users->gender == 'female')
+                                            <td>Female</td>
+                                        @endif
+                                        @if ($users->role == 'users')
+                                            <td>Users</td>
+                                        @elseif($users->role == 'company')
+                                            <td>Company</td>
+                                        @endif
                                         @if ($users->status == 1)
                                             <td>
                                                 <label class="badge badge-success">Active</label>

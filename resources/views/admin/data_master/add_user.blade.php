@@ -27,19 +27,27 @@
                     <input type="email" autocomplete="off" name="email" value="{{ old('email') }}" class="form-control"
                         id="email" placeholder="Email">
                 </div>
-                <div class="form-group col-md-6 col-sm-12">
+                <div class="form-group col-md-4 col-sm-12">
                     <label for="username">Username</label>
                     <input type="text" autocomplete="off" name="username" value="{{ old('username') }}"
                         class="form-control" id="username" placeholder="Username">
                 </div>
-                <div class="form-group col-md-6 col-sm-12">
+                <div class="form-group col-md-4 col-sm-12">
                     <label for="password">Password</label>
                     <input type="text" autocomplete="off" name="password" value="{{ old('password') }}"
                         class="form-control" id="password" placeholder="Password">
                 </div>
                 <div class="form-group col-md-4 col-sm-12">
+                    <label for="role">Role</label>
+                    <select name="role" class="form-control form-control-lg" id="role">
+                        <option>Choice role</option>
+                        <option value="users">Users</option>
+                        <option value="company">Company</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-4 col-sm-12">
                     <label for="gender">Gender</label>
-                    <select autocomplete="off" name="gender" class="form-control form-control-lg" id="gender">
+                    <select name="gender" class="form-control form-control-lg" id="gender">
                         <option>Choice gender</option>
                         <option value="male">Male</option>
                         <option value="female">Female</option>
@@ -88,13 +96,11 @@
                 </div>
                 <div class="form-group col-md-6 col-sm-12">
                     <label for="bio">Bio</label>
-                    <textarea autocomplete="off" name="bio" value="{{ old('bio') }}" class="form-control" id="bio"
-                        rows="4"></textarea>
+                    <textarea autocomplete="off" name="bio" class="form-control" id="bio" rows="4">{{ old('bio') }}</textarea>
                 </div>
                 <div class="form-group col-md-6 col-sm-12">
                     <label for="address">Address</label>
-                    <textarea autocomplete="off" name="address" value="{{ old('address') }}" class="form-control" id="address"
-                        rows="4"></textarea>
+                    <textarea autocomplete="off" name="address" class="form-control" id="address" rows="4">{{ old('address') }}</textarea>
                 </div>
                 <div class="d-grid gap-2 col-12">
                     <button type="submit" class="btn btn-primary mr-2">Submit</button>

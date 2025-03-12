@@ -22,13 +22,22 @@
                     <div class="ml-3">
                         <h6>{{ $users->name }}</h6>
                         <p class="text-muted">{{ $users->email }}</p>
-                        <p class="mt-2 text-white font-weight-bold" style="letter-spacing: 1.2px; font-size: 0.7rem">
-                            @if ($users->status == 1)
-                                <span class="p-1 bg-success">Active</span>
-                            @else
-                                <span class="p-1 bg-danger">Not Active</span>
-                            @endif
-                        </p>
+                        <div class="d-flex mt-2 align-items-center">
+                            <p class="text-white mr-2 font-weight-bold" style="letter-spacing: 1.2px; font-size: 0.7rem">
+                                @if ($users->status == 1)
+                                    <span class="p-1 bg-success">Active</span>
+                                @else
+                                    <span class="p-1 bg-danger">Not Active</span>
+                                @endif
+                            </p>
+                            <p><i class="fas fa-user"></i>
+                                @if ($users->role == 'users')
+                                    <span>Users</span>
+                                @elseif ($users->role == 'company')
+                                    <span>Company</span>
+                                @endif
+                            </p>
+                        </div>
                     </div>
                 </div>
                 <div class="form-group col-md-6 col-sm-12">
