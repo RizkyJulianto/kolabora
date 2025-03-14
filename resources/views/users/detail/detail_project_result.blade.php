@@ -137,73 +137,94 @@
             </div>
         </div>
 
-        <div class="box shadow w-full border border-slate-200 rounded">
-            <div class="flex gap-3 border-b border-slate-200 p-3 items-center">
-                <h3 class="text-lg font-medium">Result Project</h3>
-                @if ($data->status_result == 0)
-                    <div class="bg-red-100 w-auto inline-block text-red-700 px-2 py-[2px] rounded-full text-sm">
-                        <h5><i class="fas fa-x"></i> Unfinished</h5>
-                    </div>
-                @elseif($data->status_result == 1)
-                    <div class="bg-green-100 w-auto inline-block text-green-700 px-2 py-[2px] rounded-full text-sm">
-                        <h5><i class="fas fa-check"></i> Finished</h5>
-                    </div>
-                @endif
-            </div>
-            <div class="p-3 grid grid-cols-1 md:grid-cols-2 gap-3">
-                <form action="{{ route('projectResult', $data->id) }}" method="post">
-                    @csrf
-                    @method('PUT')
-                    <div class="form-group mb-3">
-                        <label class="label-form block mb-1 text-gray-500 text-sm">Upload Result</label>
-                        <input type="file"
-                            class="inline-block border w-full shadow text-sm border-slate-200 py-2 px-3 focus:border-primary outline-none rounded-md"
-                            name="result_project" id="result_project">
-                    </div>
-                    <div class="form-group mb-3">
-                        <label class="label-form block mb-1 text-gray-500 text-sm">Description Result</label>
-                        <textarea name="description_result"
-                            class="tracking-wide h-32 w-full inline-block border shadow text-sm border-slate-200 py-2 px-3 focus:border-primary outline-none rounded-md"
-                            id="description_result" cols="30" rows="10"></textarea>
-                    </div>
-                    <div class="form-group">
-                        <button id="saveSweet"
-                            class="flex-1 inline-block font-medium w-full tracking-wider text-center rounded-md bg-gradient-to-r from-sky_light  to-primary_dark text-white py-2.5 px-3 hover:opacity-[90%]"
-                            type="submit">Submit Result</button>
-                    </div>
-                </form>
-                <div class="result-project">
+        @if ($data->status === 'Accepted')
+            <div class="box shadow w-full border border-slate-200 rounded">
+                <div class="flex gap-3 border-b border-slate-200 p-3 items-center">
+                    <h3 class="text-lg font-medium">Result Project</h3>
                     @if ($data->status_result == 0)
-                        <div class="shadow flex justify-center items-center h-full w-full border border-slate-200 rounded">
-                            <h3
-                                class="tracking-wide font-medium bg-clip-text bg-gradient-to-r from-sky_light to-primary text-transparent p-2 text-center">
-                                Haven't sent project results!</h3>
+                        <div class="bg-red-100 w-auto inline-block text-red-700 px-2 py-[2px] rounded-full text-sm">
+                            <h5><i class="fas fa-x"></i> Unfinished</h5>
                         </div>
-                    @else
-                        <div class="form-group mb-3">
-                            <label class="label-form block mb-1 text-gray-500 text-sm">Date Result</label>
-                            <div
-                                class="tracking-wide h-auto w-full inline-block border shadow text-sm border-slate-200 py-2 px-3 rounded-md">
-                                <p><i class="fa-regular fa-calendar"></i> {{ $data->date_result }}</p>
-                            </div>
-                        </div>
-                        <div class="form-group mb-3">
-                            <label class="label-form block mb-1 text-gray-500 text-sm">Description Result</label>
-                            <div
-                                class="tracking-wide h-auto w-full inline-block border shadow text-sm border-slate-200 py-2 px-3 rounded-md">
-                                <p>{{ $data->description_result }}</p>
-                            </div>
-                        </div>
-                        <div class="form-group mb-3">
-                            <label class="label-form block mb-1 text-gray-500 text-sm">Upload Result</label>
-                            <div
-                                class="tracking-wide h-auto w-full inline-block border shadow text-sm border-slate-200 py-2 px-3 rounded-md">
-                                <p>{{ $data->result_project }}</p>
-                            </div>
+                    @elseif($data->status_result == 1)
+                        <div class="bg-green-100 w-auto inline-block text-green-700 px-2 py-[2px] rounded-full text-sm">
+                            <h5><i class="fas fa-check"></i> Finished</h5>
                         </div>
                     @endif
                 </div>
+                <div class="p-3 grid grid-cols-1 md:grid-cols-2 gap-5">
+                    <form action="{{ route('projectResult', $data->id) }}" method="post" enctype="multipart/form-data">
+                        @csrf
+                        @method('PUT')
+                        <div class="form-group mb-3">
+                            <label class="label-form block mb-1 text-gray-500 text-sm">Upload Result</label>
+                            <input type="file"
+                                class="inline-block border w-full shadow text-sm border-slate-200 py-2 px-3 focus:border-primary outline-none rounded-md"
+                                name="result_project" id="result_project">
+                        </div>
+                        <div class="form-group mb-3">
+                            <label class="label-form block mb-1 text-gray-500 text-sm">Description Result</label>
+                            <textarea name="description_result"
+                                class="tracking-wide h-32 w-full inline-block border shadow text-sm border-slate-200 py-2 px-3 focus:border-primary outline-none rounded-md"
+                                id="description_result" cols="30" rows="10"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button id="saveSweet"
+                                class="flex-1 inline-block font-medium w-full tracking-wider text-center rounded-md bg-gradient-to-r from-sky_light  to-primary_dark text-white py-2.5 px-3 hover:opacity-[90%]"
+                                type="submit">Submit Result</button>
+                        </div>
+                    </form>
+                    <div class="result-project">
+                        @if ($data->status_result == 0)
+                            <div
+                                class="shadow flex justify-center items-center h-full w-full border border-slate-200 rounded">
+                                <h3
+                                    class="tracking-wide font-medium bg-clip-text bg-gradient-to-r from-sky_light to-primary text-transparent p-2 text-center">
+                                    Haven't sent project results!</h3>
+                            </div>
+                        @else
+                            <div class="form-group mb-3">
+                                <label class="label-form block mb-1 text-gray-500 text-sm">Date Result</label>
+                                <div
+                                    class="tracking-wide h-auto w-full inline-block border shadow text-sm border-slate-200 py-2 px-3 rounded-md">
+                                    <p><i class="fa-regular fa-calendar"></i>
+                                        {{ date('j F Y g:i a', strtotime($data->date_result)) }}</p>
+                                </div>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label class="label-form block mb-1 text-gray-500 text-sm">Description Result</label>
+                                <div
+                                    class="tracking-wide h-auto w-full inline-block border shadow text-sm border-slate-200 py-2 px-3 rounded-md">
+                                    <p>{{ $data->description_result }}</p>
+                                </div>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label class="label-form block mb-1 text-gray-500 text-sm">Upload Result</label>
+                                <div
+                                    class="tracking-wide h-auto w-full inline-block border shadow text-sm border-slate-200 py-2 px-3 rounded-md">
+                                    <a class="hover:text-primary"
+                                        href="{{ url('/uploads/result_project/' . $data->result_project) }}">{{ $data->result_project }}</a>
+                                </div>
+                            </div>
+                        @endif
+                    </div>
+                </div>
             </div>
-        </div>
+        @elseif($data->status === 'Pending')
+            <div class="box shadow w-full border border-slate-200 rounded">
+                <div class="flex gap-3 border-b border-slate-200 p-3 items-center justify-center">
+                    <h3
+                        class="text-lg font-medium tracking-wide bg-clip-text bg-gradient-to-r from-sky_light to-primary text-transparent p-2">
+                        Project masih dalam status Pending</h3>
+                </div>
+            </div>
+        @elseif($data->status === 'Rejected')
+            <div class="box shadow w-full border border-slate-200 rounded">
+                <div class="flex gap-3 border-b border-slate-200 p-3 items-center justify-center">
+                    <h3
+                        class="text-lg font-medium tracking-wide bg-clip-text bg-gradient-to-r from-red-400 to-red-700 text-transparent p-2">
+                        Maaf permintaan anda kami tolak</h3>
+                </div>
+            </div>
+        @endif
     </main>
 @endsection

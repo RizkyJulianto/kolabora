@@ -28,6 +28,7 @@ class CompanySeeder extends Seeder
                 'linkedin' => $faker->sentence,
                 'website' => $faker->sentence,
                 'profile_company' => $faker->sentence,
+                'id_users' => $faker->numberBetween(1, 10),
                 'created_at' => now(),
                 'updated_at' => now(),
             ]);

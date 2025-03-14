@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\ProjectModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
 
 class ProjectController extends Controller
@@ -50,8 +51,18 @@ class ProjectController extends Controller
             return redirect('project/' . $id)->withErrors($validator)->withInput();
         }
 
+        $file = $request->file('result_project');
+        $extension = $file->getClientOriginalExtension();
+        $nama_file = 'project_' . time() . '_' . uniqid() . '.' . $extension;
+        $tujuan_upload = 'uploads/result_project';
+        $file->move($tujuan_upload, $nama_file);
+
+        if ($data->result_project && $data->result_project !== $nama_file) {
+            Storage::delete('public/uploads/result_project/' . $data->result_project);
+        }
+
         $data->update([
-            'result_project' => $request->result_project,
+            'result_project' => $nama_file,
             'description_result' => $request->description_result,
             'status_result' => 1,
             'date_result' => now(),

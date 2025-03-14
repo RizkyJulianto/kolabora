@@ -8,19 +8,16 @@ class TeamModel extends Model
 {
     protected $table = 'team';
     protected $fillable = [
-        'name_project',
-        'description_project',
-        'project_type',
-        'deadline',
-        'skills',
-        'salary',
-        'collaboration_type',
-        'total_members',
-        'experience',
-        'experience_year',
-        'date_project',
+        'name_team',
+        'logo_team',
+        'location_team',
+        'total_member',
+        'member',
+        'description_team',
+        'scope_team',
         'status',
-        'id_company'
+        'created_at',
+        'updated_at'
     ];
     protected $primaryKey = 'id';
 }
