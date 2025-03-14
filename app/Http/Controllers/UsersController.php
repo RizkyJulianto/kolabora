@@ -107,6 +107,6 @@ class UsersController extends Controller
         }
 
         Session::flash('success_second', 'Data users updated succcessfully');
-        return redirect()->to('profile/' . $id);
+        return redirect()->to('/profile-users/' . $id);
     }
 }

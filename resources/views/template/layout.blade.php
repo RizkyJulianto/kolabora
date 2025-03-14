@@ -58,7 +58,7 @@
                                     @endif
                                 </P>
                             </div>
-                            <a href="{{ route('profile.show', auth()->user()->id) }}"
+                            <a href="{{ url('/profile-users', auth()->user()->id) }}"
                                 class="flex items-center gap-2 p-2 text-slate-500 hover:bg-gradient-to-r from-sky_light to-primary hover:text-white">
                                 <i class="fa-solid fa-user"></i>
                                 <p class="block decoration-transparent">Profile</p>

@@ -108,10 +108,34 @@
                         </div>
                         <div class="form-group mb-3">
                             <label class="label-form block mb-1 text-gray-500 text-sm">Last Education</label>
-                            <input type="text"
-                                class="inline-block tracking-wide bg-gray-50 border-[1.8px] border-slate-300 w-full py-2 text-sm px-3 focus:border-primary outline-none rounded-md"
-                                name="last_education" id="last_education" value="{{ auth()->user()->last_education }}"
-                                autocomplete="off">
+                            <select name="last_education" id="last_education"
+                                class="inline-block tracking-wide bg-gray-50 border-[1.8px] border-slate-300 w-full py-2 text-sm px-3 focus:border-primary outline-none rounded-md">
+                                <option value="">Choice last education</option>
+                                <option {{ auth()->user()->last_education == 'not' ? 'selected' : '' }} value="not">
+                                    Tidak/Belum
+                                    Sekolah
+                                </option>
+                                <option {{ auth()->user()->last_education == 'sd' ? 'selected' : '' }} value="sd">
+                                    SD/Sederajat
+                                </option>
+                                <option {{ auth()->user()->last_education == 'smp' ? 'selected' : '' }} value="smp">
+                                    SMP/Sederajat
+                                </option>
+                                <option {{ auth()->user()->last_education == 'sma_smk' ? 'selected' : '' }}
+                                    value="sma_smk">
+                                    SMA/SMK/Sederajat</option>
+                                <option {{ auth()->user()->last_education == 'd1_d3' ? 'selected' : '' }} value="d1_d3">
+                                    DI/DI/DIII/Sederajat</option>
+                                <option {{ auth()->user()->last_education == 's1_d4' ? 'selected' : '' }} value="s1_d4">
+                                    S1/DIV/Sederajat
+                                </option>
+                                <option {{ auth()->user()->last_education == 's2' ? 'selected' : '' }} value="s2">
+                                    S2/Sederajat
+                                </option>
+                                <option {{ auth()->user()->last_education == 's2' ? 'selected' : '' }} value="s3">
+                                    S3/Sederajat
+                                </option>
+                            </select>
                         </div>
                     </div>
                     <div class="form-group mb-3">
