@@ -25,7 +25,7 @@ class FindJobsSeeder extends Seeder
                 'project_type'  => 'Full Time',
                 'deadline'  => $faker->dateTimeBetween('now', '+1 year')->format('Y-m-d H:i:s'),
                 'skills'  => $faker->sentence,
-                'collaboration_type'  => 'Team',
+                'collaboration_type'  => 'Personal',
                 'total_members'  => $faker->numberBetween(1, 20),
                 'experience'  => $faker->word,
                 'experience_year'  => $faker->numberBetween(1, 10),

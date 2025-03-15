@@ -21,7 +21,10 @@ return new class extends Migration
             $table->text('description_team')->nullable();
             $table->string('scope_team')->nullable();
             $table->boolean('status')->nullable();
+            $table->unsignedBigInteger('id_users')->nullable();
             $table->timestamps();
+
+            $table->foreign('id_users')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
         });
     }
 

@@ -191,18 +191,24 @@
                                 </div>
                             </div>
                             <div class="form-group mb-3">
+                                <label class="label-form block mb-1 text-gray-500 text-sm">Upload Result</label>
+                                <div class="flex gap-3">
+                                    <div
+                                        class="flex-[1_1_95%] tracking-wide h-auto w-full inline-block border shadow text-sm border-slate-200 py-2 px-3 rounded-md">
+                                        <p>{{ $data->result_project }}</a>
+                                    </div>
+
+                                    <button type="button"
+                                        class="flex-[1_1_5%] tracking-wide h-auto w-full flex items-center justify-center border shadow text-sm border-slate-200 py-2 px-3 rounded-md text-white bg-gradient-to-r from-sky_light to-primary "
+                                        onclick="window.location.href='{{ url('/uploads/result_project/' . $data->result_project) }}'"><i
+                                            class="fas fa-download"></i></button>
+                                </div>
+                            </div>
+                            <div class="form-group mb-3">
                                 <label class="label-form block mb-1 text-gray-500 text-sm">Description Result</label>
                                 <div
                                     class="tracking-wide h-auto w-full inline-block border shadow text-sm border-slate-200 py-2 px-3 rounded-md">
                                     <p>{{ $data->description_result }}</p>
-                                </div>
-                            </div>
-                            <div class="form-group mb-3">
-                                <label class="label-form block mb-1 text-gray-500 text-sm">Upload Result</label>
-                                <div
-                                    class="tracking-wide h-auto w-full inline-block border shadow text-sm border-slate-200 py-2 px-3 rounded-md">
-                                    <a class="hover:text-primary"
-                                        href="{{ url('/uploads/result_project/' . $data->result_project) }}">{{ $data->result_project }}</a>
                                 </div>
                             </div>
                         @endif

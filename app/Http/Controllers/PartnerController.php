@@ -9,7 +9,8 @@ class PartnerController extends Controller
 {
     public function index(Request $request)
     {
-        $query = PartnerModel::query();
+        $query = PartnerModel::with(['users']);
+
         if ($request->has('search')) {
             $search = $request->input('search');
             $query->where('name_team', 'like', "%$search%")
@@ -26,5 +27,11 @@ class PartnerController extends Controller
         $data = $query->paginate(9);
         $count = PartnerModel::count();
         return view('users/partner', compact(['data', 'count']));
+    }
+
+    public function show(string $id)
+    {
+        $data = PartnerModel::with(['users'])->findOrFail($id);
+        return view("users.detail.detail_partner", compact('data'));
     }
 }

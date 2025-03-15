@@ -7,14 +7,13 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Faker\Factory as Faker;
 
-class TeamSeeder extends Seeder
+class PartnerSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-
         $faker = Faker::create();
 
         for ($i = 0; $i < 10; $i++) {
@@ -27,6 +26,7 @@ class TeamSeeder extends Seeder
                 'description_team' => $faker->sentence,
                 'scope_team' => $faker->sentence,
                 'status' => 0,
+                'id_users' => $faker->numberBetween(1, 10),
                 'created_at' => now(),
                 'updated_at' => now(),
             ]);

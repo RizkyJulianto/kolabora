@@ -198,7 +198,7 @@
                 @if ($data->isNotEmpty())
                     <div class="mb-8 grid grid-cols-1 lg:grid-cols-2 gap-5 w-full">
                         @foreach ($data as $partner)
-                            <a href=""
+                            <a href="{{ url('/partner/' . $partner->id) }}"
                                 class="box shadow w-full border border-slate-200 rounded p-4 hover:shadow-primary_light">
                                 <div class="up w-full">
                                     <div class="left">
@@ -210,7 +210,7 @@
                                                 <div
                                                     class="bg-blue-100 w-auto inline-block text-primary px-2 py-[2px] rounded-full text-xs">
 
-                                                    <h5><i class="fas fa-user"></i> Darren</h5>
+                                                    <h5><i class="fas fa-user"></i> {{ $partner->users->username }}</h5>
                                                 </div>
                                                 <div
                                                     class="bg-orange-100 w-auto inline-block text-orange_dark px-2 py-[2px] rounded-full text-xs">
