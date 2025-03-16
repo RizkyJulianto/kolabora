@@ -1,3 +1,8 @@
+.pagination-container .active {
+    background: linear-gradient(to right, #38bdf8, #2563eb);
+    color: white;
+}
+
 .active-menu {
     background: linear-gradient(to right, #38bdf8, #2563eb);
     color: transparent;
