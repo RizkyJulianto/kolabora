@@ -20,7 +20,7 @@
                     <h4 class="bg-gradient-to-r from-sky_light to-primary py-1 px-2 rounded-full text-white">
                         {{ $count }}</h4>
                 </div>
-                <form method="get" action="{{ route('mainUsersSearch') }}" class="flex items-center gap-2">
+                <form method="get" action="{{ route('companySearch') }}" class="flex items-center gap-2">
                     <input class="border shadow text-sm border-slate-200 rounded outline-none w-full py-2 px-3"
                         type="search" autocomplete="off" name="search" id="search" placeholder="Searcing jobs">
                     <button type="submit"
@@ -104,7 +104,7 @@
                                 </p>
                             </div>
                             <div>
-                                <nav class="isolate inline-flex -space-x-px rounded-md shadow-sm" aria-label="Pagination">
+                                <nav class="isolate flex gap-2 -space-x-px rounded-md shadow-sm" aria-label="Pagination">
                                     @php
                                         $totalPages = $data->lastPage();
                                         $currentPage = $data->currentPage();

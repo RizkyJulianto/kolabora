@@ -30,7 +30,7 @@ class FindJobsSeeder extends Seeder
                 'experience'  => $faker->word,
                 'experience_year'  => $faker->numberBetween(1, 10),
                 'date_project'  => $faker->date('Y-m-d'),
-                'salary'  => $faker->numberBetween(3000000, 20000000),
+                'salary'  => $faker->numberBetween(100, 1000),
                 'id_company' => $faker->numberBetween(1, 10),
                 'created_at' => now(),
                 'updated_at' => now(),

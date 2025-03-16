@@ -286,7 +286,7 @@
                                 </p>
                             </div>
                             <div>
-                                <nav class="isolate inline-flex -space-x-px rounded-md shadow-sm" aria-label="Pagination">
+                                <nav class="isolate flex gap-2 -space-x-px rounded-md shadow-sm" aria-label="Pagination">
                                     @php
                                         $totalPages = $data->lastPage();
                                         $currentPage = $data->currentPage();

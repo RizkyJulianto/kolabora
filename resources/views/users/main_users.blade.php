@@ -231,7 +231,13 @@
                                     </a>
                                 @endif
                             @endforeach
-
+                            <div class="no-results-message-jobs flex justify-center py-4 box shadow w-full border border-slate-200 rounded"
+                                style="display: none;">
+                                <h4
+                                    class="tracking-wide font-medium bg-clip-text bg-gradient-to-r from-sky_light to-primary text-transparent p-2 text-center">
+                                    No jobs results found
+                                </h4>
+                            </div>
                         </div>
                     @else
                         <div class="flex justify-center py-4 box shadow w-full border border-slate-200 rounded">
@@ -240,15 +246,6 @@
                                 No jobs results found</h4>
                         </div>
                     @endif
-
-                    <div class="no-results-message-jobs flex justify-center py-4 box shadow w-full border border-slate-200 rounded"
-                        style="display: none;">
-                        <h4
-                            class="tracking-wide font-medium bg-clip-text bg-gradient-to-r from-sky_light to-primary text-transparent p-2 text-center">
-                            No jobs results found
-                        </h4>
-                    </div>
-
 
                     {{-- pagination --}}
                     @if ($count > 0)
@@ -280,7 +277,7 @@
                                     </p>
                                 </div>
                                 <div>
-                                    <nav class="isolate inline-flex -space-x-px rounded-md shadow-sm"
+                                    <nav class="isolate flex gap-2 -space-x-px rounded-md shadow-sm"
                                         aria-label="Pagination">
                                         @php
                                             $totalPages = $data->lastPage();

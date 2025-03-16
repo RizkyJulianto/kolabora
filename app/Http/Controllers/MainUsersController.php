@@ -10,20 +10,21 @@ class MainUsersController extends Controller
 {
     public function index(Request $request)
     {
-        $query = ProjectModel::with('company');
+        $query = ProjectModel::with('company')->whereIn('status', ['Found'])->orWhereNull('status');
+        $count = $query->count();
+
         if ($request->has('search')) {
-            $search = $request->input('search');
-            $query->where('name_project', 'like', "%$search%");
+            $search = trim($request->input('search'));
+            if (!empty($search)) {
+                $query->where('name_project', 'like', "%$search%");
+            } else {
+                return redirect()->to('main-users');
+            }
         } else {
             $query->inRandomOrder();
         }
 
-        if ($request->has('search') && empty($request->input('search'))) {
-            return redirect()->to('main-users');
-        }
-
-        $data = $query->whereIn('status', ['Found'])->orWhereNull('status')->paginate(9);
-        $count = ProjectModel::whereIn('status', ['Found'])->orWhereNull('status')->count();
+        $data = $query->paginate(9);
         return view('users/main_users', compact(['data', 'count']));
     }
 
