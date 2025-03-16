@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name_project')->nullable();
             $table->text('description_project')->nullable();
-            $table->enum('project_type', ['Full Time', 'Part Time', 'Freelance', 'Intership', 'Volunteer', 'Remote'])->nullable();
+            $table->enum('project_type', ['Full Time', 'Part Time', 'Freelance', 'Project Work', 'Intership', 'Volunteer', 'Remote'])->nullable();
             $table->dateTime('deadline')->nullable();
             $table->text('skills')->nullable();
             $table->double('salary')->nullable();

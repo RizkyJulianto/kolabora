@@ -15,42 +15,55 @@
             <div class="filter-col shadow border border-slate-200 rounded">
                 <div class="flex justify-between items-center border-b border-slate-200 py-2 px-3">
                     <h1 class="font-semibold">Filter</h1>
-                    <p class="text-sm text-red-800 rounded-full bg-red-200 py-[2px] px-2 cursor-pointer">clear all</p>
+                    <button type="button"
+                        class="clear-all-users text-sm text-red-800 rounded-full bg-red-200 py-[2px] px-2 cursor-pointer">clear
+                        all</button>
                 </div>
                 <div class="px-3 text-sm">
                     <div class="border-b border-slate-200 py-5">
-                        <h4 class="mb-2">Date Post</h4>
-                        <select class="border text-xs border-slate-200 rounded outline-none w-full p-2" name=""
-                            id="">
-                            <option value="">Anytime</option>
-                        </select>
+                        <div class="form-group">
+                            <h4 class="mb-2">Date Post</h4>
+                            <div class="grid grid-cols-2 gap-2">
+                                <input type="date"
+                                    class="border text-xs border-slate-200 rounded outline-none w-full p-2"
+                                    name="date_post_initial" id="date_post_initial">
+                                <input type="date"
+                                    class="border text-xs border-slate-200 rounded outline-none w-full p-2"
+                                    name="date_post_end" id="date_post_end">
+                            </div>
+                        </div>
                     </div>
                     <div class="border-b border-slate-200 py-5">
                         <h4 class="mb-2">Job Type</h4>
                         <div class="grid grid-cols-2 gap-1">
                             <div class="flex items-center gap-1">
-                                <input type="checkbox" name="" id="">
+                                <input type="checkbox" name="job_type_fulltime" id="job_type_fulltime" value="Full Time">
                                 <span class="text-xs">Full Time</span>
                             </div>
                             <div class="flex items-center gap-1">
-                                <input type="checkbox" name="" id="">
+                                <input type="checkbox" name="job_type_parttime" id="job_type_parttime" value="Part Time">
                                 <span class="text-xs">Part Time</span>
                             </div>
                             <div class="flex items-center gap-1">
-                                <input type="checkbox" name="" id="">
+                                <input type="checkbox" name="job_type_project_work" id="job_type_project_work"
+                                    value="Project Work">
                                 <span class="text-xs">Project Work</span>
                             </div>
                             <div class="flex items-center gap-1">
-                                <input type="checkbox" name="" id="">
+                                <input type="checkbox" name="job_type_freelance" id="job_type_freelance" value="Freelance">
                                 <span class="text-xs">Freelance</span>
                             </div>
                             <div class="flex items-center gap-1">
-                                <input type="checkbox" name="" id="">
+                                <input type="checkbox" name="job_type_intership" id="job_type_intership" value="Intership">
                                 <span class="text-xs">Intership</span>
                             </div>
                             <div class="flex items-center gap-1">
-                                <input type="checkbox" name="" id="">
+                                <input type="checkbox" name="job_type_volunteer" id="job_type_volunteer" value="Volunteer">
                                 <span class="text-xs">Volunteer</span>
+                            </div>
+                            <div class="flex items-center gap-1">
+                                <input type="checkbox" name="job_type_remote" id="job_type_remote" value="Remote">
+                                <span class="text-xs">Remote</span>
                             </div>
                         </div>
                     </div>
@@ -58,19 +71,19 @@
                         <h4 class="mb-2">Range Salary</h4>
                         <div class="grid grid-cols-2 gap-1">
                             <div class="flex items-center gap-1">
-                                <input type="checkbox" name="" id="">
+                                <input type="checkbox" name="salary_1" id="salary_1">
                                 <span class="text-xs">Less than 200$</span>
                             </div>
                             <div class="flex items-center gap-1">
-                                <input type="checkbox" name="" id="">
+                                <input type="checkbox" name="salary_2" id="salary_2">
                                 <span class="text-xs">$200 - 500$</span>
                             </div>
                             <div class="flex items-center gap-1">
-                                <input type="checkbox" name="" id="">
+                                <input type="checkbox" name="salary_3" id="salary_3">
                                 <span class="text-xs">$500 - $1000</span>
                             </div>
                             <div class="flex items-center gap-1">
-                                <input type="checkbox" name="" id="">
+                                <input type="checkbox" name="salary_4" id="salary_4">
                                 <span class="text-xs">More than $1000</span>
                             </div>
                         </div>
@@ -79,20 +92,35 @@
                         <h4 class="mb-2">Experience</h4>
                         <div class="grid grid-cols-2 gap-1">
                             <div class="flex items-center gap-1">
-                                <input type="checkbox" name="" id="">
+                                <input type="checkbox" name="experience_1" id="experience_1">
                                 <span class="text-xs">Less than a year</span>
                             </div>
                             <div class="flex items-center gap-1">
-                                <input type="checkbox" name="" id="">
+                                <input type="checkbox" name="experience_2" id="experience_2">
                                 <span class="text-xs">1 - 5 years</span>
                             </div>
                             <div class="flex items-center gap-1">
-                                <input type="checkbox" name="" id="">
+                                <input type="checkbox" name="experience_3" id="experience_3">
                                 <span class="text-xs">5 - 10 years</span>
                             </div>
                             <div class="flex items-center gap-1">
-                                <input type="checkbox" name="" id="">
+                                <input type="checkbox" name="experience_4" id="experience_4">
                                 <span class="text-xs">More than 10 year</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border-b border-slate-200 py-5">
+                        <h4 class="mb-2">Project Work</h4>
+                        <div class="grid grid-cols-2 gap-1">
+                            <div class="flex items-center gap-1">
+                                <input type="checkbox" value="Personal" name="type_project_work_1"
+                                    id="type_project_work_1">
+                                <span class="text-xs">Personal</span>
+                            </div>
+                            <div class="flex items-center gap-1">
+                                <input type="checkbox" value="Team" name="type_project_work_2"
+                                    id="type_project_work_2">
+                                <span class="text-xs">Team</span>
                             </div>
                         </div>
                     </div>
@@ -118,13 +146,18 @@
                         </button>
                     </form>
                 </div>
-                <main class="content">
+                <main class="content-main-users">
                     @if ($data->isNotEmpty())
                         <div class="mb-8 flex flex-col gap-5">
                             @foreach ($data as $jobs)
                                 @if ($jobs->status == 'Found' || $jobs->status == null)
-                                    <a href="{{ url('main-users/' . $jobs->id) }}"
-                                        class="box shadow w-full border border-slate-200 rounded p-4 hover:shadow-primary_light cursor-pointer">
+                                    <a href="{{ url('main-users/' . $jobs->id) }}" data-date="{{ $jobs->date_project }}"
+                                        data-job-type="{{ $jobs->project_type }}" data-salary="{{ $jobs->salary }}"
+                                        data-experience="{{ $jobs->experience_year }}"
+                                        data-type-project-work="{{ $jobs->collaboration_type }}"
+                                        class="box-main-users
+                                        shadow w-full border border-slate-200 rounded p-4 hover:shadow-primary_light
+                                        cursor-pointer">
                                         <div class="up flex flex-col lg:flex-row lg:gap-2 gap-4">
                                             <div class="left flex-[1_1_100%] lg:flex-[1_1_80%]">
                                                 <div class="flex gap-2">
@@ -144,7 +177,7 @@
                                                             <div
                                                                 class="bg-orange-100 w-auto inline-block text-center text-orange_normal px-2 py-[2px] rounded-full text-xs">
                                                                 <p><i class="fas fa-clock"></i>
-                                                                    {{ $jobs->project_type }}</h>
+                                                                    {{ $jobs->project_type }}</p>
                                                             </div>
                                                             <div
                                                                 class="bg-green-100 w-auto inline-block text-center text-green-700 px-2 py-[2px] rounded-full text-xs">
@@ -207,6 +240,15 @@
                                 No jobs results found</h4>
                         </div>
                     @endif
+
+                    <div class="no-results-message-jobs flex justify-center py-4 box shadow w-full border border-slate-200 rounded"
+                        style="display: none;">
+                        <h4
+                            class="tracking-wide font-medium bg-clip-text bg-gradient-to-r from-sky_light to-primary text-transparent p-2 text-center">
+                            No jobs results found
+                        </h4>
+                    </div>
+
 
                     {{-- pagination --}}
                     @if ($count > 0)

@@ -193,6 +193,7 @@
 
     <script src="{{ asset('library/sweetalert/sweetalert2.min.js') }}"></script>
     <script src="{{ asset('library/swiper/swiper-bundle.min.js') }}"></script>
+    <script src="{{ asset('library/jquery/jquery-3.7.1.js') }}"></script>
     <script src="{{ asset('js/layout_users.js') }}"></script>
 
     <script>
@@ -324,6 +325,163 @@
     </script>
 
 
+    <script>
+        // find jquery main users
+        $(document).ready(function() {
+            function filterJobs() {
+                const datePostInitial = $("#date_post_initial").val();
+                const datePostEnd = $("#date_post_end").val();
+                const jobTypes = [];
+                const projectWorks = [];
+                const salaries = [];
+                const experiences = [];
+
+                $(
+                    'input[id="job_type_fulltime"], input[id="job_type_parttime"], input[id="job_type_project_work"], input[id="job_type_freelance"], input[id="job_type_intership"], input[id="job_type_volunteer"], input[id="job_type_remote"]'
+                ).each(function() {
+                    if ($(this).is(":checked")) {
+                        jobTypes.push($(this).attr("id"));
+                    }
+                });
+
+                $(
+                    'input[id="salary_1"], input[id="salary_2"], input[id="salary_3"], input[id="salary_4"]'
+                ).each(function() {
+                    if ($(this).is(":checked")) {
+                        salaries.push($(this).attr("id"));
+                    }
+                });
+
+                $(
+                    'input[id="experience_1"], input[id="experience_2"], input[id="experience_3"], input[id="experience_4"]'
+                ).each(function() {
+                    if ($(this).is(":checked")) {
+                        experiences.push($(this).attr("id"));
+                    }
+                });
+
+                $(
+                    'input[id="type_project_work_1"], input[id="type_project_work_2"]'
+                ).each(function() {
+                    if ($(this).is(":checked")) {
+                        projectWorks.push($(this).attr("id"));
+                    }
+                });
+
+                let visibleJobCount = 0;
+
+                $(".box-main-users").each(function() {
+                    const jobDate = $(this).data("date");
+                    const jobType = $(this).data("job-type");
+                    const jobSalary = $(this).data("salary");
+                    const projectWork = $(this).data("type-project-work");
+                    const jobExperience = $(this).data("experience");
+
+                    const dateMatch =
+                        (!datePostInitial || jobDate >= datePostInitial) &&
+                        (!datePostEnd || jobDate <= datePostEnd);
+
+                    const jobTypeMatch =
+                        jobTypes.length === 0 ||
+                        jobTypes.some((jobTypeSwitch) => {
+                            switch (jobTypeSwitch) {
+                                case "job_type_fulltime":
+                                    return jobType == "Full Time";
+                                case "job_type_parttime":
+                                    return jobType == "Part Time";
+                                case "job_type_project_work":
+                                    return jobType == "Project Work";
+                                case "job_type_freelance":
+                                    return jobType == "Freelance";
+                                case "job_type_intership":
+                                    return jobType == "Intership";
+                                case "job_type_volunteer":
+                                    return jobType == "Volunteer";
+                                case "job_type_remote":
+                                    return jobType == "Remote";
+                                default:
+                                    return false;
+                            }
+                        });
+
+                    const projectWorkMatch =
+                        projectWorks.length === 0 ||
+                        projectWorks.some((typeProject) => {
+                            switch (typeProject) {
+                                case "type_project_work_1":
+                                    return projectWork == "Personal";
+                                case "type_project_work_2":
+                                    return projectWork == "Team";
+                                default:
+                                    return false;
+                            }
+                        });
+
+                    const salaryMatch =
+                        salaries.length === 0 ||
+                        salaries.some((salary) => {
+                            switch (salary) {
+                                case "salary_1":
+                                    return jobSalary < 200;
+                                case "salary_2":
+                                    return jobSalary >= 200 && jobSalary <= 500;
+                                case "salary_3":
+                                    return jobSalary >= 500 && jobSalary <= 1000;
+                                case "salary_4":
+                                    return jobSalary > 1000;
+                                default:
+                                    return false;
+                            }
+                        });
+
+                    const experienceMatch =
+                        experiences.length === 0 ||
+                        experiences.some((experience) => {
+                            switch (experience) {
+                                case "experience_1":
+                                    return jobExperience < 1;
+                                case "experience_2":
+                                    return jobExperience >= 1 && jobExperience <= 5;
+                                case "experience_3":
+                                    return jobExperience >= 5 && jobExperience <= 10;
+                                case "experience_4":
+                                    return jobExperience > 10;
+                                default:
+                                    return false;
+                            }
+                        });
+
+                    if (
+                        dateMatch &&
+                        jobTypeMatch &&
+                        salaryMatch &&
+                        experienceMatch &&
+                        projectWorkMatch
+                    ) {
+                        $(this).show();
+                        visibleJobCount++;
+                    } else {
+                        $(this).hide();
+                    }
+                });
+
+                const noResultsMessage = $('.no-results-message-jobs');
+                if (visibleJobCount === 0) {
+                    noResultsMessage.show();
+                } else {
+                    noResultsMessage.hide();
+                }
+            }
+
+            $("#date_post_initial, #date_post_end").on("change", filterJobs);
+            $('input[type="checkbox"]').on("change", filterJobs);
+            $(".clear-all-users").on("click", function() {
+                $("#date_post_initial, #date_post_end").val("");
+                $('input[type="checkbox"]').prop("checked", false);
+                filterJobs();
+            });
+        });
+    </script>
 
 </body>
 
